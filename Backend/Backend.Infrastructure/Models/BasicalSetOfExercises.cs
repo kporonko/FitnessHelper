@@ -2,7 +2,7 @@
 {
     public class BasicalSetOfExercises
     {
-        public int SetId { get; set; }
+        public int BasicalSetId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public virtual List<BasicalSetExercise> BasicalSetExercises { get; set; } = new List<BasicalSetExercise>();

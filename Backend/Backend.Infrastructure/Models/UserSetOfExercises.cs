@@ -8,7 +8,7 @@ namespace Backend.Infrastructure.Models
 {
     public class UserSetOfExercises
     {
-        public int SetId { get; set; }
+        public int UserSetId { get; set; }
         public string Name { get; set; }
         public int UserId { get; set; }
         public virtual User User { get; set; }
