@@ -25,25 +25,25 @@ namespace Backend.Infrastructure.Configuration
                 .IsRequired()
                 .HasColumnName("Name")
                 .HasColumnType("varchar")
-                .HasMaxLength(50);
+                .HasMaxLength(100);
             builder
                 .Property(x => x.Description)
                 .IsRequired()
                 .HasColumnName("Description")
                 .HasColumnType("varchar")
-                .HasMaxLength(500);
+                .HasMaxLength(2000);
             builder
                 .Property(x => x.UrlImage)
                 .IsRequired()
                 .HasColumnName("UrlImage")
                 .HasColumnType("varchar")
-                .HasMaxLength(200);
+                .HasMaxLength(500);
             builder
                 .Property(x => x.UrlVideo)
                 .IsRequired()
                 .HasColumnName("UrlVideo")
                 .HasColumnType("varchar")
-                .HasMaxLength(200);
+                .HasMaxLength(500);
         }
     }
 }

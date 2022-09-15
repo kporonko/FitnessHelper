@@ -31,19 +31,19 @@ namespace Backend.Infrastructure.Configuration
                 .IsRequired()
                 .HasColumnName("Description")
                 .HasColumnType("varchar")
-                .HasMaxLength(500);
+                .HasMaxLength(2000);
             builder
                 .Property(x => x.UrlImage)
                 .IsRequired()
                 .HasColumnName("UrlImage")
                 .HasColumnType("varchar")
-                .HasMaxLength(200);
+                .HasMaxLength(500);
             builder
                 .Property(x => x.PartOfBody)
                 .IsRequired()
                 .HasColumnName("PartOfBody")
                 .HasColumnType("varchar")
-                .HasMaxLength(20);
+                .HasMaxLength(50);
         }
     }
 }

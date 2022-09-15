@@ -23,7 +23,7 @@ namespace Backend.Infrastructure.Configuration
             builder
                 .Property(x => x.Name)
                 .IsRequired()
-                .HasColumnName("ExerciseId")
+                .HasColumnName("Name")
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
         }

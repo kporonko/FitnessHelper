@@ -15,7 +15,7 @@ namespace Backend.Infrastructure.Models
         public int Back { get; set; }
         public int Chest { get; set; }
         public int Abs { get; set; }
-        public int SetId { get; set; }
+        public int BasicalSetId { get; set; }
         public virtual BasicalSetOfExercises BasicalSetOfExercises { get; set; }
     }
 }

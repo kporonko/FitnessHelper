@@ -24,13 +24,13 @@ namespace Backend.Infrastructure.Configuration
                 .Property(x => x.Name)
                 .IsRequired()
                 .HasColumnType("varchar")
-                .HasMaxLength(50)
+                .HasMaxLength(100)
                 .HasColumnName("Name");
             builder
                 .Property(x => x.Description)
                 .IsRequired()
                 .HasColumnType("varchar")
-                .HasMaxLength(500)
+                .HasMaxLength(2000)
                 .HasColumnName("Description");
         }
     }

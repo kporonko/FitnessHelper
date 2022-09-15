@@ -10,7 +10,8 @@ namespace Backend.Infrastructure.Models
     {
         public int UserTrainingId { get; set; }
         public DateTime Date { get; set; }
-        public int SetId { get; set; }
+        public int UserSetId { get; set; }
+        public int Time { get; set; }
         public virtual UserSetOfExercises UserSetOfExercises { get; set; }
     }
 }

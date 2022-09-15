@@ -7,5 +7,6 @@
         public virtual Exercise Exercise { get; set; }
         public int MuscleId { get; set; }
         public virtual Muscle Muscle { get; set; }
+        public bool IsTarget { get; set; }
     }
 }

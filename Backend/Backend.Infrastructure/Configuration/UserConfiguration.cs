@@ -21,6 +21,18 @@ namespace Backend.Infrastructure.Configuration
                 .HasColumnType("int")
                 .ValueGeneratedOnAdd();
             builder
+                .Property(x => x.Login)
+                .IsRequired()
+                .HasColumnName("Login")
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            builder
+                .Property(x => x.Password)
+                .IsRequired()
+                .HasColumnName("Password")
+                .HasColumnType("varchar")
+                .HasMaxLength(50);
+            builder
                 .Property(x => x.FirstName)
                 .IsRequired()
                 .HasColumnName("FirstName")

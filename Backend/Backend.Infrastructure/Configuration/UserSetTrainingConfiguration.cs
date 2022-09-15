@@ -25,6 +25,11 @@ namespace Backend.Infrastructure.Configuration
                 .IsRequired()
                 .HasColumnName("Date")
                 .HasColumnType("date");
+            builder
+                .Property(x => x.Time)
+                .IsRequired()
+                .HasColumnName("Time")
+                .HasColumnType("int");
         }
     }
 }

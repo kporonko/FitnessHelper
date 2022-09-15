@@ -26,9 +26,9 @@ namespace Backend.Infrastructure.Configuration
                 .HasColumnName("ExerciseId")
                 .HasColumnType("int");
             builder
-                .Property(x => x.SetId)
+                .Property(x => x.UserSetId)
                 .IsRequired()
-                .HasColumnName("LastName")
+                .HasColumnName("UserSetId")
                 .HasColumnType("int");
         }
     }

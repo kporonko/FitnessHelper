@@ -9,8 +9,8 @@ namespace Backend.Infrastructure.Models
     public class BasicalSetExercise
     {
         public int Id { get; set; }
-        public int SetId { get; set; }
-        public virtual BasicalSetOfExercises UserSetOfExercises { get; set; }
+        public int BasicalSetId { get; set; }
+        public virtual BasicalSetOfExercises BasicalSetOfExercises { get; set; }
         public int ExerciseId { get; set; }
         public virtual Exercise Exercise { get; set; }
     }

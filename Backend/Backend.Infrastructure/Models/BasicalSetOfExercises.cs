@@ -7,6 +7,6 @@
         public string Description { get; set; }
         public virtual List<BasicalSetExercise> BasicalSetExercises { get; set; } = new List<BasicalSetExercise>();
         public virtual List<BasicalSetTraining> BasicalSetTrainings { get; set; } = new List<BasicalSetTraining>();
-        public virtual BasicalSetEfficiency BasicalSetEffeciency { get; set; }
+        public virtual BasicalSetEfficiency BasicalSetEfficiency { get; set; }
     }
 }

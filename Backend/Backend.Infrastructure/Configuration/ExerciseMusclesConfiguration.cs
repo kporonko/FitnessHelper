@@ -31,6 +31,11 @@ namespace Backend.Infrastructure.Configuration
                 .IsRequired()
                 .HasColumnName("MuscleId")
                 .HasColumnType("int");
+            builder
+                .Property(x => x.IsTarget)
+                .IsRequired()
+                .HasColumnName("IsTarget")
+                .HasColumnType("bit");
         }
     }
 }
