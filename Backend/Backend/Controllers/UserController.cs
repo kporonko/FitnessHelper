@@ -18,9 +18,14 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public ActionResult<User> Login(string login,[DataType(DataType.Password)] string password)
         {
-            return _userService.Get(new LoginUser { Login = login, Password = password});
+            var user = _userService.Get(new LoginUser { Login = login, Password = password });
+            if (user == null)
+                return NoContent();
+            return Ok(user);
+            
         }
 
         [HttpPost]
