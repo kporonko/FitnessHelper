@@ -32,6 +32,13 @@ namespace Backend.Infrastructure.Configuration
                 .HasColumnType("varchar")
                 .HasMaxLength(2000)
                 .HasColumnName("Description");
+            builder
+                .Property(x => x.UrlImage)
+                .IsRequired()
+                .HasColumnType("varchar")
+                .HasMaxLength(500)
+                .HasColumnName("UrlImage");
+            
         }
     }
 }
