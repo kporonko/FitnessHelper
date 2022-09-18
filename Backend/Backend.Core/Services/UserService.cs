@@ -2,6 +2,7 @@
 using Backend.Core.Models;
 using Backend.Infrastructure.Data;
 using Backend.Infrastructure.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Backend.Core.Services
@@ -22,7 +23,6 @@ namespace Backend.Core.Services
         /// </summary>
         /// <param name="registerUser">User`s registration data.</param>
         /// <returns>If new user is created.</returns>
-        /// <exception cref="NotImplementedException"></exception>
         public HttpStatusCode Create(RegisterUser registerUser)
         {
             try
@@ -82,17 +82,10 @@ namespace Backend.Core.Services
         /// <returns>If entered password mathes actual password.</returns>
         private bool UserPasswordValidation(User? user, LoginUser loginUser)
         {
-            try
-            {
-                if (user?.Password == loginUser?.Password)
-                    return true;
+            if (user?.Password == loginUser?.Password)
+                return true;
 
-                return false;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            return false;
         }
     } 
 }

@@ -7,7 +7,7 @@ namespace Backend.Core.Interfaces
 {
     public interface IUserService
     {
-        ActionResult<User> Get(LoginUser loginUser);
+        User? Get(LoginUser loginUser);
         HttpStatusCode Create(RegisterUser registerUser);
     }
 }
