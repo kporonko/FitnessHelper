@@ -12,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<ApplicationContext>(options => options.UseSqlServer("Data Source=localhost\\SQLSERVER;Initial Catalog=TrainingHelperAlevel;Integrated Security=True;MultipleActiveResultSets=true"));
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IBasicSetService, BasicSetService>();
 
 var app = builder.Build();
 
