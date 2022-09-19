@@ -15,7 +15,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetBySection")]
+        [Route("/GetBySection/{section}")]
         public ActionResult<List<BasicalSetInfo>> GetBySection(int section)
         {
             var sets = _basicSetService.GetBasicalSetsSmallInfoBySection(section);
@@ -26,7 +26,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetFullDescById")]
+        [Route("/GetFullDescById/{id}")]
         public ActionResult<BasicalSetFullInfo> GetFullDescById(int id)
         {
             var set = _basicSetService.GetBasicalSetFullDescById(id);
