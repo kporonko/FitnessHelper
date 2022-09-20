@@ -1,11 +1,5 @@
-﻿using Backend.Core.Models;
-using Backend.Core.Services;
+﻿using Backend.Core.Services;
 using Backend.Infrastructure.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace Backend.Core.Tests
