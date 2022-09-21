@@ -56,7 +56,7 @@ namespace Backend.Core.Services
                 return null;
 
             var resList = new List<TrainingDesc>();
-            GetUserTrainingsByUser(user, resList);
+            GetUserTrainingsByUser(user, ref resList);
 
             return resList;
         }
@@ -73,13 +73,14 @@ namespace Backend.Core.Services
                 return null;
 
             var resList = new List<TrainingDesc>();
-            foreach (var basicalTraining in user.BasicalSetTrainings)
+            foreach (var basicalTraining in user.BasicalSetTrainings.OrderBy(x => x.Date))
             {
                 var set = _context.BasicalSetOfExercises.FirstOrDefault(x => x.BasicalSetId == basicalTraining.BasicalSetId);
                 var trainingDesc = new TrainingDesc { Date = basicalTraining.Date.ToString(), SetName = set.Name, Time = basicalTraining.Time.ToString() };
                 resList.Add(trainingDesc);
             }
 
+            resList = resList.OrderByDescending(x => Convert.ToDateTime(x.Date)).ToList();
             return resList;
         }
 
@@ -122,11 +123,11 @@ namespace Backend.Core.Services
         /// </summary>
         /// <param name="user">User whose trainings info we want to get.</param>
         /// <param name="resList">Resultive list of trainings.</param>
-        private void GetUserTrainingsByUser(User user, List<TrainingDesc> resList)
+        private void GetUserTrainingsByUser(User user, ref List<TrainingDesc> resList)
         {
             foreach (var userset in user.UserSetsOfExercises)
             {
-                foreach (var userTraining in userset.UserSetTrainings)
+                foreach (var userTraining in userset.UserSetTrainings.OrderBy(x => x.Date))
                 {
                     TrainingDesc trainingDesc = new TrainingDesc { SetName = userset.Name };
                     trainingDesc.Date = userTraining.Date.ToString();
@@ -134,6 +135,7 @@ namespace Backend.Core.Services
                     resList.Add(trainingDesc);
                 }
             }
+            resList = resList.OrderByDescending(x => Convert.ToDateTime(x.Date)).ToList();
         }
     }
 }
