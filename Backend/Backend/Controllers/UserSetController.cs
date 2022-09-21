@@ -45,5 +45,25 @@ namespace Backend.Controllers
             else
                 return CreatedAtAction(nameof(AddExerciseToUserSet), data);
         }
+
+        [HttpDelete]
+        [Route("/DeleteUserSet")]
+        public IActionResult DeleteUserSet(DeleteUserSet deleteUserSet)
+        {
+            if (_userSetService.DeleteUserSet(deleteUserSet) is System.Net.HttpStatusCode.BadRequest)
+                return BadRequest();
+            else
+                return Ok();
+        }
+
+        [HttpDelete]
+        [Route("/DeleteExerciseFromUserSet")]
+        public IActionResult DeleteExerciseFromUserSet(DeleteExercise deleteExercise)
+        {
+            if (_userSetService.DeleteExerciseFromUserSet(deleteExercise) is System.Net.HttpStatusCode.BadRequest)
+                return BadRequest();
+            else
+                return Ok();
+        }
     }
 }

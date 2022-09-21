@@ -2,7 +2,6 @@
 using Backend.Core.Models;
 using Backend.Infrastructure.Data;
 using Backend.Infrastructure.Models;
-using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Backend.Core.Services
@@ -41,20 +40,6 @@ namespace Backend.Core.Services
         }
 
         /// <summary>
-        /// Checks if the user with entered login already exists.
-        /// </summary>
-        /// <param name="registerUser">User`s registration data.</param>
-        /// <returns>Whether the user login exists.</returns>
-        private bool IfTheUserLoginExists(RegisterUser registerUser)
-        {
-            User? user = _context.Users.FirstOrDefault(x => x.Login == registerUser.Login);
-            if (user != null)
-                return true;
-            
-            return false;
-        }
-
-        /// <summary>
         /// Gets the user with the entered login & password.
         /// </summary>
         /// <param name="loginUser">User`s entered login data.</param>
@@ -74,6 +59,21 @@ namespace Backend.Core.Services
             }
         }
 
+
+        /// <summary>
+        /// Checks if the user with entered login already exists.
+        /// </summary>
+        /// <param name="registerUser">User`s registration data.</param>
+        /// <returns>Whether the user login exists.</returns>
+        private bool IfTheUserLoginExists(RegisterUser registerUser)
+        {
+            User? user = _context.Users.FirstOrDefault(x => x.Login == registerUser.Login);
+            if (user != null)
+                return true;
+
+            return false;
+        }
+
         /// <summary>
         /// Checks if the entered password matches the real password
         /// </summary>
@@ -82,6 +82,8 @@ namespace Backend.Core.Services
         /// <returns>If entered password mathes actual password.</returns>
         private bool UserPasswordValidation(User? user, LoginUser loginUser)
         {
+            if (user == null)
+                return false;
             if (user?.Password == loginUser?.Password)
                 return true;
 

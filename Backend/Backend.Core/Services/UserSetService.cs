@@ -82,6 +82,38 @@ namespace Backend.Core.Services
             return HttpStatusCode.Created;
         }
 
+
+        /// <summary>
+        /// Deletes the user set by set id.
+        /// </summary>
+        /// <param name="setId">Id of user set to delete.</param>
+        /// <returns>200 statuscode if deleted. 400 if something went wrong.</returns>
+        public HttpStatusCode DeleteUserSet(DeleteUserSet deleteUserSet)
+        {
+            var set = _context.UserSetOfExercises.Include(x => x.UserSetsExercises).FirstOrDefault(x => x.UserSetId == deleteUserSet.UserSetId);
+            if (set is null)
+                return HttpStatusCode.BadRequest;
+            _context.UserSetOfExercises.Remove(set);
+            _context.SaveChanges();
+            return HttpStatusCode.OK;
+        }
+
+        /// <summary>
+        /// Deletes the exercise from user set by exercise id.
+        /// </summary>
+        /// <param name="deleteExercise">Id of exercise and id of userset.</param>
+        /// <returns>200 statuscode if deleted. 400 if something went wrong.</returns>
+        public HttpStatusCode DeleteExerciseFromUserSet(DeleteExercise deleteExercise)
+        {
+            var setExercise =_context.UserSetExercises.FirstOrDefault(x => x.UserSetId == deleteExercise.UserSetId && x.ExerciseId == deleteExercise.ExerciseId);
+            if (setExercise is null)
+                return HttpStatusCode.BadRequest;
+            _context.UserSetExercises.Remove(setExercise);
+            _context.SaveChanges();
+            return HttpStatusCode.OK;
+        }
+
+
         /// <summary>
         /// Converts userset into small desc model.
         /// </summary>

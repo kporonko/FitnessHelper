@@ -8,5 +8,7 @@ namespace Backend.Core.Interfaces
         List<UserSetOfExercisesSmallDesc>? GetListOfUserSetsSmallDesc(int userId);
         HttpStatusCode AddNewUserSet(AddUserSet addUserSet);
         HttpStatusCode AddExerciseToUserSet(AddExerciseToUserSet addExercise);
+        HttpStatusCode DeleteUserSet(DeleteUserSet deleteUserSet);
+        HttpStatusCode DeleteExerciseFromUserSet(DeleteExercise deleteExercise);
     }
 }
