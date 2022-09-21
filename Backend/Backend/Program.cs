@@ -15,6 +15,7 @@ builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IBasicSetService, BasicSetService>();
 builder.Services.AddTransient<IUserSetService, UserSetService>();
 builder.Services.AddTransient<IExerciseService, ExerciseService>();
+builder.Services.AddTransient<IMuscleService, MuscleService>();
 
 var app = builder.Build();
 
