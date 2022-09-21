@@ -26,7 +26,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/ExercisesSearch")]
+        [Route("/ExercisesSearch/{search}")]
         public ActionResult<List<ExerciseSmallDescription>> ExercisesSearch(string search)
         {
             var exercises = _exerciseService.ExercisesSearch(search);
@@ -36,7 +36,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/ExercisesByPartOfBody")]
+        [Route("/ExercisesByPartOfBody/{partOfBody}")]
         public ActionResult<List<ExerciseSmallDescription>> ExercisesByPartOfBody(string partOfBody)
         {
             var exercises = _exerciseService.ExercisesByPartOfBody(partOfBody);
@@ -46,7 +46,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/ExerciseById")]
+        [Route("/ExerciseById/{id}")]
         public ActionResult<ExerciseFull> ExerciseById(int id)
         {
             var exercise = _exerciseService.ExerciseById(id);

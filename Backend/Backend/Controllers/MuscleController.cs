@@ -16,7 +16,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetMuscleById")]
+        [Route("/GetMuscleById/{id}")]
         public ActionResult<MuscleFullDesc> GetMuscleById(int id)
         {
             var muscle = _muscleService.GetMuscleById(id);

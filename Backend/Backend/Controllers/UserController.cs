@@ -18,7 +18,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [Route("/Login")]
         public ActionResult<User> Login(string login,[DataType(DataType.Password)] string password)
         {
             var user = _userService.Get(new LoginUser { Login = login, Password = password });
@@ -29,8 +29,6 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status409Conflict)]
         public IActionResult Register(RegisterUser registerUser)
         {
             if((int)_userService.Create(registerUser) == 201)
