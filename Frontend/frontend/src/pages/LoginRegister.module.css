@@ -7,17 +7,6 @@ body::-webkit-scrollbar{
     height: 100%;
 }
 
-.formLogin{
-    margin-top: 140px;
-    margin-left: 60px;
-    margin-right: 50px;
-}
-.formRegister {
-    margin-top: 80px;
-    margin-left: 60px;
-    margin-right: 50px;
-    min-width: 27%;
-}
 h1{
     font-size: 44px;
     font-family: "Oswald", sans-serif;
@@ -85,6 +74,7 @@ button h5{
     font-weight: normal;
 }
 .flexInputs{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    grid-gap: 20%;
 }
