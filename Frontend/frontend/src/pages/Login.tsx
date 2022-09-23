@@ -39,7 +39,7 @@ const Login = () => {
                 <button className={classes.smallBtn}>
                     <Link className={classes.textDecNone} to={"/register"}>I don`t have an account</Link>
                 </button>
-                <button type="submit" disabled={login === "" || password === "" && true} className={login === "" || password === "" ? classes.loginBtnDisabled : classes.loginBtnActive}>
+                <button type="submit" disabled={login === "" || password === "" || password.length < 8 && true} className={login === "" || password === "" || password.length < 8 ? classes.loginBtnDisabled : classes.loginBtnActive}>
                     <h5>Login</h5>
                 </button>
             </form>
