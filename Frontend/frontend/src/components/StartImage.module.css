@@ -1,0 +1,10 @@
+@media only screen and (max-width: 1200px){
+    .loginImage{
+        display: none;
+    }
+}
+.loginImage{
+    width: 65%;
+    max-height: 100%;
+    border-radius: 0 60px 60px 0 ;
+}

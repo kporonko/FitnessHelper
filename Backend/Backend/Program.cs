@@ -6,6 +6,20 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("http://localhost:3000", "http://localhost:3001").AllowAnyHeader().AllowAnyMethod();
+                      });
+});
+//builder.Services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+//{
+//    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+//}));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -20,6 +34,7 @@ builder.Services.AddTransient<IProfileService, ProfileService>();
 builder.Services.AddTransient<ITrainingService, TrainingService>();
 
 var app = builder.Build();
+app.UseCors(MyAllowSpecificOrigins);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
