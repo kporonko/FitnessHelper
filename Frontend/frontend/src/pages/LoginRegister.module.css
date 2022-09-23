@@ -78,3 +78,13 @@ button h5{
     grid-template-columns: 40% 40%;
     grid-gap: 20%;
 }
+p{
+    position: absolute;
+    font-size: 66px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 900;
+    color: white;
+    width: 40%;
+    left: 8%;
+    top: 55%;
+}

@@ -26,6 +26,9 @@ const Register = () => {
     return (
         <div className={classes.mainDiv}>
             <StartImage/>
+            <p>
+                Change Your Life With Fitness Helper
+            </p>
             <div style={{width: "-webkit-fill-available", margin: "80px 40px"}}>
                 <form onSubmit={(e)=> submit(e)}>
                     <h1>Create New Account</h1>

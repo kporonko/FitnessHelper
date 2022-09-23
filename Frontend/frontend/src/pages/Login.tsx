@@ -26,6 +26,9 @@ const Login = () => {
     return (
         <div className={classes.mainDiv}>
             <StartImage/>
+            <p>
+                Change Your Life With Fitness Helper
+            </p>
             <div style={{width: "-webkit-fill-available", margin: "150px 40px"}}>
                 <form onSubmit={(e)=> submit(e)}>
                     <h1>Sign In To Your Account</h1>
