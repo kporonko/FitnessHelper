@@ -1,0 +1,28 @@
+.wrapper{
+    margin: 0 5%;
+    display: flex;
+    align-items: center;
+    gap: 20%;
+}
+.logo{
+    width: 8%;
+}
+.linksWrapper{
+    display: grid;
+    grid-template-columns: repeat(5, fit-content(100%));
+    grid-gap: 20%;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+    font-family: "Oswald", sans-serif;
+    white-space: nowrap;
+}
+.linkActive{
+    text-decoration: none;
+    color: red;
+    font-size: 28px;
+    font-family: "Oswald", sans-serif;
+    white-space: nowrap;
+}
