@@ -15,14 +15,14 @@
 .link{
     text-decoration: none;
     color: black;
-    font-size: 1.8vw;
+    font-size: 1.6vw;
     font-family: "Oswald", sans-serif;
     white-space: nowrap;
 }
 .linkActive{
     text-decoration: none;
     color: red;
-    font-size: 1.8vw;
+    font-size: 1.6vw;
     font-family: "Oswald", sans-serif;
     white-space: nowrap;
 }

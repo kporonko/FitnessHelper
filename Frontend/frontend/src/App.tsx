@@ -4,9 +4,11 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Main from "./pages/Main";
+import AOS from "aos";
 
 function App() {
-  return (
+    AOS.init();
+    return (
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Login/>}/>

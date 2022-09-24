@@ -26,14 +26,14 @@ const Login = () => {
     return (
         <div className={classes.mainDiv}>
             <StartImage/>
-            <p>
+            <p className={classes.p}>
                 Change Your Life With Fitness Helper
             </p>
             <div style={{width: "-webkit-fill-available", margin: "150px 40px"}}>
                 <form onSubmit={(e)=> submit(e)}>
                     <h1>Sign In To Your Account</h1>
                     <div className={classes.inputwrapper}>
-                        <label htmlFor="Login">Login</label>
+                        <label className={classes.label} htmlFor="Login">Login</label>
                         <input type="text" placeholder="Enter login..." id="Login" value={login} onChange={(e)=>{setLogin(e.target.value)}}/>
                     </div>
                     <div className={classes.inputwrapper}>

@@ -10,6 +10,8 @@
     "@types/node": "^16.11.59",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "aos": "^2.3.4",
+    "mdb-react-ui-kit": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
@@ -42,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "typescript-plugin-css-modules": "^3.4.0"
   }
 }
