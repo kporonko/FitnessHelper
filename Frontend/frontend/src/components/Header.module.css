@@ -1,28 +1,28 @@
 .wrapper{
-    margin: 0 5%;
+    margin: 0 7%;
     display: flex;
     align-items: center;
     gap: 20%;
 }
 .logo{
-    width: 8%;
+    width: 10%;
 }
 .linksWrapper{
     display: grid;
     grid-template-columns: repeat(5, fit-content(100%));
-    grid-gap: 20%;
+    grid-gap: 17%;
 }
 .link{
     text-decoration: none;
     color: black;
-    font-size: 28px;
+    font-size: 1.8vw;
     font-family: "Oswald", sans-serif;
     white-space: nowrap;
 }
 .linkActive{
     text-decoration: none;
     color: red;
-    font-size: 28px;
+    font-size: 1.8vw;
     font-family: "Oswald", sans-serif;
     white-space: nowrap;
 }
