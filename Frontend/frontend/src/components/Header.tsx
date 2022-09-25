@@ -10,7 +10,7 @@ const Header = () => {
                 <Link className={classes.linkActive} to={'/main'}>HOME</Link>
                 <Link className={classes.link} to={'/workouts'}>WORKOUTS</Link>
                 <Link className={classes.link} to={'/exercises'}>EXERCISES</Link>
-                <Link className={classes.link} to={'/myworkouts'}>MY WORKOUTS</Link>
+                <Link className={classes.link} to={'/my-workouts'}>MY WORKOUTS</Link>
                 <Link className={classes.link} to={'/profile'}>PROFILE</Link>
             </div>
         </div>

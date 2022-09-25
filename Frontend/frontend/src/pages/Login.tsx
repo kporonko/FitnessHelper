@@ -31,14 +31,14 @@ const Login = () => {
             </p>
             <div style={{width: "-webkit-fill-available", margin: "150px 40px"}}>
                 <form onSubmit={(e)=> submit(e)}>
-                    <h1>Sign In To Your Account</h1>
+                    <h1 className={classes.h1}>Sign In To Your Account</h1>
                     <div className={classes.inputwrapper}>
                         <label className={classes.label} htmlFor="Login">Login</label>
-                        <input type="text" placeholder="Enter login..." id="Login" value={login} onChange={(e)=>{setLogin(e.target.value)}}/>
+                        <input className={classes.input} type="text" placeholder="Enter login..." id="Login" value={login} onChange={(e)=>{setLogin(e.target.value)}}/>
                     </div>
                     <div className={classes.inputwrapper}>
-                        <label htmlFor="Password">Password</label>
-                        <input type="password" placeholder="Enter password..." id="Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
+                        <label className={classes.label} htmlFor="Password">Password</label>
+                        <input className={classes.input} type="password" placeholder="Enter password..." id="Password" value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                     </div>
                     <button className={classes.smallBtn}>
                         <Link className={classes.textDecNone} to={"/register"}>I don`t have an account</Link>
