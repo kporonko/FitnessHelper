@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Recreated">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Try to fix fires count">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664064236196</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Try to fix fires count">
+      <created>1664120716115</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664120716115</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +172,7 @@
     <MESSAGE value="Header is fixed" />
     <MESSAGE value="Main page is done" />
     <MESSAGE value="Fixed styles, added all routes and matching pages components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed styles, added all routes and matching pages components" />
+    <MESSAGE value="Try to fix fires count" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to fix fires count" />
   </component>
 </project>
