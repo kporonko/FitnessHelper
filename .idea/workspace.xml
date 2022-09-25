@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Small css fix: border to cards added and margins are fixed">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IBasicalWorkoutFull.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.module.css" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Page of basic workout is implemented without exercises">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/WorkoutExerciseCard.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/WorkoutExerciseCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/BasicSetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/BasicSetService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IBasicalWorkoutFull.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IBasicalWorkoutFull.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664122678251</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Page of basic workout is implemented without exercises">
+      <created>1664128532497</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664128532497</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +200,7 @@
     <MESSAGE value="Try to fix fires count" />
     <MESSAGE value="Fires count is fixed" />
     <MESSAGE value="Small css fix: border to cards added and margins are fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small css fix: border to cards added and margins are fixed" />
+    <MESSAGE value="Page of basic workout is implemented without exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page of basic workout is implemented without exercises" />
   </component>
 </project>

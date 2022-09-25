@@ -5,6 +5,7 @@ import {useParams} from "react-router-dom";
 import {getBasicalWorkoutFullDesc} from '../fetch/FetchData';
 import classes from './WorkoutDesc.module.css';
 import {AiFillFire, AiOutlineFire} from "react-icons/ai";
+import WorkoutExerciseCard from "../components/WorkoutExerciseCard";
 
 const WorkoutDesc = () => {
 
@@ -39,7 +40,7 @@ const WorkoutDesc = () => {
                 setDescription(desc.description)
                 setName(desc.name)
                 setEfficiency(desc.efficiency)
-                setExerciseSmallDesc(desc.exerciseSmallDesc)
+                setExerciseSmallDesc(desc.exerciseSmallDescs)
             }
         }
 
@@ -104,6 +105,11 @@ const WorkoutDesc = () => {
                     ))}</span>
                 </div>
             </div>
+            <h1 className={classes.h1}>Exercises</h1>
+                {exerciseSmallDesc === undefined ? "" :exerciseSmallDesc.map((item,i) => (
+                    <WorkoutExerciseCard key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
+            ))}
+            <button>Soon...</button>
             <Footer/>
         </div>
     );

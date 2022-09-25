@@ -11,7 +11,7 @@ export interface IBasicalWorkoutFull{
         chest: number,
         abs: number
     },
-    exerciseSmallDesc: {
+    exerciseSmallDescs: {
         id: number,
         name: string,
         image: string,

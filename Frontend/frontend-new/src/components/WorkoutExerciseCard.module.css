@@ -1,0 +1,31 @@
+.wrapper{
+    background: #4d4c4c;
+    padding: 20px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 50px;
+
+}
+.exImage{
+    width: 20%;
+}
+.h2{
+    font-size: 36px;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+    text-align: right;
+}
+.h3{
+    font-size: 28px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    color: white;
+    white-space: nowrap;
+    text-align: right;
+}

@@ -9,23 +9,27 @@
 }
 .descWrapper{
     background: #4d4c4c;
+    margin-bottom: 5%;
 }
 .mainImg{
     width: 50%;
     align-items: center;
     margin-bottom: 2%;
+    margin-top: 2%;
 }
 .p{
     font-family: "Oswald", sans-serif;
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: 100;
     text-align: center;
-    margin: 30px 25%;
+    margin: 30px 15%;
     color: white;
 }
 .fire{
     color: red;
 }
 .partBodySpan{
+    font-family: "Oswald", sans-serif;
     color: white;
     padding-right: 10px;
 }
