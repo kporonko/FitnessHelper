@@ -2,6 +2,8 @@ import {IUser} from "../interfaces/IUser";
 import {IRegisterUserDto} from "../interfaces/IRegisterUserDto";
 import {IBasicalWorkout} from "../interfaces/IBasicalWorkout";
 import {IBasicalWorkoutFull} from "../interfaces/IBasicalWorkoutFull";
+import {IExerciseDesc} from "../interfaces/ExerciseById/IExerciseDesc";
+import {IMuscle} from "../interfaces/IMuscle";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -53,7 +55,6 @@ export const getBasicWorkoutsBySection = async (section: number) => {
 }
 
 export const getBasicalWorkoutFullDesc = async (id: number) => {
-    console.log(id)
     const response = await fetch(`${baseUrl}GetFullDescById/${id}`, {
         method: 'GET',
         headers: {
@@ -62,10 +63,37 @@ export const getBasicalWorkoutFullDesc = async (id: number) => {
     if (response.status === 404){
         return null;
     }
-    console.log("response")
-    console.log(response)
     const body = await response.json();
     const data = body as IBasicalWorkoutFull;
-    console.log(data)
+    return data;
+}
+
+export const getExerciseDescById = async (id: number) => {
+    console.log(id)
+    const response = await fetch(`${baseUrl}ExerciseById/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IExerciseDesc;
+    return data;
+}
+
+export const getMuscleById = async (id: number) => {
+    console.log(id)
+    const response = await fetch(`${baseUrl}GetMuscleById/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IMuscle;
     return data;
 }

@@ -30,7 +30,7 @@ const Workouts = () => {
 
     return (
         <div>
-            <Header/>
+            <Header page="workouts"/>
             <div data-aos="fade-up" style={{position: 'relative', marginBottom: '3%'}}>
                 <p className={classes.p}>Here you can see the most popular exercise sets in the sports history.</p>
                 <img className={classes.mainImage} src={require("../../public/workouts.jpg")} alt=""/>

@@ -3,6 +3,10 @@
     border-radius: 0 0 10px 10px;
     margin-bottom: 30px;
 }
+.wrapper:hover{
+    transform: scale(1.05);
+    transition: 1s all ease;
+}
 .img{
     width: 500px;
     height: 300px;

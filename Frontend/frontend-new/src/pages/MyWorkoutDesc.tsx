@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const MyWorkoutDesc = () => {
     return (
         <div>
-            <Header/>
+            <Header page=""/>
 
             <Footer/>
         </div>

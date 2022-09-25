@@ -49,14 +49,14 @@ const WorkoutDesc = () => {
 
     return (
         <div>
-            <Header/>
+            <Header page=""/>
             <h1 className={classes.h1}>{name === "" ? "Error" : name}</h1>
             <div className={classes.descWrapper}>
-                <div style={{display: 'flex', justifyContent: 'center'}}>
+                <div data-aos="fade-up" style={{display: 'flex', justifyContent: 'center'}}>
                     <img className={classes.mainImg} src={image === "" ? "" : image} alt="Error"/>
                 </div>
-                <p className={classes.p}>{description === "" ? "Error" : description}</p>
-                <div className={classes.efficiencyWrapper}>
+                <p data-aos="fade"               className={classes.p}>{description === "" ? "Error" : description}</p>
+                <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Abs:</span> {Array(efficiency.abs).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiFillFire/></span>
                 ))}
@@ -64,7 +64,7 @@ const WorkoutDesc = () => {
                         <span className={classes.fire}><AiOutlineFire/></span>
                         ))}</span>
                 </div>
-                <div className={classes.efficiencyWrapper}>
+                <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Cardio:</span> {Array(efficiency.cardio).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiFillFire/></span>
                 ))}
@@ -72,7 +72,7 @@ const WorkoutDesc = () => {
                         <span className={classes.fire}><AiOutlineFire/></span>
                     ))}</span>
                 </div>
-                <div className={classes.efficiencyWrapper}>
+                <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Chest:</span> {Array(efficiency.chest).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiFillFire/></span>
                 ))}
@@ -80,7 +80,7 @@ const WorkoutDesc = () => {
                         <span className={classes.fire}><AiOutlineFire/></span>
                     ))}</span>
                 </div>
-                <div className={classes.efficiencyWrapper}>
+                <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Legs:</span> {Array(efficiency.legs).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiFillFire/></span>
                 ))}
@@ -88,7 +88,7 @@ const WorkoutDesc = () => {
                         <span className={classes.fire}><AiOutlineFire/></span>
                     ))}</span>
                 </div>
-                <div className={classes.efficiencyWrapper}>
+                <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Back:</span> {Array(efficiency.back).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiFillFire/></span>
                 ))}
@@ -96,7 +96,7 @@ const WorkoutDesc = () => {
                         <span className={classes.fire}><AiOutlineFire/></span>
                     ))}</span>
                 </div>
-                <div className={classes.efficiencyWrapper}>
+                <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Arms:</span> {Array(efficiency.arms).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiFillFire/></span>
                 ))}

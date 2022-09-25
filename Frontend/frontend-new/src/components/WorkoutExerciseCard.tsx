@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const WorkoutExerciseCard = (props: {image:string, name: string, targetMuscle: string, id: number}) => {
     return (
         <Link to={`/exercise/${props.id}`}>
-            <div className={classes.wrapper}>
+            <div data-aos="fade-up" className={classes.wrapper}>
                 <img className={classes.exImage} src={props.image} alt=""/>
                 <div>
                     <h2 className={classes.h2}>{props.name}</h2>

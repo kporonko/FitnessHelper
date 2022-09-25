@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const MyWorkouts = () => {
     return (
         <div>
-            <Header/>
+            <Header page="my-workouts"/>
 
             <Footer/>
         </div>

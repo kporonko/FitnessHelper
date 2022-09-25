@@ -18,7 +18,7 @@ const Main = () => {
 
     return (
         <div>
-            <Header/>
+            <Header page="main" />
             <div className={classes.main}>
                 <img className={classes.mainImg} src={require("../../public/back.jpg")} alt="MainImage"/>
                 <div data-aos="fade-up" className={classes.textWrapper}>

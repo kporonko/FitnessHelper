@@ -1,3 +1,8 @@
+@media only screen and (max-width: 1200px){
+    .p{
+        display: none;
+    }
+}
 body::-webkit-scrollbar{
     display: none;
 }
@@ -29,6 +34,7 @@ body::-webkit-scrollbar{
     width: 100%!important;
     height: 35px!important;
     border-radius: 10px!important;
+    padding: 20px 0;
 }
 .smallBtn{
     font-weight: bold;

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 const Profile = () => {
     return (
         <div>
-            <Header/>
+            <Header page="profile"/>
 
             <Footer/>
         </div>

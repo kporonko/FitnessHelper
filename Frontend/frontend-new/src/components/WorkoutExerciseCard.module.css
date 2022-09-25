@@ -8,7 +8,11 @@
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 50px;
-
+}
+.wrapper:hover{
+    background: #282727;
+    transition: 0.7s all ease;
+    transform: scale(1.02);
 }
 .exImage{
     width: 20%;
