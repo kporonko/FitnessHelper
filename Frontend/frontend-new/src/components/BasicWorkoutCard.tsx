@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {IBasicalWorkout} from "../interfaces/IBasicalWorkout";
 import classes from './BasicWorkoutCard.module.css'
 import {AiFillFire, AiOutlineFire} from 'react-icons/ai'
+import {Link} from "react-router-dom";
 
 const BasicWorkoutCard = (workout: IBasicalWorkout) => {
     const [firstKey, setFirstKey] = useState("")
@@ -32,6 +33,7 @@ const BasicWorkoutCard = (workout: IBasicalWorkout) => {
 
     return (
         <div className={classes.wrapper}>
+            <Link to={`/workout/${workout.id}`}>
             <img className={classes.img} src={workout.image} alt=""/>
             <div className={classes.workoutName}>{workout.name}</div>
             <div className={classes.efficiencyWrapper}>
@@ -52,6 +54,7 @@ const BasicWorkoutCard = (workout: IBasicalWorkout) => {
                     )}</span>
                 </p>
             </div>
+            </Link>
         </div>
     );
 };

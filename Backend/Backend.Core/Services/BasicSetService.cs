@@ -47,7 +47,7 @@ namespace Backend.Core.Services
         /// <returns>BasicalSetFullInfo model object.</returns>
         public BasicalSetFullInfo? GetBasicalSetFullDescById(int id)
         { 
-            BasicalSetOfExercises? basicalSet = _context.BasicalSetOfExercises.Include(x => x.BasicalSetExercises).First(x => x.BasicalSetId == id);
+            BasicalSetOfExercises? basicalSet = _context.BasicalSetOfExercises.Include(x => x.BasicalSetExercises).FirstOrDefault(x => x.BasicalSetId == id);
             if (basicalSet == null)
             {
                 return null;
