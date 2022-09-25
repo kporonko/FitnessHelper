@@ -1,48 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cce437a2-a3c6-45ba-8aa4-1fd864c33b8b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/public/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/public/login-image.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/public/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/App.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/components/Footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/components/Header.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/components/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/components/StartImage.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/components/StartImage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/fetch/FetchData.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/interfaces/IRegisterUserDto.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/interfaces/IUser.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/ExerciseDesc.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Exercises.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Login.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/LoginRegister.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Main.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Main.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/MuscleDesc.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/MyWorkoutDesc.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/MyWorkouts.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Profile.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Register.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/WorkoutDesc.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/src/pages/Workouts.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend/tsconfig.json" beforeDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Recreated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/BasicWorkoutCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +21,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2FG7yDRXcLGTeycq9sR2JSFIau6" />
+  <component name="ProjectId" id="2FADNDcq4uGu5wPy7mZHDQn3zV8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,22 +33,143 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Учеба/A-LEVEL/.NET C#/Diploma/FitnessHelper",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\Учеба\\A-LEVEL\\.NET C#\\Diploma\\FitnessHelper\\Frontend\\frontend-new\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma files" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\public" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\public" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\src\components" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\src\pages" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\public\images" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Frontend/frontend/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cce437a2-a3c6-45ba-8aa4-1fd864c33b8b" name="Changes" comment="" />
-      <created>1664106822609</created>
+      <changelist id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="" />
+      <created>1663925952937</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1664106822609</updated>
-      <workItem from="1664106825184" duration="30000" />
+      <updated>1663925952937</updated>
+      <workItem from="1663925954258" duration="32266000" />
+      <workItem from="1664037153195" duration="5682000" />
+      <workItem from="1664067787402" duration="6997000" />
+      <workItem from="1664104941119" duration="1814000" />
     </task>
+    <task id="LOCAL-00001" summary="React starting project is created">
+      <created>1663926088449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663926088449</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Register and login pages are implemented">
+      <created>1663941643972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663941643972</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Small css classes conditions fixed.">
+      <created>1663941989453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663941989453</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CSS fix: added responsiveness to forms and login&amp;register pages">
+      <created>1663943494015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663943494015</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Image files small fix">
+      <created>1663944078743</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663944078743</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added absolute text on login&amp;register image">
+      <created>1663952133906</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663952133906</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Header 1 version">
+      <created>1664023464310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664023464310</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Header is fixed">
+      <created>1664023690521</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664023690521</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Main page is done">
+      <created>1664037179654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664037179654</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed styles, added all routes and matching pages components">
+      <created>1664064236196</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664064236196</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="React starting project is created" />
+    <MESSAGE value="Register and login pages are implemented" />
+    <MESSAGE value="Small css classes conditions fixed." />
+    <MESSAGE value="CSS fix: added responsiveness to forms and login&amp;register pages" />
+    <MESSAGE value="Image files small fix" />
+    <MESSAGE value="Added absolute text on login&amp;register image" />
+    <MESSAGE value="Header 1 version" />
+    <MESSAGE value="Header is fixed" />
+    <MESSAGE value="Main page is done" />
+    <MESSAGE value="Fixed styles, added all routes and matching pages components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed styles, added all routes and matching pages components" />
   </component>
 </project>
