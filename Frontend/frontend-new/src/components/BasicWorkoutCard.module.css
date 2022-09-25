@@ -1,4 +1,7 @@
 .wrapper{
+    border: 1px solid black;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
 }
 .img{
     width: 500px;

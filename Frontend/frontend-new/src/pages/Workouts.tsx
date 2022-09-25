@@ -38,7 +38,7 @@ const Workouts = () => {
             <div data-aos="fade-up" className={classes.headerWrapper}>
                 <h2 className={classes.h2}>Mass Gaining Workouts</h2>
             </div>
-            <div data-aos="fade-up" style={{marginBottom: '50px'}}>
+            <div data-aos="fade-up" style={{marginBottom: '30px'}}>
                 <ScrollMenu>
                     <div style={{display: 'flex', gap: '5vh', margin: '0 50px'}}>
                         {firstSection == null ? 'null' : firstSection.map((item) => (
@@ -50,7 +50,7 @@ const Workouts = () => {
             <div data-aos="fade-up" className={classes.headerWrapper}>
                 <h2 className={classes.h2}>Fat Loss Workouts</h2>
             </div>
-            <div data-aos="fade-up" style={{marginBottom: '50px'}}>
+            <div data-aos="fade-up" style={{marginBottom: '30px'}}>
                 <ScrollMenu>
                     <div data-aos="fade-up"  style={{display: 'flex', gap: '5vh', margin: '0 50px'}}>
                         {secondSection == null ? 'null' : secondSection.map((item) => (
