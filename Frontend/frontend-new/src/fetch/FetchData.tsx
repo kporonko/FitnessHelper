@@ -1,5 +1,6 @@
 import {IUser} from "../interfaces/IUser";
 import {IRegisterUserDto} from "../interfaces/IRegisterUserDto";
+import {IBasicalWorkout} from "../interfaces/IBasicalWorkout";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -34,4 +35,20 @@ export const registerUser = async (user: IRegisterUserDto) => {
     if (response.status === 201){
         return true;
     }
+}
+
+export const getBasicWorkoutsBySection = async (section: number) => {
+    const response = await fetch(`${baseUrl}GetBySection/${section}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return null;
+    }
+    console.log(response)
+    const body = await response.json();
+    const data = body as IBasicalWorkout[];
+    console.log(data)
+    return data;
 }

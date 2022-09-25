@@ -1,0 +1,17 @@
+.wrapper{
+}
+.img{
+    width: 500px;
+    height: 300px;
+}
+.efficiencyWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.workoutName{
+    text-align: center;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-size: 4vh;
+    color: black;
+}
