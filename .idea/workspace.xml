@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Basic workouts are fully implemented, as well as muscle desc page">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/public/exercises.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ExerciseCard.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ExerciseCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IExercise.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.module.css" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Exercises page fully implemented">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/public/dumbell.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalAddWorkout.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalAddWorkout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IUsersetSmallDesc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ExerciseCard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ExerciseCard.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ExerciseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ExerciseCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,17 +34,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Учеба/A-LEVEL/.NET C#/Diploma/FitnessHelper/Frontend/frontend-new/public",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\Учеба\\A-LEVEL\\.NET C#\\Diploma\\FitnessHelper\\Frontend\\frontend-new\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Учеба/A-LEVEL/.NET C#/Diploma/FitnessHelper/Frontend/frontend-new/public&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Учеба\\A-LEVEL\\.NET C#\\Diploma\\FitnessHelper\\Frontend\\frontend-new\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\public" />
@@ -76,7 +81,8 @@
       <workItem from="1664037153195" duration="5682000" />
       <workItem from="1664067787402" duration="6997000" />
       <workItem from="1664104941119" duration="1814000" />
-      <workItem from="1664142916154" duration="14555000" />
+      <workItem from="1664142916154" duration="14698000" />
+      <workItem from="1664167385658" duration="10792000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -190,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664147619033</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Exercises page fully implemented">
+      <created>1664167352455</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664167352455</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +237,7 @@
     <MESSAGE value="Page of basic workout is implemented without exercises" />
     <MESSAGE value="Page of basic workout is fully implemented" />
     <MESSAGE value="Basic workouts are fully implemented, as well as muscle desc page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic workouts are fully implemented, as well as muscle desc page" />
+    <MESSAGE value="Exercises page fully implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exercises page fully implemented" />
   </component>
 </project>

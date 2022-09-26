@@ -15,6 +15,7 @@
     "aos": "^2.3.4",
     "mdb-react-ui-kit": "^4.2.0",
     "react": "^18.2.0",
+    "react-confirm-alert": "^3.0.6",
     "react-dom": "^18.2.0",
     "react-horizontal-scrolling-menu": "^3.2.0",
     "react-icons": "^4.4.0",

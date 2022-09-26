@@ -76,8 +76,8 @@ const Exercises = () => {
                 <img className={classes.mainImage} src={require("../../public/exercises.jpeg")} alt=""/>
             </div>
 
-            <h4 className={classes.h4}>Search For Exercises</h4>
-            <div style={{display: 'flex', justifyContent: 'center', margin: '40px 30px'}}>
+            <h4 data-aos="fade-right" className={classes.h4}>Search For Exercises</h4>
+            <div data-aos="fade-right" style={{display: 'flex', justifyContent: 'center', margin: '40px 30px'}}>
                 <Box style={{display: 'inline'}} position="relative" mb="32px">
                     <TextField onChange={(e)=> setSearch(e.target.value)} sx={{input: {fontWeight: '700', border: 'none', borderRadius: '4px'}, width: {lg: '900px', xs: '350px'}, borderRadius:"40px", backgroundColor: '#fff'}} value={search} placeholder='Search products...' type="text"/>
                     <Button onClick={handleSearch}
@@ -107,7 +107,7 @@ const Exercises = () => {
                     />
                 </Box>}
 
-            <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: "wrap", margin: '10px 7%'}}>
+            <div data-aos="fade-right" style={{display: 'flex', justifyContent: 'space-between', flexWrap: "wrap", margin: '100px 7%'}}>
                 <h2 onClick={() => allExercisesHandle()} className={classes.h2Category}>All Exercises</h2>
                 <h2 onClick={() => categoryHandle("Neck")} className={classes.h2Category}>Neck</h2>
                 <h2 onClick={() => categoryHandle("Shoulders")}  className={classes.h2Category}>Shoulders</h2>
@@ -124,9 +124,9 @@ const Exercises = () => {
             {currCategory !== undefined && <h2 style={{margin: '30px', fontSize:'44px', fontWeight: '900'}} className={classes.h2}>{currCategory}</h2>}
 
 
-            <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', margin: '30px 7%'}}>
+            <div data-aos="fade-right" style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', margin: '30px 7%'}}>
                 {currentExercises?.map((item, index) => (
-                        <ExerciseCard id={item.id} key={index} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
+                    <ExerciseCard id={item.id} key={index} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
                 ))}
             </div>
 

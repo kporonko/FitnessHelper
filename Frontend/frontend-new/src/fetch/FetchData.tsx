@@ -5,6 +5,7 @@ import {IBasicalWorkoutFull} from "../interfaces/IBasicalWorkoutFull";
 import {IExerciseDesc} from "../interfaces/ExerciseById/IExerciseDesc";
 import {IMuscle} from "../interfaces/IMuscle";
 import {IExercise} from "../interfaces/IExercise";
+import {IUsersetSmallDesc} from "../interfaces/IUsersetSmallDesc";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -138,4 +139,45 @@ export const getExByPartBody = async (part: string) => {
     const body = await response.json();
     const data = body as IExercise[];
     return data;
+}
+
+export const getMyWorkouts = async (userId: number) => {
+    const response = await fetch(`${baseUrl}UserSetsByUserId/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IUsersetSmallDesc[];
+    return data;
+}
+
+export const deleteMyWorkout = async (workoutId: number) => {
+    const response = await fetch(`${baseUrl}DeleteUserSet`, {
+        method: 'DELETE',
+        body: JSON.stringify({
+            "userSetId": workoutId,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}
+
+export const addNewWorkout = async (userId:number, name: string) => {
+    const response = await fetch(`${baseUrl}CreateNewUserSetOfExercises`, {
+        method: 'POST',
+        body: JSON.stringify({
+            "userId": userId,
+            "setName": name,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
 }

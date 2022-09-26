@@ -1,0 +1,85 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.modalActive{
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.modal__content{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    height: 50%;
+    width: 50%;
+    transform: scale(0.5);
+    transition: 0.4s all;
+}
+
+.modal__content.active{
+    transform: scale(1);
+}
+.form{
+    width: 100%;
+    height: 100%;
+}
+.label{
+    margin-bottom: 7%;
+    display: block;
+    font-size: 55px;
+    font-weight: 100;
+    font-family: "Oswald", sans-serif;
+}
+.input{
+    border-radius: 20px;
+    width: 80%;
+    padding: 0% 5%;
+    font-size: 40px;
+    font-weight: normal;
+    font-family: "Oswald", sans-serif;
+}
+.buttonSubmit{
+    padding: 1% 5%;
+    margin-top: 7%;
+    border: none;
+    font-family: "Oswald", sans-serif;
+    font-size: 34px;
+    font-weight: normal;
+    background: #00D63C;
+    border-radius: 50px;
+    display: block;
+}
+.buttonSubmit:hover{
+    transition: 1s all ease;
+    color: white;
+    transform: scale(1.05);
+    background: #1b6d32;
+}
+.disabled{
+    background: #d3d1d1;
+    color: #4d4c4c;
+}
+.disabled:hover{
+    transform: none;
+    background: #d3d1d1;
+    color: #4d4c4c;
+}
