@@ -4,6 +4,7 @@ import {IBasicalWorkout} from "../interfaces/IBasicalWorkout";
 import {IBasicalWorkoutFull} from "../interfaces/IBasicalWorkoutFull";
 import {IExerciseDesc} from "../interfaces/ExerciseById/IExerciseDesc";
 import {IMuscle} from "../interfaces/IMuscle";
+import {IExercise} from "../interfaces/IExercise";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -84,7 +85,6 @@ export const getExerciseDescById = async (id: number) => {
 }
 
 export const getMuscleById = async (id: number) => {
-    console.log(id)
     const response = await fetch(`${baseUrl}GetMuscleById/${id}`, {
         method: 'GET',
         headers: {
@@ -95,5 +95,47 @@ export const getMuscleById = async (id: number) => {
     }
     const body = await response.json();
     const data = body as IMuscle;
+    return data;
+}
+
+export const getAllExercises = async () => {
+    const response = await fetch(`${baseUrl}AllExercises`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IExercise[];
+    return data;
+}
+
+export const getExBySearch = async (search: string) => {
+    const response = await fetch(`${baseUrl}ExercisesSearch/${search}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IExercise[];
+    return data;
+}
+
+export const getExByPartBody = async (part: string) => {
+    const response = await fetch(`${baseUrl}ExercisesByPartOfBody/${part}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IExercise[];
     return data;
 }
