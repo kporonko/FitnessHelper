@@ -27,23 +27,10 @@ const ExerciseDesc = () => {
                 let exercise = await getExerciseDescById(+id);
                 setExercise(exercise);
             }
-
-            let res = "";
-            if (exercise?.urlVideo === undefined){
-                return "";
-            }
-            for (let i = exercise?.urlVideo.length - 1; i > 0; i--){
-                if (exercise?.urlVideo[i]==='/'){
-                    return res;
-                }
-                res += exercise?.urlVideo[i]
-            }
-            setVideoId(res);
         }
         getExDesc()
     }, [])
 
-    const [videoId, setVideoId] = useState("")
 
 
 
