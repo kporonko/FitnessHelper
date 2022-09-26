@@ -6,6 +6,8 @@ import {getAllExercises, getExByPartBody, getExBySearch} from '../fetch/FetchDat
 import {IExercise} from "../interfaces/IExercise";
 import ExerciseCard from "../components/ExerciseCard";
 import {Box, Button, Pagination, TextField} from "@mui/material";
+import ModalAddWorkout from "../components/ModalAddWorkout";
+import ModalWorkoutsList from "../components/ModalWorkoutsList";
 
 const Exercises = () => {
 
@@ -18,7 +20,7 @@ const Exercises = () => {
 
     const indexOfLastProductSearch = currentSearchPage * 15;
     const indexOfFirstProductSearch = indexOfLastProductSearch - 15;
-
+    const [isActiveModal, setIsActiveModal] = useState(false)
     const [currCategory, setCurrCategory] = useState("")
 
     useEffect(() => {
@@ -33,7 +35,7 @@ const Exercises = () => {
     const currentExercises = exercises?.slice(indexOfFirstProduct, indexOfLastProduct);
 
     const [search, setSearch] = useState("")
-
+    const [currExerciseToAdd, setCurrExerciseToAdd] = useState(0)
     const [searchedExercises, setSearchedExercises] = useState<IExercise[]>()
     const currentSearchedExercises = searchedExercises?.slice(indexOfFirstProductSearch, indexOfLastProductSearch);
 
@@ -68,6 +70,9 @@ const Exercises = () => {
         setExercises(exercises);
         setCurrCategory("All Exercises")
     }
+
+    console.log(currExerciseToAdd)
+
     return (
         <div>
             <Header page="exercises"/>
@@ -92,7 +97,7 @@ const Exercises = () => {
                 <h2 className={classes.h2}>{searchedExercises === undefined ? '' : `${searchedExercises.length} Results On ${search}`} </h2>
                 <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', margin: '30px 7%'}}>
                     {currentSearchedExercises?.map((val, ind) => (
-                            <ExerciseCard id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>
+                            <ExerciseCard currExerciseToAdd={currExerciseToAdd} setCurrExerciseToAdd={setCurrExerciseToAdd} active={isActiveModal} setActive={setIsActiveModal} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>
                         ))
                     }
                 </div>
@@ -126,7 +131,7 @@ const Exercises = () => {
 
             <div data-aos="fade-right" style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', margin: '30px 7%'}}>
                 {currentExercises?.map((item, index) => (
-                    <ExerciseCard id={item.id} key={index} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
+                    <ExerciseCard currExerciseToAdd={currExerciseToAdd} setCurrExerciseToAdd={setCurrExerciseToAdd} active={isActiveModal} setActive={setIsActiveModal} id={item.id} key={index} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
                 ))}
             </div>
 
@@ -139,6 +144,8 @@ const Exercises = () => {
                     onChange={paginate}
                 />
             </Box>}
+
+            <ModalWorkoutsList exerciseId={currExerciseToAdd} active={isActiveModal} setActive={setIsActiveModal}/>
             <Footer/>
         </div>
     );

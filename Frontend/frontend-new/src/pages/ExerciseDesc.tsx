@@ -7,6 +7,7 @@ import {IExerciseDesc} from "../interfaces/ExerciseById/IExerciseDesc";
 import classes from "./ExerciseDesc.module.css";
 import YouTube from "react-youtube";
 import ReactPlayer from "react-player";
+import ModalWorkoutsList from "../components/ModalWorkoutsList";
 
 
 const ExerciseDesc = () => {
@@ -14,7 +15,7 @@ const ExerciseDesc = () => {
     const {id} = useParams()
 
     const [exercise, setExercise] = useState<IExerciseDesc>()
-
+    const [isActiveModal, setIsActiveModal] = useState(false)
     const opts = {
         height: '600px',
         width: '1000px',
@@ -54,7 +55,7 @@ const ExerciseDesc = () => {
                 <img className={classes.exImage} src={exercise?.urlImage} alt="Image"/>
             </div>
             <div style={{display:'flex', justifyContent: 'center', marginTop: '30px'}}>
-                <button className={classes.buttonAdd}>Add Exercise To Workout Set</button>
+                <button onClick={() => setIsActiveModal(true)} className={classes.buttonAdd}>Add Exercise To Workout Set</button>
             </div>
             <div className={classes.descWrapper}>
                 <h2 data-aos="fade-right" className={classes.h2}>{exercise?.name}</h2>
@@ -92,6 +93,7 @@ const ExerciseDesc = () => {
                     </div>
                 }
                 </div>
+            {id !== undefined && <ModalWorkoutsList exerciseId={+id} active={isActiveModal} setActive={setIsActiveModal}/>}
             <Footer/>
         </div>
     );

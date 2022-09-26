@@ -1,0 +1,83 @@
+.modal{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+
+}
+
+.modalActive{
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+
+.modal__content{
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    height: 50%;
+    width: 50%;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.modal__content.active{
+    transform: scale(1);
+}
+.imgWrapper{
+    width: 100%;
+    height: 100%;
+}
+.image{
+    width: 100px;
+    border-radius: 100%;
+}
+.h1{
+    font-size: 34px;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+}
+.cardWrapper{
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 20%;
+    border: 1px solid #4a4949;
+    display: flex;
+    justifyContent: space-between;
+    margin: 10px 5%;
+    background: #4d4c4c;
+    color: white;
+}
+.cardWrapper:hover{
+    cursor: pointer;
+    background: #282727;
+    transition: 0.5s all ease;
+}
+.h2{
+    text-align: center;
+    width: 100%;
+    padding: 10px 30px;
+    background: #282727;
+    color: white;
+
+    font-weight: lighter;
+    font-family: "Oswald", sans-serif;
+    font-size: 44px;
+}

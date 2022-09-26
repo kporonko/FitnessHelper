@@ -181,3 +181,17 @@ export const addNewWorkout = async (userId:number, name: string) => {
 
     return response.status;
 }
+
+export const addExerciseToUserSet = async (exerciseId:number, userSetId: number) => {
+    const response = await fetch(`${baseUrl}AddExerciseToUserSet`, {
+        method: 'POST',
+        body: JSON.stringify({
+            "exerciseId": exerciseId,
+            "userSetId": userSetId,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}

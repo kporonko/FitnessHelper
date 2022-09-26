@@ -24,6 +24,12 @@
     border-radius: 30px;
     text-align: center;
 }
+.buttonAdd:hover{
+    transform: scale(1.1);
+    transition: 1s all ease;
+    color: white;
+    background: #1b6d32;
+}
 .descWrapper{
     background: #4d4c4c;
     color: white;

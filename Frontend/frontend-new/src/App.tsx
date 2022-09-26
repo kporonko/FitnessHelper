@@ -13,11 +13,14 @@ import ExerciseDesc from "./pages/ExerciseDesc";
 import WorkoutDesc from "./pages/WorkoutDesc";
 import MyWorkoutDesc from "./pages/MyWorkoutDesc";
 import MuscleDesc from "./pages/MuscleDesc";
+import {ReactNotifications} from "react-notifications-component";
+import 'react-notifications-component/dist/theme.css'
 
 function App() {
     AOS.init();
     return (
     <BrowserRouter>
+        <ReactNotifications/>
         <Routes>
             <Route path="/" element={<Login/>}/>
             <Route path="/main" element={<Main />}/>
