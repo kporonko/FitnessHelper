@@ -1,0 +1,45 @@
+.h2{
+    padding: 20px 50px;
+    background: #282727;
+    color: white;
+    font-size: 44px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+.flexDiv{
+    align-items: center;
+    margin: 10px 15%;
+    display: flex;
+    gap: 20%;
+}
+.imgWrapper{
+
+}
+.h5{
+    font-size: 34px;
+    font-weight: 100;
+    font-family: "Oswald", sans-serif;
+}
+.h3{
+    font-size: 44px;
+    font-weight: normal;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20%;
+}
+.boldSpan{
+    font-weight: normal;
+}
+.categorySpan{
+    margin: 20px;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+}
+.categorySpan:hover{
+    color: black;
+}
+.activeSpan{
+    color: red;
+}

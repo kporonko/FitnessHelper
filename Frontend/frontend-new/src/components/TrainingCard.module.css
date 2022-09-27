@@ -1,0 +1,26 @@
+.cardWrapper{
+    padding: 25px 10%;
+    background: #4d4c4c;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15%;
+    display: flex;
+    gap: 20%;
+    border-radius: 50px;
+}
+.h2{
+    text-align: left;
+    font-weight: normal;
+    font-size: 44px;
+    font-family: "Oswald", sans-serif;
+}
+.h5{
+    text-align: right;
+    font-weight: 100;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+}
+.span{
+    font-weight: normal;
+}
