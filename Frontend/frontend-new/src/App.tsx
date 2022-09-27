@@ -15,6 +15,7 @@ import MyWorkoutDesc from "./pages/MyWorkoutDesc";
 import MuscleDesc from "./pages/MuscleDesc";
 import {ReactNotifications} from "react-notifications-component";
 import 'react-notifications-component/dist/theme.css'
+import Training from "./pages/Training";
 
 function App() {
     AOS.init();
@@ -33,7 +34,7 @@ function App() {
             <Route path="/workout/:id" element={<WorkoutDesc/>}/>
             <Route path="/my-workout/:id" element={<MyWorkoutDesc/>}/>
             <Route path="/muscle/:id" element={<MuscleDesc/>}/>
-            <Route path="/training" element={<div>Training</div>}/>
+            <Route path="/training" element={<Training/>}/>
         </Routes>
     </BrowserRouter>
   );

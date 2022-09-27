@@ -6,6 +6,7 @@ import {getBasicalWorkoutFullDesc} from '../fetch/FetchData';
 import classes from './WorkoutDesc.module.css';
 import {AiFillFire, AiOutlineFire} from "react-icons/ai";
 import WorkoutExerciseCard from "../components/WorkoutExerciseCard";
+import StartTrainingForm from "../components/StartTrainingForm";
 
 const WorkoutDesc = () => {
 
@@ -107,9 +108,10 @@ const WorkoutDesc = () => {
             </div>
             <h1 className={classes.h1}>Exercises</h1>
                 {exerciseSmallDesc === undefined ? "" :exerciseSmallDesc.map((item,i) => (
-                    <WorkoutExerciseCard isUserWorkout={false} key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
+                    <WorkoutExerciseCard workoutId={-1} isUserWorkout={false} key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
             ))}
-            <button>Soon...</button>
+            {id !== undefined &&
+            <StartTrainingForm workoutId={+id} exerciseSmallDesc={exerciseSmallDesc} workoutName={name}/>}
             <Footer/>
         </div>
     );

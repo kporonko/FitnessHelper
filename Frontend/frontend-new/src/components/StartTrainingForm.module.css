@@ -1,0 +1,31 @@
+.h2{
+    font-size: 36px;
+    font-weight: normal;
+    font-family: "Oswald", sans-serif;
+}
+.component{
+
+}
+.input{
+    border-radius: 50px;
+    padding: 0 10px;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "Oswald", sans-serif;
+}
+.button{
+    margin: 50px 0;
+    padding: 10px 170px;
+    font-size: 30px;
+    font-weight: normal;
+    font-family: "Oswald", sans-serif;
+    background: white;
+    color: black;
+    border-radius: 50px;
+}
+.button:hover{
+    transition: 0.5s all ease;
+    transform: scale(1.02);
+    background: #282727;
+    color: white;
+}
