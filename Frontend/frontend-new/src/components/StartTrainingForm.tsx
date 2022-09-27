@@ -12,23 +12,29 @@ const StartTrainingForm = (props: {exerciseSmallDesc: IExercise[], workoutName: 
 
     return (
         <div style={{margin: '50px 20%'}}>
-            <form style={{display: 'flex', justifyContent: 'space-between'}}>
-                <div className={classes.component}>
-                    <h2 className={classes.h2}>Worktime</h2>
-                    <input className={classes.input} min={10} value={workTime} onChange={(e) => setWorkTime(+e.target.value)} step={10} type="number"/>
+            { props.exerciseSmallDesc.length > 0 ?
+                <div>
+                    <form style={{display: 'flex', justifyContent: 'space-between'}}>
+                        <div className={classes.component}>
+                            <h2 className={classes.h2}>Worktime</h2>
+                            <input className={classes.input} min={10} value={workTime} onChange={(e) => setWorkTime(+e.target.value)} step={10} type="number"/>
+                        </div>
+                        <div className={classes.component}>
+                            <h2 className={classes.h2}>Sets Count</h2>
+                            <input className={classes.input} min={1} value={setsCount} onChange={(e) => setSetsCount(+e.target.value)} step={1} type="number"/>
+                        </div>
+                        <div className={classes.component}>
+                            <h2 className={classes.h2}>Rest</h2>
+                            <input className={classes.input} min={10} value={rest} onChange={(e) => setRest(+e.target.value)} step={10} type="number"/>
+                        </div>
+                    </form>
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                        <Link to={'/training'} state={{workTime: workTime, setsCount: setsCount, rest: rest, exerciseSmallDesc: props.exerciseSmallDesc, name: props.workoutName, id: props.workoutId}}><button className={classes.button}>StartTraining</button></Link>
+                    </div>
                 </div>
-                <div className={classes.component}>
-                    <h2 className={classes.h2}>Sets Count</h2>
-                    <input className={classes.input} min={1} value={setsCount} onChange={(e) => setSetsCount(+e.target.value)} step={1} type="number"/>
-                </div>
-                <div className={classes.component}>
-                    <h2 className={classes.h2}>Rest</h2>
-                    <input className={classes.input} min={10} value={rest} onChange={(e) => setRest(+e.target.value)} step={10} type="number"/>
-                </div>
-            </form>
-            <div style={{display: 'flex', justifyContent: 'center'}}>
-                <Link to={'/training'} state={{workTime: workTime, setsCount: setsCount, rest: rest, exerciseSmallDesc: props.exerciseSmallDesc, name: props.workoutName, id: props.workoutId}}><button className={classes.button}>StartTraining</button></Link>
-            </div>
+            :
+            <div>No Exercises</div>
+            }
         </div>
     );
 };
