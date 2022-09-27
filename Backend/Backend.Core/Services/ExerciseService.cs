@@ -69,17 +69,20 @@ namespace Backend.Core.Services
         /// </summary>
         /// <param name="setId">Id of user`s set.</param>
         /// <returns>List of set`s exercises small description.</returns>
-        public List<ExerciseSmallDescription> ExercisesByUserSet(int setId)
+        public ExercisesUserSet ExercisesByUserSet(int setId)
         {
-            var resList = new List<ExerciseSmallDescription>();
+            var modelRes = new ExercisesUserSet();
+            var listExercises = new List<ExerciseSmallDescription>();
             var exercisesUserSet = _context.UserSetExercises.Include(x => x.Exercise).ThenInclude(x => x.ExerciseMuscles).ThenInclude(x => x.Muscle).Where(x => x.UserSetId == setId).ToList();
             foreach (var exUserSet in exercisesUserSet)
             {
                 var currExercise = new ExerciseSmallDescription { Id = exUserSet.Exercise.ExerciseId, Image = exUserSet.Exercise.UrlImage, Name = exUserSet.Exercise.Name };
                 AddsTargetMuscleToDescByExUserSet(exUserSet, ref currExercise);
-                resList.Add(currExercise);
+                listExercises.Add(currExercise);
             }
-            return resList;
+            modelRes.exerciseSmallDescription = listExercises;
+            modelRes.Name = _context.UserSetOfExercises.FirstOrDefault(x => x.UserSetId == setId).Name;
+            return modelRes;
         }
 
         /// <summary>

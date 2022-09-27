@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './MyWorkoutCard.module.css'
 import {AiFillDelete, AiOutlinePlusCircle} from "react-icons/ai";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {deleteMyWorkout} from '../fetch/FetchData'
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import {getExercisesFromUserWorkout} from '../fetch/FetchData'
+import {IExercise} from "../interfaces/IExercise";
 
 const MyWorkoutCard = (props: {id: number, name: string, exercises: string[]}) => {
-
 
     const handleDelete = async (e: React.MouseEvent<SVGElement>) => {
         e.preventDefault()

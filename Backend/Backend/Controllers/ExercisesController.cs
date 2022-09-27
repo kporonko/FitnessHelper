@@ -47,11 +47,9 @@ namespace Backend.Controllers
 
         [HttpGet]
         [Route("/ExercisesByUserSet/{setId}")]
-        public ActionResult<List<ExerciseSmallDescription>> ExercisesByUserSet(int setId)
+        public ActionResult<ExercisesUserSet> ExercisesByUserSet(int setId)
         {
             var exercises = _exerciseService.ExercisesByUserSet(setId);
-            if (exercises.Count == 0)
-                return NotFound();
             return Ok(exercises);
         }
 

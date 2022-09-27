@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Deleted unnecessary functions">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IUserSetFullDesc.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Interfaces/IExerciseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Interfaces/IExerciseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/ExerciseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/ExerciseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/ExercisesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/ExercisesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +76,7 @@
       <workItem from="1664067787402" duration="6997000" />
       <workItem from="1664104941119" duration="1814000" />
       <workItem from="1664142916154" duration="14698000" />
-      <workItem from="1664167385658" duration="17467000" />
+      <workItem from="1664167385658" duration="22723000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>

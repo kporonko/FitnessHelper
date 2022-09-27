@@ -1,0 +1,10 @@
+.h2{
+    font-size: 54px;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: #282727;
+}

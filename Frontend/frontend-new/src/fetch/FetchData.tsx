@@ -6,6 +6,7 @@ import {IExerciseDesc} from "../interfaces/ExerciseById/IExerciseDesc";
 import {IMuscle} from "../interfaces/IMuscle";
 import {IExercise} from "../interfaces/IExercise";
 import {IUsersetSmallDesc} from "../interfaces/IUsersetSmallDesc";
+import {IUserSetFullDesc} from "../interfaces/IUserSetFullDesc";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -194,4 +195,18 @@ export const addExerciseToUserSet = async (exerciseId:number, userSetId: number)
         }});
 
     return response.status;
+}
+
+export const getExercisesFromUserWorkout = async (userSetId: number) => {
+    const response = await fetch(`${baseUrl}ExercisesByUserSet/${userSetId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404){
+        return undefined;
+    }
+    const body = await response.json();
+    const data = body as IUserSetFullDesc;
+    return data;
 }
