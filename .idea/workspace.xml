@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Adding exercise to user workout function is implemented">
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/ExerciseDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/ExerciseDesc.tsx" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Deleted unnecessary functions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <workItem from="1664067787402" duration="6997000" />
       <workItem from="1664104941119" duration="1814000" />
       <workItem from="1664142916154" duration="14698000" />
-      <workItem from="1664167385658" duration="16454000" />
+      <workItem from="1664167385658" duration="17467000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664230619374</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Deleted unnecessary functions">
+      <created>1664230775094</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664230775094</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +247,7 @@
     <MESSAGE value="Exercises page fully implemented" />
     <MESSAGE value="User Workouts page is implemented. Buttons add delete is added too." />
     <MESSAGE value="Adding exercise to user workout function is implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding exercise to user workout function is implemented" />
+    <MESSAGE value="Deleted unnecessary functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deleted unnecessary functions" />
   </component>
 </project>

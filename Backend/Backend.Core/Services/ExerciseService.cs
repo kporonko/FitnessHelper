@@ -63,6 +63,42 @@ namespace Backend.Core.Services
             return resList;
         }
 
+
+        /// <summary>
+        /// Gets exercises from the user`s set.
+        /// </summary>
+        /// <param name="setId">Id of user`s set.</param>
+        /// <returns>List of set`s exercises small description.</returns>
+        public List<ExerciseSmallDescription> ExercisesByUserSet(int setId)
+        {
+            var resList = new List<ExerciseSmallDescription>();
+            var exercisesUserSet = _context.UserSetExercises.Include(x => x.Exercise).ThenInclude(x => x.ExerciseMuscles).ThenInclude(x => x.Muscle).Where(x => x.UserSetId == setId).ToList();
+            foreach (var exUserSet in exercisesUserSet)
+            {
+                var currExercise = new ExerciseSmallDescription { Id = exUserSet.Exercise.ExerciseId, Image = exUserSet.Exercise.UrlImage, Name = exUserSet.Exercise.Name };
+                AddsTargetMuscleToDescByExUserSet(exUserSet, ref currExercise);
+                resList.Add(currExercise);
+            }
+            return resList;
+        }
+
+        /// <summary>
+        /// Adds target muscle value to current exercise description.
+        /// </summary>
+        /// <param name="exUserSet">Intermediate table exercise-userSet value.</param>
+        /// <param name="currExercise">Current description we must fill with data.</param>
+        private void AddsTargetMuscleToDescByExUserSet(UserSetExercise exUserSet, ref ExerciseSmallDescription currExercise)
+        {
+            var ex = exUserSet.Exercise;
+            foreach (var exMuscle in ex.ExerciseMuscles)
+            {
+                if (exMuscle.IsTarget)
+                {
+                    currExercise.TargetMuscle = exMuscle.Muscle.Name;
+                }
+            }
+        }
+
         /// <summary>
         /// Gets exercise full description by Id.
         /// </summary>

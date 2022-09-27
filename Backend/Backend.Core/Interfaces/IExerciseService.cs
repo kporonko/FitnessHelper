@@ -12,6 +12,7 @@ namespace Backend.Core.Interfaces
         List<ExerciseSmallDescription> AllExercises();
         List<ExerciseSmallDescription> ExercisesByPartOfBody(string part);
         List<ExerciseSmallDescription> ExercisesSearch(string search);
+        List<ExerciseSmallDescription> ExercisesByUserSet(int setId);
         ExerciseFull? ExerciseById(int exerciseId);
 
     }
