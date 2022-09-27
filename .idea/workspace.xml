@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="User workout description page exercise deleting function added.">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Training page added. Data receiving from workout page is implemented">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +70,7 @@
       <workItem from="1664067787402" duration="6997000" />
       <workItem from="1664104941119" duration="1814000" />
       <workItem from="1664142916154" duration="14698000" />
-      <workItem from="1664167385658" duration="27757000" />
+      <workItem from="1664167385658" duration="28122000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -229,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664274019199</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Training page added. Data receiving from workout page is implemented">
+      <created>1664277009682</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664277009682</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +273,7 @@
     <MESSAGE value="Deleted unnecessary functions" />
     <MESSAGE value="User workout description page is added. Api: query of getting workout description was added." />
     <MESSAGE value="User workout description page exercise deleting function added." />
-    <option name="LAST_COMMIT_MESSAGE" value="User workout description page exercise deleting function added." />
+    <MESSAGE value="Training page added. Data receiving from workout page is implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Training page added. Data receiving from workout page is implemented" />
   </component>
 </project>

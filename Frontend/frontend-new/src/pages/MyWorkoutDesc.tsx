@@ -10,6 +10,8 @@ import classes from './MyWorkoutDesc.module.css'
 import {IUsersetSmallDesc} from "../interfaces/IUsersetSmallDesc";
 import {IUserSetFullDesc} from "../interfaces/IUserSetFullDesc";
 import WorkoutExerciseCard from "../components/WorkoutExerciseCard";
+import StartTrainingForm from "../components/StartTrainingForm";
+
 const MyWorkoutDesc = () => {
 
     const {id} = useParams()
@@ -38,6 +40,8 @@ const MyWorkoutDesc = () => {
                     <WorkoutExerciseCard workoutId={+id} isUserWorkout={true} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>}
                 </div>
             ))}
+            {exercises !== undefined && exercises.exerciseSmallDescription !== undefined && id !== undefined &&
+            <StartTrainingForm exerciseSmallDesc={exercises.exerciseSmallDescription} workoutName={exercises.name} workoutId={+id}/>}
             <Footer/>
         </div>
     );
