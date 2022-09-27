@@ -41,9 +41,9 @@
 }
 .icon{
     position: absolute;
-    right: 10%;
+    right: 5%;
     top: 40%;
-    font-size: 40px;
+    font-size: 60px;
     color: #ff0000;
 }
 .icon:hover{

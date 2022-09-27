@@ -210,3 +210,17 @@ export const getExercisesFromUserWorkout = async (userSetId: number) => {
     const data = body as IUserSetFullDesc;
     return data;
 }
+
+export const deleteExerciseFromWorkout = async (exerciseId:number, userSetId: number) => {
+    const response = await fetch(`${baseUrl}DeleteExerciseFromUserSet`, {
+        method: 'DELETE',
+        body: JSON.stringify({
+            "exerciseId": exerciseId,
+            "userSetId": userSetId,
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}

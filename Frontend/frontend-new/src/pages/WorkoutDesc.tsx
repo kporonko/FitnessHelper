@@ -107,7 +107,7 @@ const WorkoutDesc = () => {
             </div>
             <h1 className={classes.h1}>Exercises</h1>
                 {exerciseSmallDesc === undefined ? "" :exerciseSmallDesc.map((item,i) => (
-                    <WorkoutExerciseCard key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
+                    <WorkoutExerciseCard isUserWorkout={false} key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
             ))}
             <button>Soon...</button>
             <Footer/>

@@ -9,6 +9,7 @@ import ModalWorkoutsList from "../components/ModalWorkoutsList";
 import classes from './MyWorkoutDesc.module.css'
 import {IUsersetSmallDesc} from "../interfaces/IUsersetSmallDesc";
 import {IUserSetFullDesc} from "../interfaces/IUserSetFullDesc";
+import WorkoutExerciseCard from "../components/WorkoutExerciseCard";
 const MyWorkoutDesc = () => {
 
     const {id} = useParams()
@@ -32,8 +33,9 @@ const MyWorkoutDesc = () => {
             <Header page=""/>
             <h2 className={classes.h2}>Workout <span style={{fontSize: '60px', color:'rgba(0, 187, 249, 0.8)'}}>{exercises?.name}</span></h2>
             {exercises?.exerciseSmallDescription?.map((val, ind) =>(
-                <div style={{margin: '30px 30%'}}>
-                    <ExerciseCard id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} active={isActiveModal} setActive={setIsActiveModal} currExerciseToAdd={currExerciseToAdd} setCurrExerciseToAdd={setCurrExerciseToAdd}/>
+                <div>
+                    {id !== undefined &&
+                    <WorkoutExerciseCard workoutId={+id} isUserWorkout={true} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>}
                 </div>
             ))}
             <Footer/>
