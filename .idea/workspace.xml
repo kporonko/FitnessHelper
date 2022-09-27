@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Added start training form to myExercise">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/public/user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/TrainingCard.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/TrainingCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IProfile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/ITraining.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Profile is fully done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/WorkoutExerciseCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/WorkoutExerciseCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +71,7 @@
       <workItem from="1664067787402" duration="6997000" />
       <workItem from="1664104941119" duration="1814000" />
       <workItem from="1664142916154" duration="14698000" />
-      <workItem from="1664167385658" duration="32885000" />
+      <workItem from="1664167385658" duration="33912000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -246,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664277327732</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Profile is fully done">
+      <created>1664291367502</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1664291367502</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +290,7 @@
     <MESSAGE value="User workout description page exercise deleting function added." />
     <MESSAGE value="Training page added. Data receiving from workout page is implemented" />
     <MESSAGE value="Added start training form to myExercise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added start training form to myExercise" />
+    <MESSAGE value="Profile is fully done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Profile is fully done" />
   </component>
 </project>

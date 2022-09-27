@@ -30,8 +30,8 @@ const MyWorkouts = () => {
             <div data-aos="fade" className={classes.headerWrapper}>
                 <h2 className={classes.h2}>My Workouts</h2>
             </div>
-            <div onClick={() => setModalActive(true)} style={{display:'flex', justifyContent: 'center', margin: '30px 0'}}>
-                <button className={classes.button}>
+            <div style={{display:'flex', justifyContent: 'center', margin: '30px 0'}}>
+                <button onClick={() => setModalActive(true)} className={classes.button}>
                     <div style={{display: 'flex', alignItems:'center', gap:'50px'}}>
                         <AiOutlinePlusCircle className={classes.icon}/>
                         <p className={classes.buttonText}>Add New Workout</p>

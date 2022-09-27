@@ -25,8 +25,8 @@ const WorkoutExerciseCard = (props: {image:string, name: string, targetMuscle: s
     }
 
     return (
-        <Link to={`/exercise/${props.id}`}>
             <div data-aos="fade-up" className={classes.wrapper}>
+                <Link style={{width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}} to={`/exercise/${props.id}`}>
                 <img className={classes.exImage} src={props.image} alt=""/>
                 <div>
                     <h2 className={classes.h2}>{props.name}</h2>
@@ -34,8 +34,8 @@ const WorkoutExerciseCard = (props: {image:string, name: string, targetMuscle: s
                 </div>
                 {props.isUserWorkout &&
                 <AiFillDelete onClick={(e) => handleClickDeleteExercise(e)} className={classes.icon} fontSize='28px' cursor='pointer'/>}
+                </Link>
             </div>
-        </Link>
 
     );
 };

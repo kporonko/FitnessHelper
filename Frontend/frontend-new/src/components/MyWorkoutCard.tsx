@@ -28,18 +28,18 @@ const MyWorkoutCard = (props: {id: number, name: string, exercises: string[]}) =
     }
 
     return (
-        <Link to={`/my-workout/${props.id}`}>
             <div data-aos="fade-up" className={classes.wrapper}>
-                <img className={classes.exImage} src={require("../../public/dumbell.jpg")} alt=""/>
-                <div>
-                    <h2 className={classes.h2}>{props.name}</h2>
-                    <h3 className={classes.h3}>Exercises: {props.exercises.length === 0 ? 'No Exercises' : props.exercises.map((val, ind) => (
-                        <span>{val}, </span>
-                    ))}</h3>
-                </div>
-                <AiFillDelete onClick={(e)=>handleDelete(e)} className={classes.icon} fontSize='28px' cursor='pointer'/>
+                <Link style={{width: '100%', display: 'flex', justifyContent: 'space-between'}} to={`/my-workout/${props.id}`}>
+                    <img className={classes.exImage} src={require("../../public/dumbell.jpg")} alt=""/>
+                    <div>
+                        <h2 className={classes.h2}>{props.name}</h2>
+                        <h3 className={classes.h3}>Exercises: {props.exercises.length === 0 ? 'No Exercises' : props.exercises.map((val, ind) => (
+                            <span>{val}, </span>
+                        ))}</h3>
+                    </div>
+                    <AiFillDelete onClick={(e)=>handleDelete(e)} className={classes.icon} fontSize='28px' cursor='pointer'/>
+                </Link>
             </div>
-        </Link>
     );
 };
 
