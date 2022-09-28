@@ -286,11 +286,10 @@ export const createAndAddBasicTraining = async (userId:number, basicalSetId: num
     return response.status;
 }
 
-export const createAndAddUserTraining = async (userId:number, userSetId: number, time: number, date: string) => {
+export const createAndAddUserTraining = async (userSetId: number, time: number, date: string) => {
     const response = await fetch(`${baseUrl}CreateAndAddUserTraining`, {
         method: 'POST',
         body: JSON.stringify({
-            "userId": userId,
             "userSetId": userSetId,
             "time": time,
             "date": date

@@ -21,7 +21,7 @@ const Training = () => {
     const handleUserTraining = async () => {
         let userId = localStorage.getItem("id")
         if (userId !== null){
-            await createAndAddUserTraining(+userId, id, Math.ceil(time), dateNow)
+            await createAndAddUserTraining(id, Math.ceil(time), dateNow)
         }
     }
     const handleBasicTraining = async () => {
