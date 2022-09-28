@@ -268,3 +268,36 @@ export const getBasicTrainingsByUserId = async (userId: number) => {
     const data = body as ITraining[];
     return data;
 }
+
+export const createAndAddBasicTraining = async (userId:number, basicalSetId: number, time: number, date: string) => {
+    console.log(userId, basicalSetId, time, date)
+    const response = await fetch(`${baseUrl}CreateAndAddBasicTraining`, {
+        method: 'POST',
+        body: JSON.stringify({
+            "userId": userId,
+            "basicalSetId": basicalSetId,
+            "time": time,
+            "date": date
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}
+
+export const createAndAddUserTraining = async (userId:number, userSetId: number, time: number, date: string) => {
+    const response = await fetch(`${baseUrl}CreateAndAddUserTraining`, {
+        method: 'POST',
+        body: JSON.stringify({
+            "userId": userId,
+            "userSetId": userSetId,
+            "time": time,
+            "date": date
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}

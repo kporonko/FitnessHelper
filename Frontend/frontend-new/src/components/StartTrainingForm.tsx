@@ -4,7 +4,7 @@ import classes from './StartTrainingForm.module.css'
 import {IExerciseDesc} from "../interfaces/ExerciseById/IExerciseDesc";
 import {IExercise} from "../interfaces/IExercise";
 
-const StartTrainingForm = (props: {exerciseSmallDesc: IExercise[], workoutName: string, workoutId: number}) => {
+const StartTrainingForm = (props: {exerciseSmallDesc: IExercise[], workoutName: string, workoutId: number, isUser: boolean}) => {
 
     const [workTime, setWorkTime] = useState(10)
     const [setsCount, setSetsCount] = useState(1)
@@ -29,11 +29,11 @@ const StartTrainingForm = (props: {exerciseSmallDesc: IExercise[], workoutName: 
                         </div>
                     </form>
                     <div style={{display: 'flex', justifyContent: 'center'}}>
-                        <Link to={'/training'} state={{workTime: workTime, setsCount: setsCount, rest: rest, exerciseSmallDesc: props.exerciseSmallDesc, name: props.workoutName, id: props.workoutId}}><button className={classes.button}>StartTraining</button></Link>
+                        <Link to={'/training'} state={{workTime: workTime, setsCount: setsCount, rest: rest, exerciseSmallDesc: props.exerciseSmallDesc, name: props.workoutName, id: props.workoutId, isUser: props.isUser}}><button className={classes.button}>StartTraining</button></Link>
                     </div>
                 </div>
-            :
-            <div>No Exercises</div>
+                :
+                <div>No Exercises</div>
             }
         </div>
     );

@@ -1,18 +1,19 @@
-import React from 'react';
+import * as React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Main from "./pages/Main";
-import AOS from "aos";
-import Workouts from "./pages/Workouts";
-import Exercises from "./pages/Exercises";
-import MyWorkouts from "./pages/MyWorkouts";
-import Profile from "./pages/Profile";
-import ExerciseDesc from "./pages/ExerciseDesc";
-import WorkoutDesc from "./pages/WorkoutDesc";
-import MyWorkoutDesc from "./pages/MyWorkoutDesc";
-import MuscleDesc from "./pages/MuscleDesc";
+import Login from "./src/pages/Login";
+import Register from "./src/pages/Register";
+import Main from "./src/pages/Main";
+import * as AOS from "aos";
+import Workouts from "./src/pages/Workouts";
+import Exercises from "./src/pages/Exercises";
+import MyWorkouts from "./src/pages/MyWorkouts";
+import Profile from "./src/pages/Profile";
+import ExerciseDesc from "./src/pages/ExerciseDesc";
+import WorkoutDesc from "./src/pages/WorkoutDesc";
+import MyWorkoutDesc from "./src/pages/MyWorkoutDesc";
+import MuscleDesc from "./src/pages/MuscleDesc";
+import Training from "./src/pages/Training";
 
 function App() {
     AOS.init();
@@ -30,7 +31,7 @@ function App() {
             <Route path="/workout/:id" element={<WorkoutDesc/>}/>
             <Route path="/my-workout/:id" element={<MyWorkoutDesc/>}/>
             <Route path="/muscle/:id" element={<MuscleDesc/>}/>
-            <Route path="/training" element={<div>Training</div>}/>
+            <Route path="/training" element={<Training/>}/>
         </Routes>
     </BrowserRouter>
   );

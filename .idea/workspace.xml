@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed starting form visibility when workout has no exercises">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.module.css" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Query add training added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkoutDesc.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

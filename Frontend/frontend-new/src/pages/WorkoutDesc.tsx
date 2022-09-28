@@ -59,15 +59,15 @@ const WorkoutDesc = () => {
                 <p data-aos="fade"               className={classes.p}>{description === "" ? "Error" : description}</p>
                 <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Abs:</span> {Array(efficiency.abs).fill(0).map((x,i) => (
-                        <span className={classes.fire}><AiFillFire/></span>
+                    <span className={classes.fire}><AiFillFire/></span>
                 ))}
                     <span>{Array(5 - efficiency.abs).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiOutlineFire/></span>
-                        ))}</span>
+                    ))}</span>
                 </div>
                 <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Cardio:</span> {Array(efficiency.cardio).fill(0).map((x,i) => (
-                        <span className={classes.fire}><AiFillFire/></span>
+                    <span className={classes.fire}><AiFillFire/></span>
                 ))}
                     <span>{Array(5 - efficiency.cardio).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiOutlineFire/></span>
@@ -75,7 +75,7 @@ const WorkoutDesc = () => {
                 </div>
                 <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Chest:</span> {Array(efficiency.chest).fill(0).map((x,i) => (
-                        <span className={classes.fire}><AiFillFire/></span>
+                    <span className={classes.fire}><AiFillFire/></span>
                 ))}
                     <span>{Array(5 - efficiency.chest).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiOutlineFire/></span>
@@ -83,7 +83,7 @@ const WorkoutDesc = () => {
                 </div>
                 <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Legs:</span> {Array(efficiency.legs).fill(0).map((x,i) => (
-                        <span className={classes.fire}><AiFillFire/></span>
+                    <span className={classes.fire}><AiFillFire/></span>
                 ))}
                     <span>{Array(5 - efficiency.legs).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiOutlineFire/></span>
@@ -91,7 +91,7 @@ const WorkoutDesc = () => {
                 </div>
                 <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Back:</span> {Array(efficiency.back).fill(0).map((x,i) => (
-                        <span className={classes.fire}><AiFillFire/></span>
+                    <span className={classes.fire}><AiFillFire/></span>
                 ))}
                     <span>{Array(5 - efficiency.back).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiOutlineFire/></span>
@@ -99,7 +99,7 @@ const WorkoutDesc = () => {
                 </div>
                 <div data-aos="fade" className={classes.efficiencyWrapper}>
                     <span className={classes.partBodySpan}>Arms:</span> {Array(efficiency.arms).fill(0).map((x,i) => (
-                        <span className={classes.fire}><AiFillFire/></span>
+                    <span className={classes.fire}><AiFillFire/></span>
                 ))}
                     <span>{Array(5 - efficiency.arms).fill(0).map((x,i) => (
                         <span className={classes.fire}><AiOutlineFire/></span>
@@ -107,11 +107,11 @@ const WorkoutDesc = () => {
                 </div>
             </div>
             <h1 className={classes.h1}>Exercises</h1>
-                {exerciseSmallDesc === undefined ? "" :exerciseSmallDesc.map((item,i) => (
-                    <WorkoutExerciseCard workoutId={-1} isUserWorkout={false} key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
+            {exerciseSmallDesc === undefined ? "" :exerciseSmallDesc.map((item,i) => (
+                <WorkoutExerciseCard workoutId={-1} isUserWorkout={false} key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
             ))}
             {id !== undefined &&
-            <StartTrainingForm workoutId={+id} exerciseSmallDesc={exerciseSmallDesc} workoutName={name}/>}
+                <StartTrainingForm isUser={false} workoutId={+id} exerciseSmallDesc={exerciseSmallDesc} workoutName={name}/>}
             <Footer/>
         </div>
     );

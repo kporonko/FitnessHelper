@@ -29,7 +29,7 @@ const MyWorkoutDesc = () => {
         }
         getExercises()
     }, [exercises])
-    
+
     return (
         <div>
             <Header page=""/>
@@ -37,11 +37,11 @@ const MyWorkoutDesc = () => {
             {exercises?.exerciseSmallDescription?.map((val, ind) =>(
                 <div>
                     {id !== undefined &&
-                    <WorkoutExerciseCard workoutId={+id} isUserWorkout={true} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>}
+                        <WorkoutExerciseCard workoutId={+id} isUserWorkout={true} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>}
                 </div>
             ))}
             {exercises !== undefined && exercises.exerciseSmallDescription !== undefined && id !== undefined &&
-            <StartTrainingForm exerciseSmallDesc={exercises.exerciseSmallDescription} workoutName={exercises.name} workoutId={+id}/>}
+                <StartTrainingForm isUser={true} exerciseSmallDesc={exercises.exerciseSmallDescription} workoutName={exercises.name} workoutId={+id}/>}
             <Footer/>
         </div>
     );
