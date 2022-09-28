@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed range of Link">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed starting form visibility when workout has no exercises">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +72,7 @@
       <workItem from="1664067787402" duration="6997000" />
       <workItem from="1664104941119" duration="1814000" />
       <workItem from="1664142916154" duration="14698000" />
-      <workItem from="1664167385658" duration="34225000" />
+      <workItem from="1664167385658" duration="43476000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -253,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664292318871</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Fixed starting form visibility when workout has no exercises">
+      <created>1664292635730</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664292635730</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,7 +281,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Register and login pages are implemented" />
     <MESSAGE value="Small css classes conditions fixed." />
     <MESSAGE value="CSS fix: added responsiveness to forms and login&amp;register pages" />
     <MESSAGE value="Image files small fix" />
@@ -296,6 +305,7 @@
     <MESSAGE value="Added start training form to myExercise" />
     <MESSAGE value="Profile is fully done" />
     <MESSAGE value="Fixed range of Link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed range of Link" />
+    <MESSAGE value="Fixed starting form visibility when workout has no exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed starting form visibility when workout has no exercises" />
   </component>
 </project>
