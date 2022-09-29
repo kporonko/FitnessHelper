@@ -8,7 +8,8 @@ import ModalEndTraining from "../components/ModalEndTraining";
 const Training = () => {
 
     const location = useLocation()
-    const {workTime, setsCount, rest, exerciseSmallDesc, name, id, isUser} = location.state;
+    let {workTime, setsCount, rest, exerciseSmallDesc, name, id, isUser} = location.state;
+    const count = exerciseSmallDesc.length;
 
     const [work, setWork] = useState<number>(workTime)
     const [sets, setSets] = useState<number>(setsCount)
@@ -18,8 +19,51 @@ const Training = () => {
     const [isRelax, setIsRelax] = useState<boolean>(true)
     const dateNow =  new Date(Date.now()).toISOString();
     const time = workTime * exerciseSmallDesc.length * setsCount / 60;
-
     const [isActiveModal, setIsActiveModal] = useState(false)
+    let [newArr, setNewArr] = useState([...exerciseSmallDesc.slice(1, exerciseSmallDesc.length)]);
+
+    useEffect(()=>{
+        let myInterval = setTimeout(() => {
+            if (sets > 0){
+                if (work > 0){
+                    setWork(work - 1)
+                }
+                else if (work === 0){
+                    if (isRelax){
+                        setWork(rest);
+                        setImage("https://img.freepik.com/premium-photo/faceless-man-relaxing-in-armchair_23-2147800039.jpg?w=2000")
+                        setNameExercise("Rest")
+                        setIsRelax(false)
+                        return;
+                    }
+                    setWork(workTime)
+                    if (exercise === 1){
+                        if (sets === 1){
+                            setIsActiveModal(true)
+                            return
+                        }
+                        else{
+                            setNewArr(exerciseSmallDesc.slice(1, exerciseSmallDesc.length))
+                            setExercise(exerciseSmallDesc.length)
+                            setNameExercise(exerciseSmallDesc[0].name)
+                            setImage(exerciseSmallDesc[0].image)
+                            setSets(sets - 1)
+                            setIsRelax(true)
+                        }
+                    }
+                    else{
+                        setNewArr(newArr.slice(1,newArr.length))
+                        setExercise(exercise - 1)
+                        setNameExercise(newArr[0].name)
+                        setImage(newArr[0].image)
+                        setIsRelax(true)
+                    }
+                }
+            }
+        }, 1000)
+    }, [work]);
+
+
     const nav = useNavigate()
     const handleUserTraining = async () => {
         let code = await createAndAddUserTraining(id, Math.ceil(time), dateNow)
@@ -37,52 +81,12 @@ const Training = () => {
         }
     }
 
-    useEffect(()=>{
-        let myInterval = setTimeout(() => {
-            if (sets > 0){
-                if (work > 0) {
-                    setWork(work - 1);
-                }
-                if (work === 0){
-                    if (isRelax){
-                        setWork(rest);
-                        setImage("https://img.freepik.com/premium-photo/faceless-man-relaxing-in-armchair_23-2147800039.jpg?w=2000")
-                        setNameExercise("Rest")
-                        setIsRelax(false)
-                        return;
-                    }
-                    if (exercise === 0){
-                        if (sets - 1 === 0){
-                            if (isUser){
-                                handleUserTraining()
-                            }
-                            else {
-                                handleBasicTraining()
-                            }
-                            return;
-                        }
-                        setExercise(exerciseSmallDesc.length)
-                        setSets(sets - 1);
-                        setWork(workTime)
-                        setImage(exerciseSmallDesc[0].image)
-                        setNameExercise(exerciseSmallDesc[0].name)
-                    }
-                    setIsRelax(true)
-                    setImage(exerciseSmallDesc[exerciseSmallDesc.length - exercise].image)
-                    setWork(workTime)
-                    setNameExercise(exerciseSmallDesc[exerciseSmallDesc.length - exercise].name)
-                    setExercise(exercise - 1);
-                }
-            }
-        }, 1000)
-    }, [work]);
-
     return (
         <div>
             <h2 className={classes.header}>{nameExercise}</h2>
             <div style={{display: 'flex', gap: '100px', justifyContent: 'center'}}>
                 <h3>{isRelax && `Set ${setsCount - sets + 1}/${setsCount}`}</h3>
-                <h3>{isRelax && `Exercise ${exerciseSmallDesc.length - exercise + 1}/${exerciseSmallDesc.length}`}</h3>
+                <h3>{isRelax && `Exercise ${exerciseSmallDesc.length - exercise + 1}/${count}`}</h3>
             </div>
             <div className={classes.wrapper}>
                 <div className={classes.time}><h2 className={classes.absolute}>{work}</h2></div>
