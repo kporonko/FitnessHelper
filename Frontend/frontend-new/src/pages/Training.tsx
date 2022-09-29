@@ -61,14 +61,12 @@ const Training = () => {
                             }
                             return;
                         }
-                        console.log("here")
                         setExercise(exerciseSmallDesc.length)
                         setSets(sets - 1);
                         setWork(workTime)
-                        setImage(exerciseSmallDesc[1].image)
-                        setNameExercise(exerciseSmallDesc[1].name)
+                        setImage(exerciseSmallDesc[0].image)
+                        setNameExercise(exerciseSmallDesc[0].name)
                     }
-                    console.log(exercise)
                     setIsRelax(true)
                     setImage(exerciseSmallDesc[exerciseSmallDesc.length - exercise].image)
                     setWork(workTime)
