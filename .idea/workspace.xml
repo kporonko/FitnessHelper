@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed bugs + added training queries">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed incorrect userTraining query">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalEndTraining.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalEndTraining.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664369971918</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Fixed incorrect userTraining query">
+      <created>1664370304061</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1664370304061</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +294,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CSS fix: added responsiveness to forms and login&amp;register pages" />
     <MESSAGE value="Image files small fix" />
     <MESSAGE value="Added absolute text on login&amp;register image" />
     <MESSAGE value="Header 1 version" />
@@ -311,6 +318,7 @@
     <MESSAGE value="Fixed range of Link" />
     <MESSAGE value="Fixed starting form visibility when workout has no exercises" />
     <MESSAGE value="Fixed bugs + added training queries" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs + added training queries" />
+    <MESSAGE value="Fixed incorrect userTraining query" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed incorrect userTraining query" />
   </component>
 </project>

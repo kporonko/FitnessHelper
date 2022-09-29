@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {IExercise} from "../interfaces/IExercise";
 import classes from './Training.module.css'
 import {createAndAddBasicTraining, createAndAddUserTraining} from "../fetch/FetchData";
+import ModalEndTraining from "../components/ModalEndTraining";
 
 const Training = () => {
 
@@ -18,16 +19,21 @@ const Training = () => {
     const dateNow =  new Date(Date.now()).toISOString();
     const time = workTime * exerciseSmallDesc.length * setsCount / 60;
 
+    const [isActiveModal, setIsActiveModal] = useState(false)
+    const nav = useNavigate()
     const handleUserTraining = async () => {
-        let userId = localStorage.getItem("id")
-        if (userId !== null){
-            await createAndAddUserTraining(id, Math.ceil(time), dateNow)
+        let code = await createAndAddUserTraining(id, Math.ceil(time), dateNow)
+        if (code === 201){
+            setIsActiveModal(true);
         }
     }
     const handleBasicTraining = async () => {
         let userId = localStorage.getItem("id")
         if (userId !== null){
-            await createAndAddBasicTraining(+userId, id, Math.ceil(time), dateNow)
+            let code = await createAndAddBasicTraining(+userId, id, Math.ceil(time), dateNow)
+            if (code === 201){
+                setIsActiveModal(true);
+            }
         }
     }
 
@@ -55,16 +61,18 @@ const Training = () => {
                             }
                             return;
                         }
+                        console.log("here")
                         setExercise(exerciseSmallDesc.length)
                         setSets(sets - 1);
                         setWork(workTime)
-                        setImage(exerciseSmallDesc[0].image)
-                        setNameExercise(exerciseSmallDesc[0].name)
+                        setImage(exerciseSmallDesc[1].image)
+                        setNameExercise(exerciseSmallDesc[1].name)
                     }
+                    console.log(exercise)
                     setIsRelax(true)
-                    setImage(exerciseSmallDesc[10 - exercise].image)
+                    setImage(exerciseSmallDesc[exerciseSmallDesc.length - exercise].image)
                     setWork(workTime)
-                    setNameExercise(exerciseSmallDesc[10 - exercise].name)
+                    setNameExercise(exerciseSmallDesc[exerciseSmallDesc.length - exercise].name)
                     setExercise(exercise - 1);
                 }
             }
@@ -76,7 +84,7 @@ const Training = () => {
             <h2 className={classes.header}>{nameExercise}</h2>
             <div style={{display: 'flex', gap: '100px', justifyContent: 'center'}}>
                 <h3>{isRelax && `Set ${setsCount - sets + 1}/${setsCount}`}</h3>
-                <h3>{isRelax && `Exercise ${exerciseSmallDesc.length - exercise + 1}/${exerciseSmallDesc.length+1}`}</h3>
+                <h3>{isRelax && `Exercise ${exerciseSmallDesc.length - exercise + 1}/${exerciseSmallDesc.length}`}</h3>
             </div>
             <div className={classes.wrapper}>
                 <div className={classes.time}><h2 className={classes.absolute}>{work}</h2></div>
@@ -84,6 +92,7 @@ const Training = () => {
                     <img className={classes.image} src={image} alt=""/>
                 </div>
             </div>
+            <ModalEndTraining time={Math.ceil(time)} name={name} active={isActiveModal} setActive={setIsActiveModal}/>
         </div>
     );
 };
