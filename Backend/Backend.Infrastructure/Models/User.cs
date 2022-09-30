@@ -13,6 +13,7 @@ namespace Backend.Infrastructure.Models
         public string Password { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public byte[] Avatar { get; set; }
         public virtual List<UserSetOfExercises> UserSetsOfExercises { get; set; } = new List<UserSetOfExercises>();
         public virtual List<BasicalSetTraining> BasicalSetTrainings { get; set; } = new List<BasicalSetTraining>();
     }
