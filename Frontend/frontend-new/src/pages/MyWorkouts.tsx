@@ -43,6 +43,7 @@ const MyWorkouts = () => {
                     <MyWorkoutCard key={ind} id={val.id} exercises={val.exercises} name={val.name}/>
                 </div>
             ))}
+            <div style={{marginTop: '20px'}}></div>
             <ModalAddWorkout active={modalActive} setActive={setModalActive}/>
             <Footer/>
         </div>

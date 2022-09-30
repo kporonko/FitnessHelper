@@ -22,7 +22,7 @@ const Exercises = () => {
     const indexOfFirstProductSearch = indexOfLastProductSearch - 15;
     const [isActiveModal, setIsActiveModal] = useState(false)
     const [currCategory, setCurrCategory] = useState("")
-
+    const myRef = useRef<HTMLDivElement>(null)
     useEffect(() => {
         const getExercises = async() => {
             let exercises = await getAllExercises();
@@ -39,13 +39,12 @@ const Exercises = () => {
     const [searchedExercises, setSearchedExercises] = useState<IExercise[]>()
     const currentSearchedExercises = searchedExercises?.slice(indexOfFirstProductSearch, indexOfLastProductSearch);
 
-    const refList = useRef<HTMLDivElement>(null)
     const refListSearch = useRef<HTMLDivElement>(null)
 
     const paginate = (event: any, value: React.SetStateAction<number>) => {
         setCurrentPage(value);
-        if (refList.current){
-            refList.current.scrollIntoView({behavior: 'smooth'})
+        if (myRef.current){
+            myRef.current.scrollIntoView({behavior: 'smooth'})
         }
     };
     const paginateSearch = (event: any, value: React.SetStateAction<number>) => {
@@ -54,13 +53,16 @@ const Exercises = () => {
             refListSearch.current.scrollIntoView({behavior: 'smooth'})
         }
     };
+
+    const [a, setA] = useState("")
     const handleSearch = async () => {
+        setA(search)
         let searchedEx = await getExBySearch(search);
         setSearchedExercises(searchedEx)
     }
 
     const categoryHandle = async (part: string) => {
-        let exByPart = await getExByPartBody(part)
+        let exByPart = await getExByPartBody(part);
         setExercises(exByPart)
         setCurrCategory(part + ' Exercises')
     }
@@ -70,7 +72,6 @@ const Exercises = () => {
         setExercises(exercises);
         setCurrCategory("All Exercises")
     }
-
     console.log(currExerciseToAdd)
 
     return (
@@ -93,8 +94,8 @@ const Exercises = () => {
                 </Box>
             </div>
 
-            <div>
-                <h2 className={classes.h2}>{searchedExercises === undefined ? '' : `${searchedExercises.length} Results On ${search}`} </h2>
+            <div ref={refListSearch}>
+                <h2 className={classes.h2}>{searchedExercises === undefined ? '' : `${searchedExercises.length} Results On ${a}`} </h2>
                 <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', margin: '30px 7%'}}>
                     {currentSearchedExercises?.map((val, ind) => (
                             <ExerciseCard currExerciseToAdd={currExerciseToAdd} setCurrExerciseToAdd={setCurrExerciseToAdd} active={isActiveModal} setActive={setIsActiveModal} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>
@@ -112,7 +113,7 @@ const Exercises = () => {
                     />
                 </Box>}
 
-            <div data-aos="fade-right" style={{display: 'flex', justifyContent: 'space-between', flexWrap: "wrap", margin: '100px 7%'}}>
+            <div ref={myRef}  data-aos="fade-right" style={{display: 'flex', justifyContent: 'space-between', flexWrap: "wrap", margin: '100px 7%'}}>
                 <h2 onClick={() => allExercisesHandle()} className={classes.h2Category}>All Exercises</h2>
                 <h2 onClick={() => categoryHandle("Neck")} className={classes.h2Category}>Neck</h2>
                 <h2 onClick={() => categoryHandle("Shoulders")}  className={classes.h2Category}>Shoulders</h2>

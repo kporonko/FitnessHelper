@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Small fix, but bug with showing first exercise 2 times is still here">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed training. Program functionality is done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664370304061</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fixed training. Program functionality is done">
+      <created>1664468339369</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1664468339369</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +300,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Image files small fix" />
     <MESSAGE value="Added absolute text on login&amp;register image" />
     <MESSAGE value="Header 1 version" />
     <MESSAGE value="Header is fixed" />
@@ -317,6 +324,7 @@
     <MESSAGE value="Fixed starting form visibility when workout has no exercises" />
     <MESSAGE value="Fixed bugs + added training queries" />
     <MESSAGE value="Fixed incorrect userTraining query" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed incorrect userTraining query" />
+    <MESSAGE value="Fixed training. Program functionality is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed training. Program functionality is done" />
   </component>
 </project>
