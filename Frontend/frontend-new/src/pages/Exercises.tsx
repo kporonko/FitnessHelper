@@ -54,9 +54,9 @@ const Exercises = () => {
         }
     };
 
-    const [a, setA] = useState("")
+    const [tempSearch, setTempSearch] = useState("")
     const handleSearch = async () => {
-        setA(search)
+        setTempSearch(search)
         let searchedEx = await getExBySearch(search);
         setSearchedExercises(searchedEx)
     }
@@ -95,7 +95,7 @@ const Exercises = () => {
             </div>
 
             <div ref={refListSearch}>
-                <h2 className={classes.h2}>{searchedExercises === undefined ? '' : `${searchedExercises.length} Results On ${a}`} </h2>
+                <h2 className={classes.h2}>{searchedExercises === undefined ? '' : `${searchedExercises.length} Results On ${tempSearch}`} </h2>
                 <div style={{display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', margin: '30px 7%'}}>
                     {currentSearchedExercises?.map((val, ind) => (
                             <ExerciseCard currExerciseToAdd={currExerciseToAdd} setCurrExerciseToAdd={setCurrExerciseToAdd} active={isActiveModal} setActive={setIsActiveModal} id={val.id} name={val.name} image={val.image} targetMuscle={val.targetMuscle} key={ind}/>
