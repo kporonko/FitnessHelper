@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fixed training. Program functionality is done">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Name is fixed">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalPause.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalEndTraining.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalEndTraining.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +283,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664468339369</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Exercises pagination scroll is fixed, bug with search text is fixed too">
+      <created>1664565493098</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1664565493098</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Name is fixed">
+      <created>1664565555919</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664565555919</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,8 +315,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added absolute text on login&amp;register image" />
-    <MESSAGE value="Header 1 version" />
     <MESSAGE value="Header is fixed" />
     <MESSAGE value="Main page is done" />
     <MESSAGE value="Fixed styles, added all routes and matching pages components" />
@@ -325,6 +338,8 @@
     <MESSAGE value="Fixed bugs + added training queries" />
     <MESSAGE value="Fixed incorrect userTraining query" />
     <MESSAGE value="Fixed training. Program functionality is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed training. Program functionality is done" />
+    <MESSAGE value="Exercises pagination scroll is fixed, bug with search text is fixed too" />
+    <MESSAGE value="Name is fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Name is fixed" />
   </component>
 </project>
