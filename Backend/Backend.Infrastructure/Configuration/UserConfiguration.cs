@@ -44,11 +44,6 @@ namespace Backend.Infrastructure.Configuration
                 .HasColumnName("LastName")
                 .HasColumnType("varchar")
                 .HasMaxLength(50);
-            builder
-                .Property(x => x.Avatar)
-                .IsRequired()
-                .HasColumnName("Avatar")
-                .HasColumnType("varbinary(max)");
         }
     }
 }
