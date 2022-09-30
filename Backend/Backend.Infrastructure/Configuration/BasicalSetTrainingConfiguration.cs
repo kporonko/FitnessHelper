@@ -25,7 +25,7 @@ namespace Backend.Infrastructure.Configuration
                 .Property(x => x.Date)
                 .IsRequired()
                 .HasColumnName("Date")
-                .HasColumnType("date");
+                .HasColumnType("datetime");
             builder
                 .Property(x => x.Time)
                 .IsRequired()

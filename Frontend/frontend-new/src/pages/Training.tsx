@@ -43,7 +43,12 @@ const Training = () => {
                         setWork(workTime)
                         if (exercise === 1){
                             if (sets === 1){
-                                setIsActiveModal(true)
+                                if (isUser){
+                                    handleUserTraining()
+                                }
+                                else{
+                                    handleBasicTraining()
+                                }
                                 return
                             }
                             else{

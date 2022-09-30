@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Name is fixed">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalPause.tsx" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Pause functionality added to training">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalEndTraining.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalEndTraining.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/BasicalSetTrainingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/BasicalSetTrainingConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/UserSetTrainingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/UserSetTrainingConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -297,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664565555919</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Pause functionality added to training">
+      <created>1664566860730</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1664566860730</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,7 +323,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Header is fixed" />
     <MESSAGE value="Main page is done" />
     <MESSAGE value="Fixed styles, added all routes and matching pages components" />
     <MESSAGE value="Try to fix fires count" />
@@ -340,6 +347,7 @@
     <MESSAGE value="Fixed training. Program functionality is done" />
     <MESSAGE value="Exercises pagination scroll is fixed, bug with search text is fixed too" />
     <MESSAGE value="Name is fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Name is fixed" />
+    <MESSAGE value="Pause functionality added to training" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pause functionality added to training" />
   </component>
 </project>
