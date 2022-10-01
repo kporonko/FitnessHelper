@@ -1,6 +1,8 @@
 ﻿using Backend.Core.Interfaces;
 using Backend.Core.Models;
 using Backend.Infrastructure.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Net;
@@ -8,6 +10,7 @@ using System.Net;
 namespace Backend.Controllers
 {
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
@@ -19,12 +22,14 @@ namespace Backend.Controllers
 
         [HttpGet]
         [Route("/Login")]
-        public ActionResult<User> Login(string login,[DataType(DataType.Password)] string password)
+        public ActionResult<User> Login(/*string login,[DataType(DataType.Password)] string password*/)
         {
-            var user = _userService.Get(new LoginUser { Login = login, Password = password });
-            if (user == null)
-                return NoContent();
-            return Ok(user);
+            //var user = _userService.Get(new LoginUser { Login = login, Password = password });
+            //if (user == null)
+            //    return NoContent();
+            //return Ok(user);
+
+            return Ok(new User());
             
         }
 

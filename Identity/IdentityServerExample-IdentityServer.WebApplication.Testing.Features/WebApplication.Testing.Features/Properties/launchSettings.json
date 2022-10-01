@@ -1,0 +1,12 @@
+﻿{
+  "profiles": {
+    "WebApplication.Testing.Features": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:7199",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
