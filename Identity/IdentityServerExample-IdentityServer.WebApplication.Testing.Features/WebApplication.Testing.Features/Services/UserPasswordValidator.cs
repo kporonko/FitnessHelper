@@ -34,9 +34,10 @@ namespace WebApplication1.Testing.Features.Services
                     SqlDataReader reader = cmd.ExecuteReader();
                     while (reader.Read())
                     {
-                        User user = new User { UserName = reader[i].ToString(), Password = reader[i+1].ToString() };
+                        User user = new User();
+                        user.UserName = reader.GetString(0);
+                        user.Password = reader.GetString(1);
                         users.Add(user);
-                        i += 1;
                     }
                 }
                 catch (Exception)
