@@ -10,7 +10,6 @@ using System.Net;
 namespace Backend.Controllers
 {
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("[controller]")]
     public class UserController : ControllerBase
     {
@@ -21,6 +20,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Route("/Login")]
         public ActionResult<User> Login(/*string login,[DataType(DataType.Password)] string password*/)
         {

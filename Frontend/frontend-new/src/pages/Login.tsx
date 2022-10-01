@@ -12,14 +12,14 @@ const Login = () => {
     const nav = useNavigate();
     const submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const user: IUser | null = await loginUser(login, password);
-        if (user === null){
-            alert("Invalid login or password")
+        const status: number = await loginUser();
+        if (status === 200){
+            nav('/main')
             return;
         }
         else{
-            localStorage.setItem("id", user.userId.toString());
-            nav("/main")
+            alert("Invalid login or password")
+            return;
         }
     }
 

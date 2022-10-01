@@ -12,18 +12,26 @@ import {ITraining} from "../interfaces/ITraining";
 
 const baseUrl = "https://localhost:7198/";
 
-export const loginUser = async (login: string, password: string) => {
-    const response = await fetch(`${baseUrl}Login?login=${login}&password=${password}`, {
+// export const loginUser = async (login: string, password: string) => {
+//     const response = await fetch(`${baseUrl}Login?login=${login}&password=${password}`, {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         }});
+//     if (response.status === 204){
+//         return null;
+//     }
+//     const body = await response.json();
+//     const data = body as IUser;
+//     return data;
+// }
+export const loginUser = async () => {
+    const response = await fetch(`${baseUrl}Login`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }});
-    if (response.status === 204){
-        return null;
-    }
-    const body = await response.json();
-    const data = body as IUser;
-    return data;
+    return response.status;
 }
 export const registerUser = async (user: IRegisterUserDto) => {
     const response = await fetch(`${baseUrl}User`, {
