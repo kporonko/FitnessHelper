@@ -9,22 +9,40 @@ import {IUsersetSmallDesc} from "../interfaces/IUsersetSmallDesc";
 import {IUserSetFullDesc} from "../interfaces/IUserSetFullDesc";
 import {IProfile} from "../interfaces/IProfile";
 import {ITraining} from "../interfaces/ITraining";
+import {IGetToken} from "../interfaces/IGetToken";
 
 const baseUrl = "https://localhost:7198/";
 
-export const loginUser = async (login: string, password: string) => {
-    const response = await fetch(`${baseUrl}Login?login=${login}&password=${password}`, {
+export const getToken = async (login: string, password: string) => {
+    const response = await fetch(`${baseUrl}GetToken?login=${login}&password=${password}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
         }});
+
     if (response.status === 204){
         return null;
     }
     const body = await response.json();
-    const data = body as IUser;
+    const data = body as IGetToken;
     return data;
 }
+
+
+export const loginUser = async (token: string) => {
+    const response = await fetch(`${baseUrl}Login`, {
+        method: 'GET',
+        headers:{
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }});
+
+    if (response.status === 200) {
+        return true;
+    }
+    return false
+}
+
 export const registerUser = async (user: IRegisterUserDto) => {
     const response = await fetch(`${baseUrl}User`, {
         method: 'Post',

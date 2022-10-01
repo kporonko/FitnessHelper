@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import classes from "./LoginRegister.module.css"
 import {Link, useNavigate, useNavigation} from "react-router-dom";
-import {loginUser} from "../fetch/FetchData"
+import {getToken, loginUser} from "../fetch/FetchData"
 import {IUser} from "../interfaces/IUser";
 import StartImage from "../components/StartImage";
+import {IGetToken} from "../interfaces/IGetToken";
 
 const Login = () => {
 
@@ -12,14 +13,23 @@ const Login = () => {
     const nav = useNavigate();
     const submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        const user: IUser | null = await loginUser(login, password);
-        if (user === null){
+        const data: IGetToken | null = await getToken(login, password);
+        if (data === null){
             alert("Invalid login or password")
-            return;
         }
         else{
-            localStorage.setItem("id", user.userId.toString());
-            nav("/main")
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("userId", data.userId.toString());
+            let token = localStorage.getItem("token");
+            if (token !== null){
+                const resLogin = await loginUser(token);
+                if (resLogin === true){
+                    nav("/main")
+                }
+                else{
+                    alert("Invalid login or password")
+                }
+            }
         }
     }
 

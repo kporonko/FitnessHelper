@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Pause functionality added to training">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Initial setup">
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IGetToken.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/BasicalSetTrainingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/BasicalSetTrainingConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/UserSetTrainingConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Configuration/UserSetTrainingConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Migrations/ApplicationContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Infrastructure/Migrations/ApplicationContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,6 +16,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -73,6 +80,7 @@
       <workItem from="1664104941119" duration="1814000" />
       <workItem from="1664142916154" duration="14698000" />
       <workItem from="1664167385658" duration="43476000" />
+      <workItem from="1664626279594" duration="3577000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -305,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664566860730</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Initial setup">
+      <created>1664625913323</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664625913323</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +338,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Main page is done" />
     <MESSAGE value="Fixed styles, added all routes and matching pages components" />
     <MESSAGE value="Try to fix fires count" />
     <MESSAGE value="Fires count is fixed" />
@@ -348,6 +362,7 @@
     <MESSAGE value="Exercises pagination scroll is fixed, bug with search text is fixed too" />
     <MESSAGE value="Name is fixed" />
     <MESSAGE value="Pause functionality added to training" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pause functionality added to training" />
+    <MESSAGE value="Initial setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial setup" />
   </component>
 </project>
