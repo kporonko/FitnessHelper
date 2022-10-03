@@ -21,6 +21,8 @@ namespace Backend.Infrastructure.Data
         public DbSet<UserSetExercise> UserSetExercises { get; set; }
         public DbSet<UserSetOfExercises> UserSetOfExercises { get; set; }
         public DbSet<UserSetTraining> UserSetTrainings { get; set; }
+        public DbSet<Achievment> Achievments { get; set; }
+        public DbSet<UserAchievment> UserAchievments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +37,8 @@ namespace Backend.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new UserSetExerciseConfiguration());
             modelBuilder.ApplyConfiguration(new UserSetOfExercisesConfiguration());
             modelBuilder.ApplyConfiguration(new UserSetTrainingConfiguration());
+            modelBuilder.ApplyConfiguration(new AchievmentConfiguration());
+            modelBuilder.ApplyConfiguration(new UserAchievmentConfiguration());
 
 
             modelBuilder
@@ -107,6 +111,19 @@ namespace Backend.Infrastructure.Data
                 .HasOne(x => x.BasicalSetEfficiency)
                 .WithOne(b => b.BasicalSetOfExercises)
                 .HasForeignKey<BasicalSetOfExercises>(x => x.BasicalSetId)
+                .IsRequired();
+
+            modelBuilder
+                .Entity<UserAchievment>()
+                .HasOne(x => x.User)
+                .WithMany(x => x.UsersAchievments)
+                .HasForeignKey(x => x.UserId)
+                .IsRequired();
+            modelBuilder
+                .Entity<UserAchievment>()
+                .HasOne(x => x.Achievment)
+                .WithMany(x => x.UsersAchievments)
+                .HasForeignKey(x => x.AchievmentId)
                 .IsRequired();
         }
     }

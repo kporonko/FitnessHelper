@@ -15,5 +15,6 @@ namespace Backend.Infrastructure.Models
         public string LastName { get; set; }
         public virtual List<UserSetOfExercises> UserSetsOfExercises { get; set; } = new List<UserSetOfExercises>();
         public virtual List<BasicalSetTraining> BasicalSetTrainings { get; set; } = new List<BasicalSetTraining>();
+        public virtual List<UserAchievment> UsersAchievments { get; set; } = new List<UserAchievment>();
     }
 }

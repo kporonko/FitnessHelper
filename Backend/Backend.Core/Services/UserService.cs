@@ -28,9 +28,13 @@ namespace Backend.Core.Services
             {
                 if (IfTheUserLoginExists(registerUser))
                     return HttpStatusCode.Conflict;
+
+                var user = new User { Login = registerUser.Login, Password = registerUser.Password, FirstName = registerUser.FirstName, LastName = registerUser.LastName };
+                FillAchievments(user);
                 
-                _context.Users.Add(new User { Login = registerUser.Login, Password = registerUser.Password, FirstName = registerUser.FirstName, LastName = registerUser.LastName });
+                _context.Users.Add(user);
                 _context.SaveChanges();
+
                 return HttpStatusCode.Created;
             }
             catch (Exception)
@@ -88,6 +92,19 @@ namespace Backend.Core.Services
                 return true;
 
             return false;
+        }
+
+        /// <summary>
+        /// Fills all achievments to user with ISDone = false.
+        /// </summary>
+        /// <param name="user"></param>
+        private void FillAchievments(User user)
+        {
+            var achievments = _context.Achievments.ToList();
+            for (int i = 0; i < achievments.Count; i++)
+            {
+                user.UsersAchievments.Add(new UserAchievment { Achievment = achievments[i], IsDone = false });
+            }
         }
     } 
 }

@@ -57,6 +57,13 @@ const Profile = () => {
                     <h5 className={classes.h5}>Total Trainings Time: <span className={classes.boldSpan}>{profile?.totalTrainingsTimeInMinutes} min.</span></h5>
                 </div>
             </div>
+            <div className={classes.achievments}>
+                <hr/>
+                    <div>
+                        aboba
+                    </div>
+                <hr/>
+            </div>
             <h2 className={classes.h2}>Trainings</h2>
             <div style={{margin: '30px 15%'}}>
                 <span onClick={() => handleUserTrainings()} className={isUserSet ? `${classes.categorySpan} ${classes.activeSpan}` : `${classes.categorySpan}`}>Own Trainings</span>
