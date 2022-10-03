@@ -8,7 +8,8 @@ namespace Backend.Core.Models.UserMuscles
 {
     public class MusclesForUpdate
     {
-        public List<List<MuscleId>> Synergists { get; set; }
-        public List<MuscleId> Target { get; set; }
+        public int UserId { get; set; }
+        public List<int> Synergists { get; set; }
+        public List<int> Target { get; set; }
     }
 }

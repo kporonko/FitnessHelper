@@ -20,5 +20,7 @@ namespace Backend.Core.Models.BasicSets
 
         [Required]
         public string TargetMuscle { get; set; }
+        public int TargetId { get; set; }
+        public List<int> SynergistsId { get; set; }
     }
 }

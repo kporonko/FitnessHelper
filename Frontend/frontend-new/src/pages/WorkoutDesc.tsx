@@ -7,6 +7,7 @@ import classes from './WorkoutDesc.module.css';
 import {AiFillFire, AiOutlineFire} from "react-icons/ai";
 import WorkoutExerciseCard from "../components/WorkoutExerciseCard";
 import StartTrainingForm from "../components/StartTrainingForm";
+import {IExercise} from "../interfaces/IExercise";
 
 const WorkoutDesc = () => {
 
@@ -23,12 +24,15 @@ const WorkoutDesc = () => {
         chest: 0,
         abs: 0
     });
-    const [exerciseSmallDesc, setExerciseSmallDesc] = useState([{
-        name: "",
-        image: "",
-        id: -1,
-        targetMuscle: ""
-    }])
+    // const [exerciseSmallDesc, setExerciseSmallDesc] = useState([{
+    //     name: "",
+    //     image: "",
+    //     id: -1,
+    //     targetMuscle: "",
+    //     targetId: -1,
+    //     synergists: [-1]
+    // }])
+    const [exerciseSmallDesc, setExerciseSmallDesc] = useState<IExercise[]>()
 
     useEffect(() => {
         const getDescWorkout = async () => {
@@ -110,7 +114,7 @@ const WorkoutDesc = () => {
             {exerciseSmallDesc === undefined ? "" :exerciseSmallDesc.map((item,i) => (
                 <WorkoutExerciseCard workoutId={-1} isUserWorkout={false} key={i} id={item.id} name={item.name} image={item.image} targetMuscle={item.targetMuscle}/>
             ))}
-            {id !== undefined &&
+            {id !== undefined && exerciseSmallDesc !== undefined &&
                 <StartTrainingForm isUser={false} workoutId={+id} exerciseSmallDesc={exerciseSmallDesc} workoutName={name}/>}
             <Footer/>
         </div>

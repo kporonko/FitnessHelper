@@ -19,7 +19,6 @@ const Training = () => {
     const location = useLocation()
     let {workTime, setsCount, rest, exerciseSmallDesc, name, id, isUser} = location.state;
     const count = exerciseSmallDesc.length;
-
     const [work, setWork] = useState<number>(workTime)
     const [sets, setSets] = useState<number>(setsCount)
     const [exercise, setExercise] = useState<number>(exerciseSmallDesc.length)
@@ -32,11 +31,12 @@ const Training = () => {
     let [newArr, setNewArr] = useState([...exerciseSmallDesc.slice(1, exerciseSmallDesc.length)]);
     const [isPaused, setIsPaused] = useState<boolean>(false);
 
-    let synergists: number[];
-    let targetIds: number[];
-
-    //  exerciseSmallDesc.forEach((ex: IExercise) => synergists.push(ex.synergistsId));
-    //  exerciseSmallDesc.forEach((ex: IExercise) => targetIds.push(ex.targetId));
+    const synergists: number[] = [].concat(...exerciseSmallDesc.map((ex: IExercise) => ex.synergistsId));
+    const targetIds: number[] = exerciseSmallDesc.map((ex: IExercise) => ex.targetId);
+    console.log('synergists')
+    console.log(synergists)
+    console.log('targetIds')
+    console.log(targetIds)
 
     useEffect(()=>{
         if (!isPaused){
@@ -58,18 +58,18 @@ const Training = () => {
                             if (sets === 1){
                                 if (isUser){
                                     setWork(-1)
-                                    for (let i = 0; i < exerciseSmallDesc.length; i++){
-                                        let synergist = exerciseSmallDesc[i].synergistsId;
-                                        for (let j = 0; j < synergist.length; j++){
-                                            synergists.push(synergist[j])
-                                        }
-                                        console.log(synergists)
+                                    const userId = localStorage.getItem("id")
+                                    if (userId !== null){
+                                        updateUserMuscles({ synergists: synergists, target: targetIds, userId: +userId})
                                     }
-                                    updateUserMuscles({ synergists: synergists, target: targetIds})
                                     return handleUserTraining()
                                 }
                                 else{
                                     setWork(-1)
+                                    const userId = localStorage.getItem("id")
+                                    if (userId !== null){
+                                        updateUserMuscles({ synergists: synergists, target: targetIds, userId: +userId})
+                                    }
                                     handleBasicTraining()
                                 }
                                 return

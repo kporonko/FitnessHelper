@@ -430,13 +430,13 @@ export const getUserMuscles = async (userId: number) => {
 }
 
 export const updateUserMuscles = async (muscle: MuscleForUpdate) => {
-    console.log("muscle")
     console.log(muscle)
-    const response = await fetch(`${baseUrl}UpdateUserMuscles777`, {
+    const response = await fetch(`${baseUrl}UpdateUserMuscles`, {
         method: 'PUT',
         body: JSON.stringify({
             "synergists": muscle.synergists,
-            "target": muscle.target
+            "target": muscle.target,
+            "userId": muscle.userId
         }),
         headers: {
             'Content-Type': 'application/json',

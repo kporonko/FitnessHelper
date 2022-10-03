@@ -9,7 +9,7 @@ const StartTrainingForm = (props: {exerciseSmallDesc: IExercise[], workoutName: 
     const [workTime, setWorkTime] = useState(10)
     const [setsCount, setSetsCount] = useState(1)
     const [rest, setRest] = useState(10)
-
+    console.log(props.exerciseSmallDesc)
     return (
         <div style={{margin: '50px 20%'}}>
             { props.exerciseSmallDesc.length > 0 ?

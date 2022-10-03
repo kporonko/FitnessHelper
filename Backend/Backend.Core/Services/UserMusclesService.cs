@@ -33,14 +33,12 @@ namespace Backend.Core.Services
             {
                 var muscle = _context.Muscles.FirstOrDefault(x => x.MuscleId == userMuscle.MuscleId);
                 var resMuscle = new UserMuscleSmallDesc { Id = muscle.MuscleId, Name = muscle.Name, UrlImage = muscle.UrlImage };
-                if(countPoints <= 0)
-                    resMuscle.Percentage = 0;
-                else
-                    resMuscle.Percentage = userMuscle.MusclePoints / countPoints;
+
+                resMuscle.Percentage = userMuscle.MusclePoints;
                 resList.Add(resMuscle);
                 _context.SaveChanges();
             }
-            resList = resList.OrderBy(x => x.Percentage).ThenBy(x => x.Name).ToList();
+            resList = resList.OrderByDescending(x => x.Percentage).ThenBy(x => x.Name).ToList();
             return resList;
         }
 
@@ -48,18 +46,17 @@ namespace Backend.Core.Services
         {
             foreach (var target in userMuscles.Target)
             {
-                var targetMuscle = _context.UserMuscles.FirstOrDefault(x => x.MuscleId == target.Id);
+                var targetMuscle = _context.UserMuscles.FirstOrDefault(x => x.MuscleId == target && x.UserId == userMuscles.UserId);
                 targetMuscle.MusclePoints += 10;
             }
 
-            foreach (var synergistList in userMuscles.Synergists)
+            foreach (var synergist in userMuscles.Synergists)
             {
-                foreach (var synergist in synergistList)
-                {
-                    var muscle = _context.UserMuscles.FirstOrDefault(x => x.MuscleId == synergist.Id);
-                    muscle.MusclePoints += 5;
-                }
+                var muscle = _context.UserMuscles.FirstOrDefault(x => x.MuscleId == synergist && x.UserId == userMuscles.UserId);
+                muscle.MusclePoints += 5;
             }
+            _context.SaveChanges();
+
             return HttpStatusCode.OK;
         }
 

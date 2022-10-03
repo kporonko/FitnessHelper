@@ -1,5 +1,6 @@
 ﻿using Backend.Core.Interfaces;
 using Backend.Core.Models.BasicSets;
+using Backend.Core.Models.UserMuscles;
 using Backend.Infrastructure.Data;
 using Backend.Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
@@ -52,7 +53,7 @@ namespace Backend.Core.Services
             {
                 return null;
             }
-
+            
             AddEfficiencyToSet(basicalSet);
             EfficiencyDesc efficiencyDesc = GetEfficiencyDescFromEfficiency(basicalSet.BasicalSetEfficiency);
 
@@ -146,10 +147,19 @@ namespace Backend.Core.Services
         /// <param name="exerciseSmallDescList">List of exercise small desc model.</param>
         private void AddExerciseSmallDescToList(BasicalSetExercise basicalSetExercise, List<ExerciseSmallDesc> exerciseSmallDescList)
         {
-            var exercise = _context.Exercises.First(x => x.ExerciseId == basicalSetExercise.ExerciseId);
+            var exercise = _context.Exercises.Include(x => x.ExerciseMuscles).First(x => x.ExerciseId == basicalSetExercise.ExerciseId);
             var exerciseMuscle = _context.ExerciseMuscles.Where(x => x.ExerciseId == exercise.ExerciseId).First(x => x.IsTarget == true);
             var targetMuscle = _context.Muscles.First(x => x.MuscleId == exerciseMuscle.MuscleId);
-            exerciseSmallDescList.Add(ConvertExerciseToExerciseDesc(exercise, targetMuscle));
+            var targetId = targetMuscle.MuscleId;
+            var resList = new List<int>();
+            foreach (var ex in exercise.ExerciseMuscles)
+            {
+                if (!ex.IsTarget)
+                {
+                    resList.Add(ex.MuscleId);
+                }
+            }
+            exerciseSmallDescList.Add(ConvertExerciseToExerciseDesc(exercise, targetMuscle, targetId, resList));
         }
 
         /// <summary>
@@ -158,9 +168,9 @@ namespace Backend.Core.Services
         /// <param name="exercise">Initial exercise.</param>
         /// <param name="targetMuscle">Converted SmallDesc of exercise.</param>
         /// <returns></returns>
-        private ExerciseSmallDesc ConvertExerciseToExerciseDesc(Exercise exercise, Muscle targetMuscle)
+        private ExerciseSmallDesc ConvertExerciseToExerciseDesc(Exercise exercise, Muscle targetMuscle, int targetId, List<int> synergists)
         {
-            return new ExerciseSmallDesc() { Id = exercise.ExerciseId, Image = exercise.UrlImage, Name = exercise.Name, TargetMuscle = targetMuscle.Name };
+            return new ExerciseSmallDesc() { Id = exercise.ExerciseId, Image = exercise.UrlImage, Name = exercise.Name, TargetMuscle = targetMuscle.Name, SynergistsId = synergists, TargetId = targetId };
         }
     }
 }

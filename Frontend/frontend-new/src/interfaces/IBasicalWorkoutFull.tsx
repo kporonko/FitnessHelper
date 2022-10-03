@@ -1,3 +1,5 @@
+import {IExercise} from "./IExercise";
+
 export interface IBasicalWorkoutFull{
     id: number,
     name: string,
@@ -11,10 +13,5 @@ export interface IBasicalWorkoutFull{
         chest: number,
         abs: number
     },
-    exerciseSmallDescs: {
-        id: number,
-        name: string,
-        image: string,
-        targetMuscle: string
-    }[]
+    exerciseSmallDescs: IExercise[]
 }
