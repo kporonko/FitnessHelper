@@ -7,6 +7,10 @@
     font-family: "Oswald", sans-serif;
     margin: 0;
 }
+.imgWrapper{
+    display: flex;
+    justify-content: center;
+}
 .exImage{
     width: 30%;
 }

@@ -86,8 +86,8 @@ const Exercises = () => {
             <h4 data-aos="fade-right" className={classes.h4}>Search For Exercises</h4>
             <div data-aos="fade-right" style={{display: 'flex', justifyContent: 'center', margin: '40px 30px'}}>
                 <Box style={{display: 'inline'}} position="relative" mb="32px">
-                    <TextField onChange={(e)=> setSearch(e.target.value)} sx={{input: {fontWeight: '700', border: 'none', borderRadius: '4px'}, width: {lg: '900px', xs: '350px'}, borderRadius:"40px", backgroundColor: '#fff'}} value={search} placeholder='Search products...' type="text"/>
-                    <Button onClick={handleSearch}
+                    <TextField onChange={(e)=> setSearch(e.target.value)} sx={{input: {fontWeight: '700', border: 'none', borderRadius: '4px'}, width: {lg: '900px', xs: '350px'}, borderRadius:"40px", backgroundColor: '#fff'}} value={search} placeholder='Search for exercises...' type="text"/>
+                    <Button className={classes.buttonSearch} onClick={handleSearch}
                         sx={{bgcolor: 'black', color: '#fff', textTransform: 'none', width: {lg: '175px', xs: '12px'}, fontSize:{lg: '20px', xs: '14px'}, height: '56px', position: "absolute", right: '0', }}
                     >
                         Search

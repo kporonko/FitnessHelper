@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Statistics user muscle in process">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Statistics user muscles is done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Models/BasicSets/ExerciseSmallDesc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Models/BasicSets/ExerciseSmallDesc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Models/UserMuscles/MusclesForUpdate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Models/UserMuscles/MusclesForUpdate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/BasicSetService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/BasicSetService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/UserMusclesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/UserMusclesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IBasicalWorkoutFull.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IBasicalWorkoutFull.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/UserMuscles/MuscleForUpdate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/UserMuscles/MuscleForUpdate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/ExerciseDesc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/ExerciseDesc.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664830777023</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Statistics user muscles is done">
+      <created>1664839622966</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1664839622966</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +380,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Page of basic workout is fully implemented" />
     <MESSAGE value="Basic workouts are fully implemented, as well as muscle desc page" />
     <MESSAGE value="Exercises page fully implemented" />
     <MESSAGE value="User Workouts page is implemented. Buttons add delete is added too." />
@@ -402,6 +404,7 @@
     <MESSAGE value="Achievements are implemented fully" />
     <MESSAGE value="Pagination bug with category handle is fixed" />
     <MESSAGE value="Statistics user muscle in process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Statistics user muscle in process" />
+    <MESSAGE value="Statistics user muscles is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Statistics user muscles is done" />
   </component>
 </project>

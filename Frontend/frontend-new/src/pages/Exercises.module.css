@@ -29,3 +29,11 @@
     font-size: 38px;
     text-align: center;
 }
+.buttonSearch{
+    font-family: "Oswald", sans-serif!important;
+}
+.buttonSearch:hover{
+    background: black!important;
+    transform: scale(1.1);
+    transition: 1s all ease;
+}

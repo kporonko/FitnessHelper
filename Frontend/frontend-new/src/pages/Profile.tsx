@@ -72,7 +72,7 @@ const Profile = () => {
                 <hr/>
                     <div style={{display: 'flex', justifyContent: 'center', gap:'30px'}}>
                         {achievments?.map((val, ind) => (
-                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                            <div className={classes.achievmentWrap} style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                                 <img className={val.isDone === true ? classes.achievImage: classes.achievImageGray} src={val.image} alt=""/>
                                 <h2 className={val.isDone === true ? classes.achievName: classes.achievNameGray}>{val.name}</h2>
                                 <h2 className={classes.achievDesc}>{val.description}</h2>

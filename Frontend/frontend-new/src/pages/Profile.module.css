@@ -88,6 +88,10 @@
     color: white;
     border-radius: 30px;
 }
+.button:hover{
+    transform: scale(1.05);
+    transition: 0.5s all ease;
+}
 .red{
     background: red;
 }
@@ -117,4 +121,9 @@
 }
 .link:hover>div{
     display: block;
+}
+.achievmentWrap:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    transition: 0.7s all ease;
 }

@@ -60,7 +60,7 @@
     padding: 10px 20%;
     border: 1px solid #4a4949;
     display: flex;
-    justifyContent: space-between;
+    justify-content: space-between;
     margin: 10px 5%;
     background: #4d4c4c;
     color: white;
@@ -80,4 +80,7 @@
     font-weight: lighter;
     font-family: "Oswald", sans-serif;
     font-size: 44px;
+}
+.imgWrapper{
+
 }
