@@ -8,7 +8,7 @@ namespace Backend.Core.Models.Achievments
 {
     public class AchievmentSmallDesc
     {
-        public int Id { get; set; }
+        public int AchievmentId { get; set; }
         public string Name { get; set; }
         public string Desc { get; set; }
     }

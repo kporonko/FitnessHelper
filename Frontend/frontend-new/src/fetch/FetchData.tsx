@@ -333,3 +333,83 @@ export const getAllAchievments = async (userId: number) => {
     }
     return undefined;
 }
+
+
+export const getResearcher = async (userId: number) => {
+    const response = await fetch(`${baseUrl}IsResearcher/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404)
+        return null;
+    const body = await response.json();
+    const data = body as IAchievment;
+    return data;
+}
+
+export const getCreator = async (userId: number) => {
+    const response = await fetch(`${baseUrl}IsCreator/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404)
+        return null;
+    const body = await response.json();
+    const data = body as IAchievment;
+    return data;
+}
+
+export const is5Own = async (userId: number) => {
+    const response = await fetch(`${baseUrl}Is5OwnTrainings/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404)
+        return null;
+    const body = await response.json();
+    const data = body as IAchievment;
+    return data;
+}
+
+export const is5Basical = async (userId: number) => {
+    const response = await fetch(`${baseUrl}Is5BasicalTrainings/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404)
+        return null;
+    const body = await response.json();
+    const data = body as IAchievment;
+    return data;
+}
+
+export const countTrainingAchievements = async (userId: number) => {
+    const response = await fetch(`${baseUrl}TrainingAchievements/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404)
+        return null;
+    const body = await response.json();
+    const data = body as IAchievment;
+    return data;
+}
+
+export const putAchievement = async (achievmentId: number, userId: number) => {
+    const response = await fetch(`${baseUrl}PutAchievment`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            "achievmentId": achievmentId,
+            "userId": userId
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}

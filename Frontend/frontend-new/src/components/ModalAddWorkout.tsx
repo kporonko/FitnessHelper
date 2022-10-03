@@ -1,6 +1,6 @@
 import React, {FormEvent, useState} from 'react';
 import classes from './ModalAddWorkout.module.css'
-import {addNewWorkout} from '../fetch/FetchData'
+import {addNewWorkout, getCreator, putAchievement} from '../fetch/FetchData'
 
 const ModalAddWorkout = (props: {active:boolean, setActive: React.Dispatch<React.SetStateAction<boolean>>}) => {
 
@@ -12,7 +12,17 @@ const ModalAddWorkout = (props: {active:boolean, setActive: React.Dispatch<React
         if (name !== "" && id !== null){
             await addNewWorkout(+id ,name)
         }
-        props.setActive(false)
+        props.setActive(false);
+
+        let userId = localStorage.getItem("id");
+        if (userId !== null) {
+            let achiev = await getCreator(+userId)
+            if (achiev !== null) {
+                await putAchievement(6, +userId);
+                alert(`Congrats. You got a new achievement: ${achiev.name}`)
+                window.location.reload()
+            }
+        }
     }
 
     return (

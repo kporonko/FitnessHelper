@@ -2,7 +2,14 @@ import React, {useEffect, useState} from 'react';
 import {useLocation, useNavigate} from "react-router-dom";
 import {IExercise} from "../interfaces/IExercise";
 import classes from './Training.module.css'
-import {createAndAddBasicTraining, createAndAddUserTraining} from "../fetch/FetchData";
+import {
+    countTrainingAchievements,
+    createAndAddBasicTraining,
+    createAndAddUserTraining,
+    getCreator, is5Basical,
+    is5Own,
+    putAchievement
+} from "../fetch/FetchData";
 import ModalEndTraining from "../components/ModalEndTraining";
 import ModalPause from "../components/ModalPause";
 
@@ -44,9 +51,11 @@ const Training = () => {
                         if (exercise === 1){
                             if (sets === 1){
                                 if (isUser){
-                                    handleUserTraining()
+                                    setWork(-1)
+                                    return handleUserTraining()
                                 }
                                 else{
+                                    setWork(-1)
                                     handleBasicTraining()
                                 }
                                 return
@@ -75,10 +84,25 @@ const Training = () => {
 
 
     const nav = useNavigate()
+
     const handleUserTraining = async () => {
         let code = await createAndAddUserTraining(id, Math.ceil(time), dateNow)
         if (code === 201){
             setIsActiveModal(true);
+        }
+        let userId = localStorage.getItem("id");
+        if (userId !== null) {
+            let achiev = await is5Own(+userId)
+            if (achiev !== null) {
+                await putAchievement(5, +userId);
+                alert(`Congrats. You got a new achievement: ${achiev.name}`)
+            }
+            let ach = await countTrainingAchievements(+userId);
+            console.log(ach)
+            if (ach !== null) {
+                await putAchievement(ach.achievmentId, +userId);
+                alert(`Congrats. You got a new achievement: ${ach.name}`)
+            }
         }
     }
     const handleBasicTraining = async () => {
@@ -88,12 +112,29 @@ const Training = () => {
             if (code === 201){
                 setIsActiveModal(true);
             }
+            let achiev = await is5Basical(+userId)
+            if (achiev !== null) {
+                await putAchievement(4, +userId);
+                alert(`Congrats. You got a new achievement: ${achiev.name}`)
+            }
+
+            let ach = await countTrainingAchievements(+userId);
+            if (ach !== null) {
+                await putAchievement(ach.achievmentId, +userId);
+                alert(`Congrats. You got a new achievement: ${ach.name}`)
+            }
         }
     }
 
     const handlePause = () => {
         if (isPaused){
-            setWork(work - 1)
+            if (work < 2){
+                setWork(work+1);
+            }
+            else{
+                setWork(work - 1)
+            }
+            // setWork(work-1);
         }
         setIsPaused(!isPaused)
     }

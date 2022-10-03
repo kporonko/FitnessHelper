@@ -16,10 +16,10 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/TrainingExercises/{userId}")]
-        public ActionResult<AchievmentSmallDesc> TrainingExercises(int userId)
+        [Route("/TrainingAchievements/{userId}")]
+        public ActionResult<AchievmentSmallDesc> TrainingAchievements(int userId)
         {
-            var achievment = _achievmentService.TrainingExercises(userId);
+            var achievment = _achievmentService.TrainingAchievements(userId);
             if (achievment == null)
                 return NotFound();
             return Ok(achievment);
@@ -45,8 +45,29 @@ namespace Backend.Controllers
             return Ok(achievment);
         }
 
+        [HttpGet]
+        [Route("/IsResearcher/{userId}")]
+        public ActionResult<AchievmentSmallDesc> IsResearcher(int userId)
+        {
+            var achievment = _achievmentService.IsResearcher(userId);
+            if (achievment == null)
+                return NotFound();
+            return Ok(achievment);
+        }
+
+        [HttpGet]
+        [Route("/IsCreator/{userId}")]
+        public ActionResult<AchievmentSmallDesc> IsCreator(int userId)
+        {
+            var achievment = _achievmentService.IsCreator(userId);
+            if (achievment == null)
+                return NotFound();
+            return Ok(achievment);
+        }
+
+
         [HttpPut]
-        [Route("/PutAchievment/{userId}")]
+        [Route("/PutAchievment")]
         public IActionResult PutAchievment(UserAchievmentDto userAchievmentDto)
         {
             var code = _achievmentService.PutAchievment(userAchievmentDto.AchievmentId, userAchievmentDto.UserId);

@@ -10,9 +10,11 @@ namespace Backend.Core.Interfaces
 {
     public interface IAchievmentService
     {
-        AchievmentSmallDesc? TrainingExercises(int userId);
+        AchievmentSmallDesc? TrainingAchievements(int userId);
         AchievmentSmallDesc? Is5BasicalTrainings(int userId);
         AchievmentSmallDesc? Is5OwnTrainings(int userId);
+        AchievmentSmallDesc? IsResearcher(int userId);
+        AchievmentSmallDesc? IsCreator(int userId);
         List<AchievmentFull> GetAllAchievments(int userId);
         HttpStatusCode PutAchievment(int achievmentId, int userId);
     }

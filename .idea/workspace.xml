@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Achievements backend is done">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/interfaces/IAchievment.tsx" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Models/Achievments/AchievmentFull.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Models/Achievments/AchievmentFull.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Interfaces/IAchievmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Interfaces/IAchievmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Models/Achievments/AchievmentSmallDesc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Models/Achievments/AchievmentSmallDesc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/AchievmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/AchievmentService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalAddWorkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalAddWorkout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664802733983</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed">
+      <created>1664804536325</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664804536325</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,7 +354,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Try to fix fires count" />
     <MESSAGE value="Fires count is fixed" />
     <MESSAGE value="Small css fix: border to cards added and margins are fixed" />
     <MESSAGE value="Page of basic workout is implemented without exercises" />
@@ -373,6 +378,7 @@
     <MESSAGE value="Pause functionality added to training" />
     <MESSAGE value="Initial setup" />
     <MESSAGE value="Achievements backend is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Achievements backend is done" />
+    <MESSAGE value="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed" />
   </component>
 </project>

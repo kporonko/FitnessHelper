@@ -22,9 +22,9 @@ namespace Backend.Core.Services
             _context = context;
         }
 
-        public AchievmentSmallDesc? TrainingExercises(int userId)
+        public AchievmentSmallDesc? TrainingAchievements(int userId)
         {
-            var user = _context.Users.Include(x => x.UserSetsOfExercises).ThenInclude(x => x.UserSetTrainings).FirstOrDefault(x => x.UserId == userId);
+            var user = _context.Users.Include(x => x.UserSetsOfExercises).ThenInclude(x => x.UserSetTrainings).Include(x =>x.BasicalSetTrainings).FirstOrDefault(x => x.UserId == userId);
             int count = 0;
             foreach (var userSet in user.UserSetsOfExercises)
             {
@@ -34,22 +34,22 @@ namespace Backend.Core.Services
             count += user.BasicalSetTrainings.Count;
 
             if (count == 1)
-                return new AchievmentSmallDesc { Id = 1, Desc = "Finish Your First Training Session", Name = "First Steps" };
+                return new AchievmentSmallDesc { AchievmentId = 1, Desc = "Finish Your First Training Session", Name = "First Steps" };
             else if(count == 10)
-                return new AchievmentSmallDesc { Id = 2, Desc = "Finish 10 Training Sessions", Name = "On The Right Way" };
+                return new AchievmentSmallDesc { AchievmentId = 2, Desc = "Finish 10 Training Sessions", Name = "On The Right Way" };
             else if (count == 50)
-                return new AchievmentSmallDesc { Id = 3, Desc = "Finish 50 Training Sessions", Name = "You got better" };
+                return new AchievmentSmallDesc { AchievmentId = 3, Desc = "Finish 50 Training Sessions", Name = "You got better" };
             else
                 return null;
         }
 
         public AchievmentSmallDesc? Is5BasicalTrainings(int userId)
         {
-            var user = _context.Users.Include(x => x.UserSetsOfExercises).ThenInclude(x => x.UserSetTrainings).FirstOrDefault(x => x.UserId == userId);
+            var user = _context.Users.Include(x => x.BasicalSetTrainings).FirstOrDefault(x => x.UserId == userId);
             int count = 0;
             count += user.BasicalSetTrainings.Count;
             if (count == 5)
-                return new AchievmentSmallDesc { Id = 4, Desc = "Finish 5 Basical Training Sessions", Name = "Learn From The Best" };
+                return new AchievmentSmallDesc { AchievmentId = 4, Desc = "Finish 5 Basical Training Sessions", Name = "Learn From The Best" };
             else
                 return null;
         }
@@ -63,7 +63,7 @@ namespace Backend.Core.Services
                 count += userSet.UserSetTrainings.Count;
             }
             if (count == 5)
-                return new AchievmentSmallDesc { Id = 5, Desc = "Finish 5 Your Own Trainings", Name = "Train On Your Own" };
+                return new AchievmentSmallDesc { AchievmentId = 5, Desc = "Finish 5 Your Own Trainings", Name = "Train On Your Own" };
             else
                 return null;
         }
@@ -72,6 +72,7 @@ namespace Backend.Core.Services
         {
             var userAchievment = _context.UserAchievments.First(x => x.UserId == userId && x.AchievmentId == achievmentId);
             userAchievment.IsDone = true;
+            _context.SaveChanges();
             return HttpStatusCode.OK;
         }
 
@@ -87,6 +88,24 @@ namespace Backend.Core.Services
             }
 
             return resList;
+        }
+
+        public AchievmentSmallDesc? IsResearcher(int userId)
+        {
+            var achievement = _context.UserAchievments.Include(x => x.Achievment).FirstOrDefault(x => x.UserId == userId && x.AchievmentId == 7);
+            if (achievement.IsDone)
+                return null;
+            else
+                return new AchievmentSmallDesc { Desc = achievement.Achievment.Description, AchievmentId = achievement.AchievmentId, Name = achievement.Achievment.Name };
+        }
+
+        public AchievmentSmallDesc? IsCreator(int userId)
+        {
+            var achievement = _context.UserAchievments.Include(x => x.Achievment).FirstOrDefault(x => x.UserId == userId && x.AchievmentId == 6);
+            if (achievement.IsDone)
+                return null;
+            else
+                return new AchievmentSmallDesc { Desc = achievement.Achievment.Description, AchievmentId = achievement.AchievmentId, Name = achievement.Achievment.Name };
         }
     }
 }
