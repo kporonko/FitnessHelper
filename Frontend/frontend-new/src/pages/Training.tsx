@@ -8,10 +8,11 @@ import {
     createAndAddUserTraining,
     getCreator, is5Basical,
     is5Own,
-    putAchievement
+    putAchievement, updateUserMuscles
 } from "../fetch/FetchData";
 import ModalEndTraining from "../components/ModalEndTraining";
 import ModalPause from "../components/ModalPause";
+import {MuscleId} from "../interfaces/UserMuscles/MuscleId";
 
 const Training = () => {
 
@@ -29,8 +30,13 @@ const Training = () => {
     const time = workTime * exerciseSmallDesc.length * setsCount / 60;
     const [isActiveModal, setIsActiveModal] = useState(false)
     let [newArr, setNewArr] = useState([...exerciseSmallDesc.slice(1, exerciseSmallDesc.length)]);
-
     const [isPaused, setIsPaused] = useState<boolean>(false);
+
+    let synergists: number[];
+    let targetIds: number[];
+
+    //  exerciseSmallDesc.forEach((ex: IExercise) => synergists.push(ex.synergistsId));
+    //  exerciseSmallDesc.forEach((ex: IExercise) => targetIds.push(ex.targetId));
 
     useEffect(()=>{
         if (!isPaused){
@@ -52,6 +58,14 @@ const Training = () => {
                             if (sets === 1){
                                 if (isUser){
                                     setWork(-1)
+                                    for (let i = 0; i < exerciseSmallDesc.length; i++){
+                                        let synergist = exerciseSmallDesc[i].synergistsId;
+                                        for (let j = 0; j < synergist.length; j++){
+                                            synergists.push(synergist[j])
+                                        }
+                                        console.log(synergists)
+                                    }
+                                    updateUserMuscles({ synergists: synergists, target: targetIds})
                                     return handleUserTraining()
                                 }
                                 else{

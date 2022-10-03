@@ -23,6 +23,7 @@ namespace Backend.Infrastructure.Data
         public DbSet<UserSetTraining> UserSetTrainings { get; set; }
         public DbSet<Achievment> Achievments { get; set; }
         public DbSet<UserAchievment> UserAchievments { get; set; }
+        public DbSet<UserMuscles> UserMuscles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,6 +40,7 @@ namespace Backend.Infrastructure.Data
             modelBuilder.ApplyConfiguration(new UserSetTrainingConfiguration());
             modelBuilder.ApplyConfiguration(new AchievmentConfiguration());
             modelBuilder.ApplyConfiguration(new UserAchievmentConfiguration());
+            modelBuilder.ApplyConfiguration(new UserMusclesConfiguration());
 
 
             modelBuilder
@@ -124,6 +126,19 @@ namespace Backend.Infrastructure.Data
                 .HasOne(x => x.Achievment)
                 .WithMany(x => x.UsersAchievments)
                 .HasForeignKey(x => x.AchievmentId)
+                .IsRequired();
+
+            modelBuilder
+                .Entity<UserMuscles>()
+                .HasOne(x => x.User)
+                .WithMany(x => x.UserMuscles)
+                .HasForeignKey(x => x.UserId)
+                .IsRequired();
+            modelBuilder
+                .Entity<UserMuscles>()
+                .HasOne(x => x.Muscle)
+                .WithMany(x => x.UserMuscles)
+                .HasForeignKey(x => x.MuscleId)
                 .IsRequired();
         }
     }

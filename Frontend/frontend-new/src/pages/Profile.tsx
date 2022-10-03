@@ -1,12 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {getProfile, getUserTrainingsByUserId, getBasicTrainingsByUserId, getAllAchievments} from '../fetch/FetchData';
+import {getProfile, getUserTrainingsByUserId, getBasicTrainingsByUserId, getAllAchievments, getUserMuscles} from '../fetch/FetchData';
 import {IProfile} from "../interfaces/IProfile";
 import classes from './Profile.module.css'
 import {ITraining} from "../interfaces/ITraining";
 import TrainingCard from "../components/TrainingCard";
 import {IAchievment} from "../interfaces/IAchievment";
+import {IUserMuscle} from "../interfaces/IUserMuscle";
+import {Link} from "react-router-dom";
+import Dropdown from 'react-dropdown';
 
 const Profile = () => {
 
@@ -14,6 +17,8 @@ const Profile = () => {
     const [trainings, setTrainings] = useState<ITraining[]>()
     const [isUserSet, setIsUserSet] = useState(true);
     const [achievments, setAchievments] = useState<IAchievment[]>();
+    const [userMuscles, setUserMuscles] = useState<IUserMuscle[]>();
+    const [isOpenMuscles, setIsOpenMuscles] = useState(false)
 
     useEffect(() => {
         const getFullProfile = async () => {
@@ -25,6 +30,8 @@ const Profile = () => {
                 setTrainings(userTrainings)
                 let achievements = await getAllAchievments(+userId);
                 setAchievments(achievements)
+                let muscles = await getUserMuscles(+userId)
+                setUserMuscles(muscles);
             }
         }
         getFullProfile()
@@ -74,6 +81,27 @@ const Profile = () => {
                     </div>
                 <hr/>
             </div>
+
+            <div style={{margin: '10px 7%'}}>
+                <hr/>
+                <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <button className={!isOpenMuscles ? classes.button : `${classes.button} ${classes.red}`} onClick={() => setIsOpenMuscles(!isOpenMuscles)}>{isOpenMuscles? 'Close Muscles' : 'Open Muscles'}</button>
+                </div>
+                <div className={isOpenMuscles ? classes.userMuscles : classes.invisible} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    {userMuscles?.map((val, ind) => (
+                        <div key={ind}>
+                            <Link className={classes.link} to={`/muscle/${val.id}`}>
+                                <h5 className={classes.muscleName}>{val.name}: <span>{val.percentage}</span></h5>
+                                <div>
+                                    <img style={{top: document.documentElement.clientHeight / 2, right: 20}} className={classes.image} src={val.urlImage} alt=""/>
+                                </div>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+                <hr/>
+            </div>
+
             <h2 className={classes.h2}>Trainings</h2>
             <div style={{margin: '30px 15%'}}>
                 <span onClick={() => handleUserTrainings()} className={isUserSet ? `${classes.categorySpan} ${classes.activeSpan}` : `${classes.categorySpan}`}>Own Trainings</span>

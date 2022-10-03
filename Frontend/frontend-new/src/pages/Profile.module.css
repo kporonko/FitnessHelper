@@ -70,3 +70,51 @@
     text-align: center;
     color: gray;
 }
+.userMuscles{
+
+}
+.invisible{
+    display: none!important;
+}
+.button{
+    padding: 5px 50px;
+    font-size: 34px;
+    font-weight: normal;
+    font-family: "Oswald", sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    background: #00D63C;
+    color: white;
+    border-radius: 30px;
+}
+.red{
+    background: red;
+}
+.muscleName{
+    color: #4d4c4c;
+    cursor: pointer;
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    font-size: 28px;
+}
+.muscleName:hover{
+    font-size: 34px;
+    color: black;
+    transition: 0.5s all ease;
+}
+.imgWrapperDiv{
+    display: none;
+}
+
+.image{
+    position: fixed;
+    width: 400px;
+    height: 400px;
+}
+.link>div{
+    display: none;
+}
+.link:hover>div{
+    display: block;
+}

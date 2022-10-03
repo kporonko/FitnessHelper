@@ -11,6 +11,8 @@ import {IProfile} from "../interfaces/IProfile";
 import {ITraining} from "../interfaces/ITraining";
 import {IGetToken} from "../interfaces/IGetToken";
 import {IAchievment} from "../interfaces/IAchievment";
+import {IUserMuscle} from "../interfaces/IUserMuscle";
+import {MuscleForUpdate} from "../interfaces/UserMuscles/MuscleForUpdate";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -406,6 +408,35 @@ export const putAchievement = async (achievmentId: number, userId: number) => {
         body: JSON.stringify({
             "achievmentId": achievmentId,
             "userId": userId
+        }),
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+
+    return response.status;
+}
+
+export const getUserMuscles = async (userId: number) => {
+    const response = await fetch(`${baseUrl}GetUserMuscles/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 404)
+        return undefined;
+    const body = await response.json();
+    const data = body as IUserMuscle[];
+    return data;
+}
+
+export const updateUserMuscles = async (muscle: MuscleForUpdate) => {
+    console.log("muscle")
+    console.log(muscle)
+    const response = await fetch(`${baseUrl}UpdateUserMuscles777`, {
+        method: 'PUT',
+        body: JSON.stringify({
+            "synergists": muscle.synergists,
+            "target": muscle.target
         }),
         headers: {
             'Content-Type': 'application/json',

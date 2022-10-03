@@ -15,5 +15,7 @@ namespace Backend.Core.Models.Exercises
         public string Image { get; set; }
 
         public string TargetMuscle { get; set; }
+        public List<int> SynergistsId { get; set; }
+        public int TargetId { get; set; }
     }
 }

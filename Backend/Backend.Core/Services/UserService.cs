@@ -31,7 +31,7 @@ namespace Backend.Core.Services
 
                 var user = new User { Login = registerUser.Login, Password = registerUser.Password, FirstName = registerUser.FirstName, LastName = registerUser.LastName };
                 FillAchievments(user);
-                
+                FillMuscles(user);
                 _context.Users.Add(user);
                 _context.SaveChanges();
 
@@ -104,6 +104,19 @@ namespace Backend.Core.Services
             for (int i = 0; i < achievments.Count; i++)
             {
                 user.UsersAchievments.Add(new UserAchievment { Achievment = achievments[i], IsDone = false });
+            }
+        }
+
+        /// <summary>
+        /// Fills all muscles with 0 points to user.
+        /// </summary>
+        /// <param name="user"></param>
+        private void FillMuscles(User user)
+        {
+            var muscles = _context.Muscles.ToList();
+            for (int i = 0; i < muscles.Count; i++)
+            {
+                user.UserMuscles.Add(new UserMuscles { UserId = user.UserId, MuscleId = muscles[i].MuscleId, MusclePoints = 0});
             }
         }
     } 

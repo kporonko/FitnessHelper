@@ -10,7 +10,7 @@
 .exImage{
     width: 30%;
 }
-.imgWrapper{
+.imgWrapperDiv{
     display: flex;
     justify-content: center;
 }

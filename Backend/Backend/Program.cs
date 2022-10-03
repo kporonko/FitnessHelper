@@ -48,6 +48,7 @@ builder.Services.AddTransient<IMuscleService, MuscleService>();
 builder.Services.AddTransient<IProfileService, ProfileService>();
 builder.Services.AddTransient<ITrainingService, TrainingService>();
 builder.Services.AddTransient<IAchievmentService, AchievmentService>();
+builder.Services.AddTransient<IUserMusclesService, UserMusclesService>();
 
 var app = builder.Build();
 app.UseCors(MyAllowSpecificOrigins);

@@ -41,7 +41,7 @@
 .modal__content.active{
     transform: scale(1);
 }
-.imgWrapper{
+.imgWrapperDiv{
     width: 100%;
     height: 100%;
 }

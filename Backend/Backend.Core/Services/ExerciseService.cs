@@ -77,12 +77,33 @@ namespace Backend.Core.Services
             foreach (var exUserSet in exercisesUserSet)
             {
                 var currExercise = new ExerciseSmallDescription { Id = exUserSet.Exercise.ExerciseId, Image = exUserSet.Exercise.UrlImage, Name = exUserSet.Exercise.Name };
+                AddSynergistsToDesc(exUserSet, ref currExercise);
                 AddsTargetMuscleToDescByExUserSet(exUserSet, ref currExercise);
                 listExercises.Add(currExercise);
             }
             modelRes.exerciseSmallDescription = listExercises;
             modelRes.Name = _context.UserSetOfExercises.FirstOrDefault(x => x.UserSetId == setId).Name;
             return modelRes;
+        }
+
+
+        /// <summary>
+        /// Adds synergists list to currrent exercise description.
+        /// </summary>
+        /// <param name="exUserSet">Intermediate table exercise-userSet value.</param>
+        /// <param name="currExercise">Current description we must fill with data.</param>
+        private void AddSynergistsToDesc(UserSetExercise exUserSet, ref ExerciseSmallDescription currExercise)
+        {
+            var ex = exUserSet.Exercise;
+            var resList = new List<int>();
+            foreach (var exMuscle in ex.ExerciseMuscles)
+            {
+                if (!exMuscle.IsTarget)
+                {
+                    resList.Add(exMuscle.MuscleId);
+                }
+            }
+            currExercise.SynergistsId = resList;
         }
 
         /// <summary>
@@ -98,6 +119,7 @@ namespace Backend.Core.Services
                 if (exMuscle.IsTarget)
                 {
                     currExercise.TargetMuscle = exMuscle.Muscle.Name;
+                    currExercise.TargetId = exMuscle.Muscle.MuscleId;
                 }
             }
         }
