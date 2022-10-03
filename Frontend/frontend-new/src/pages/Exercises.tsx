@@ -62,17 +62,18 @@ const Exercises = () => {
     }
 
     const categoryHandle = async (part: string) => {
+        setCurrentPage(1)
         let exByPart = await getExByPartBody(part);
         setExercises(exByPart)
         setCurrCategory(part + ' Exercises')
     }
 
     const allExercisesHandle = async () => {
+        setCurrentPage(1)
         let exercises = await getAllExercises();
         setExercises(exercises);
         setCurrCategory("All Exercises")
     }
-    console.log(currExerciseToAdd)
 
     return (
         <div>

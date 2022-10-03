@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Achievements are implemented fully">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Interfaces/IAchievmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Interfaces/IAchievmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Models/Achievments/AchievmentSmallDesc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Models/Achievments/AchievmentSmallDesc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/AchievmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/AchievmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalAddWorkout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalAddWorkout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664804536325</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Achievements are implemented fully">
+      <created>1664811686791</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664811686791</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +354,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fires count is fixed" />
     <MESSAGE value="Small css fix: border to cards added and margins are fixed" />
     <MESSAGE value="Page of basic workout is implemented without exercises" />
     <MESSAGE value="Page of basic workout is fully implemented" />
@@ -379,6 +378,7 @@
     <MESSAGE value="Initial setup" />
     <MESSAGE value="Achievements backend is done" />
     <MESSAGE value="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed" />
+    <MESSAGE value="Achievements are implemented fully" />
+    <option name="LAST_COMMIT_MESSAGE" value="Achievements are implemented fully" />
   </component>
 </project>
