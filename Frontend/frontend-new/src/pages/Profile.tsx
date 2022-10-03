@@ -1,17 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {getProfile, getUserTrainingsByUserId, getBasicTrainingsByUserId} from '../fetch/FetchData';
+import {getProfile, getUserTrainingsByUserId, getBasicTrainingsByUserId, getAllAchievments} from '../fetch/FetchData';
 import {IProfile} from "../interfaces/IProfile";
 import classes from './Profile.module.css'
 import {ITraining} from "../interfaces/ITraining";
 import TrainingCard from "../components/TrainingCard";
+import {IAchievment} from "../interfaces/IAchievment";
 
 const Profile = () => {
 
     const [profile, setProfile] = useState<IProfile>()
     const [trainings, setTrainings] = useState<ITraining[]>()
     const [isUserSet, setIsUserSet] = useState(true);
+    const [achievments, setAchievments] = useState<IAchievment[]>();
 
     useEffect(() => {
         const getFullProfile = async () => {
@@ -21,6 +23,8 @@ const Profile = () => {
                 setProfile(profile)
                 let userTrainings = await getUserTrainingsByUserId(+userId);
                 setTrainings(userTrainings)
+                let achievements = await getAllAchievments(+userId);
+                setAchievments(achievements)
             }
         }
         getFullProfile()
@@ -59,8 +63,14 @@ const Profile = () => {
             </div>
             <div className={classes.achievments}>
                 <hr/>
-                    <div>
-                        aboba
+                    <div style={{display: 'flex', justifyContent: 'center', gap:'30px'}}>
+                        {achievments?.map((val, ind) => (
+                            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                                <img className={val.isDone === true ? classes.achievImage: classes.achievImageGray} src={val.image} alt=""/>
+                                <h2 className={val.isDone === true ? classes.achievName: classes.achievNameGray}>{val.name}</h2>
+                                <h2 className={classes.achievDesc}>{val.description}</h2>
+                            </div>
+                        ))}
                     </div>
                 <hr/>
             </div>

@@ -82,7 +82,7 @@ namespace Backend.Core.Services
 
             foreach (var userAchievment in user.UsersAchievments)
             {
-                var achievment = new AchievmentFull { AchievmentId = userAchievment.AchievmentId, Description = userAchievment.Achievment.Description, Name = userAchievment.Achievment.Name, IsDone = userAchievment.IsDone };
+                var achievment = new AchievmentFull { AchievmentId = userAchievment.AchievmentId, Description = userAchievment.Achievment.Description, Name = userAchievment.Achievment.Name, IsDone = userAchievment.IsDone, Image = userAchievment.Achievment.UrlImage };
                 resList.Add(achievment);
             }
 

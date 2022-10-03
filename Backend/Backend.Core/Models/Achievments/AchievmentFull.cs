@@ -11,6 +11,7 @@ namespace Backend.Core.Models.Achievments
         public int AchievmentId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string Image { get; set; }
         public bool IsDone { get; set; }
     }
 }

@@ -10,7 +10,6 @@ const Main = () => {
     const nav = useNavigate()
 
     useEffect(()=>{
-        console.log(localStorage.getItem("id"))
         if (localStorage.getItem("id") == null){
             nav("/");
         }

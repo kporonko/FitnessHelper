@@ -16,7 +16,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/TrainingExercises")]
+        [Route("/TrainingExercises/{userId}")]
         public ActionResult<AchievmentSmallDesc> TrainingExercises(int userId)
         {
             var achievment = _achievmentService.TrainingExercises(userId);
@@ -26,7 +26,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/Is5BasicalTrainings")]
+        [Route("/Is5BasicalTrainings/{userId}")]
         public ActionResult<AchievmentSmallDesc> Is5BasicalTrainings(int userId)
         {
             var achievment = _achievmentService.Is5BasicalTrainings(userId);
@@ -36,7 +36,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/Is5OwnTrainings")]
+        [Route("/Is5OwnTrainings/{userId}")]
         public ActionResult<AchievmentSmallDesc> Is5OwnTrainings(int userId)
         {
             var achievment = _achievmentService.Is5OwnTrainings(userId);
@@ -46,7 +46,7 @@ namespace Backend.Controllers
         }
 
         [HttpPut]
-        [Route("/PutAchievment")]
+        [Route("/PutAchievment/{userId}")]
         public IActionResult PutAchievment(UserAchievmentDto userAchievmentDto)
         {
             var code = _achievmentService.PutAchievment(userAchievmentDto.AchievmentId, userAchievmentDto.UserId);
@@ -56,7 +56,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetAllAchievments")]
+        [Route("/GetAllAchievments/{userId}")]
         public IActionResult GetAllAchievments(int userId)
         {
             var list = _achievmentService.GetAllAchievments(userId);

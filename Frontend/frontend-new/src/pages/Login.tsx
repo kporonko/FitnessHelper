@@ -19,7 +19,7 @@ const Login = () => {
         }
         else{
             localStorage.setItem("token", data.token);
-            localStorage.setItem("userId", data.userId.toString());
+            localStorage.setItem("id", data.userId.toString());
             let token = localStorage.getItem("token");
             if (token !== null){
                 const resLogin = await loginUser(token);

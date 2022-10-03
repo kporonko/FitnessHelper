@@ -10,6 +10,7 @@ import {IUserSetFullDesc} from "../interfaces/IUserSetFullDesc";
 import {IProfile} from "../interfaces/IProfile";
 import {ITraining} from "../interfaces/ITraining";
 import {IGetToken} from "../interfaces/IGetToken";
+import {IAchievment} from "../interfaces/IAchievment";
 
 const baseUrl = "https://localhost:7198/";
 
@@ -317,4 +318,18 @@ export const createAndAddUserTraining = async (userSetId: number, time: number, 
         }});
 
     return response.status;
+}
+
+export const getAllAchievments = async (userId: number) => {
+    const response = await fetch(`${baseUrl}GetAllAchievments/${userId}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }});
+    if (response.status === 200){
+        const body = await response.json();
+        const data = body as IAchievment[];
+        return data;
+    }
+    return undefined;
 }

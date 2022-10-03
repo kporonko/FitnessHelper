@@ -44,5 +44,29 @@
     color: red;
 }
 .achievments{
-    
+    margin: 10px 7%;
+}
+.achievImage{
+    width: 150px;
+    height: 150px;
+}
+.achievName{
+    font-size: 20px;
+    text-align: center;
+    color: #00D63C;
+}
+.achievDesc{
+    font-size: 14px;
+    text-align: center;
+}
+.achievImageGray{
+    filter: grayscale(100%);
+    width: 150px;
+    height: 150px;
+    opacity: 0.3;
+}
+.achievNameGray{
+    font-size: 20px;
+    text-align: center;
+    color: gray;
 }
