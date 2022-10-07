@@ -1,6 +1,10 @@
 ﻿using Backend.Core.Models;
 using Backend.Core.Services;
 using Backend.Infrastructure.Data;
+using Backend.Infrastructure.Models;
+using DeepEqual.Syntax;
+using Microsoft.EntityFrameworkCore;
+using Moq;
 using Xunit;
 
 namespace Backend.Core.Tests
@@ -11,60 +15,79 @@ namespace Backend.Core.Tests
         public void UserGet_NonExistingUser_ReturnNull()
         {
             // Arrange
-            ApplicationContextFactory applicationContextFactory = new ApplicationContextFactory();
-            var service = new UserService(applicationContextFactory.CreateDbContext(new string[] { }));
-            var userLogin = new LoginUser() { Login = "TestLogin" + (char)new Random().Next(1,100), Password = "TestPassword" + (char)new Random().Next(1, 100) };
+            var options = new DbContextOptionsBuilder<ApplicationContext>()
+                .UseInMemoryDatabase(databaseName: "Gym")
+                .Options;
+            var service = new UserService(new ApplicationContext(options));
+            var user = new LoginUser { Password = "NonExistingPassword", Login = "NonExistingLogin" };
 
             // Act
-            var user = service.Get(userLogin);
+            var result = service.Get(user);
 
             // Assert
-            Assert.Null(user);
+            Assert.Null(result);
         }
 
         [Fact]
-        public void UserGet_ExistingUser_ReturnId()
+        public void UserGet_ExistingUser_ReturnUser()
         {
             // Arrange
-            ApplicationContextFactory applicationContextFactory = new ApplicationContextFactory();
-            var service = new UserService(applicationContextFactory.CreateDbContext(new string[] { }));
-            var userLogin = new LoginUser() { Login = "amonullo@gmail.com", Password = "12345678" };
+            var options = new DbContextOptionsBuilder<ApplicationContext>()
+                .UseInMemoryDatabase(databaseName: "Gym")
+                .Options;
+            var service = new UserService(new ApplicationContext(options));
+            var newUser = new User { UserId = 2, FirstName = "First", LastName = "Second", Login = "SecondTestLogin", Password = "SecondTestPassword" };
+            using (var context = new ApplicationContext(options))
+            {
+                context.Users.Add(newUser);
+                context.SaveChanges();
+            }
+            var user = new LoginUser { Password = "SecondTestPassword", Login = "SecondTestLogin" };
 
             // Act
-            var user = service.Get(userLogin);
+            var result = service.Get(user);
 
             // Assert
-            Assert.Equal(1, user.UserId);
+            Assert.Equal(newUser.UserId, result.UserId);
         }
 
         [Fact]
         public void UserCreate_UserWithExistingLogin_NotCreatedUser()
         {
             // Arrange
-            ApplicationContextFactory applicationContextFactory = new ApplicationContextFactory();
-            var service = new UserService(applicationContextFactory.CreateDbContext(new string[] { }));
-            var userRegister = new RegisterUser() { Login = "amonullo@gmail.com", Password = "TestPassword", FirstName = "TestFirstName", LastName = " TestLastName" };
-
+            var options = new DbContextOptionsBuilder<ApplicationContext>()
+                .UseInMemoryDatabase(databaseName: "Gym")
+                .Options;
+            var service = new UserService(new ApplicationContext(options));
+            var user = new RegisterUser { Password = "Second", FirstName = "Second", LastName = "Second", Login = "Login2" };
+            var newUser = new User { UserId = 3, FirstName = "First", LastName = "Second", Login = "Login2", Password = "Password2" };
+            using (var context = new ApplicationContext(options))
+            {
+                context.Users.Add(newUser);
+                context.SaveChanges();
+            }
             // Act
-            var statusCode = service.Create(userRegister);
+            var result = service.Create(user);
 
             // Assert
-            Assert.Equal(409, (int)statusCode);
+            Assert.Equal(System.Net.HttpStatusCode.Conflict, result);
         }
 
         [Fact]
         public void UserCreate_UserWithNonExistingLogin_CreatedUser()
         {
             // Arrange
-            ApplicationContextFactory applicationContextFactory = new ApplicationContextFactory();
-            var service = new UserService(applicationContextFactory.CreateDbContext(new string[] { }));
-            var userRegister = new RegisterUser() { Login = "TestLogin", Password = "TestPassword", FirstName = "TestFirstName", LastName = "TestLastName" };
+            var options = new DbContextOptionsBuilder<ApplicationContext>()
+                .UseInMemoryDatabase(databaseName: "Gym")
+                .Options;
+            var service = new UserService(new ApplicationContext(options));
+            var user = new RegisterUser { Password = "Password", FirstName = "First", LastName = "Last", Login = "Login" };
 
             // Act
-            var statusCode = service.Create(userRegister);
+            var result = service.Create(user);
 
             // Assert
-            Assert.Equal(201, (int)statusCode);
+            Assert.Equal(System.Net.HttpStatusCode.Created, result);
         }
     }
 }

@@ -82,7 +82,7 @@ namespace Backend.Core.Services
                 listExercises.Add(currExercise);
             }
             modelRes.exerciseSmallDescription = listExercises;
-            modelRes.Name = _context.UserSetOfExercises.FirstOrDefault(x => x.UserSetId == setId).Name;
+            modelRes.Name = _context.UserSetOfExercises.FirstOrDefault(x => x.UserSetId == setId)?.Name;
             return modelRes;
         }
 
