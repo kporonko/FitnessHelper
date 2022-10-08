@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  frontend:
+    image: frontend
+    build:
+      context: .
+      dockerfile: Frontend/frontend-new/Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "3000:3000"
+
+  backend:
+    image: backend
+    build:
+      context: .
+      dockerfile: Backend/Dockerfile
+    depends_on:
+      - sql.data
+      - identityserver
+    ports:
+      - "7198:7198"
+
+  identityserver:
+    image: identityserver
+    build:
+      context: .
+      dockerfile: Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/Dockerfile
+    ports:
+      - "7199:7199"
+
+  sql.data:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ConnectionString=Data Source=DESKTOP-7HK7ORN\SQLSERVER;Initial Catalog=TrainingHelperAlevel;Integrated Security=True;MultipleActiveResultSets=true
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"

@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Small fix">
+      <change afterPath="$PROJECT_DIR$/Backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +79,7 @@
       <workItem from="1664142916154" duration="14698000" />
       <workItem from="1664167385658" duration="43476000" />
       <workItem from="1664626279594" duration="3577000" />
-      <workItem from="1665064222750" duration="596000" />
+      <workItem from="1665064222750" duration="4386000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
