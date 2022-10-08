@@ -10,7 +10,7 @@ import {IAchievment} from "../interfaces/IAchievment";
 import {IUserMuscle} from "../interfaces/IUserMuscle";
 import {Link} from "react-router-dom";
 import Dropdown from 'react-dropdown';
-
+import userImg from "../Assets/user.png";
 const Profile = () => {
 
     const [profile, setProfile] = useState<IProfile>()
@@ -60,7 +60,7 @@ const Profile = () => {
             <h2 className={classes.h2}>Your Profile</h2>
             <div className={classes.flexDiv}>
                 <div className={classes.imgWrapper}>
-                    <img src={require("../../public/user.png")} alt=""/>
+                    <img src={userImg} alt=""/>
                 </div>
                 <div>
                     <h3 className={classes.h3}>{profile?.name}</h3>

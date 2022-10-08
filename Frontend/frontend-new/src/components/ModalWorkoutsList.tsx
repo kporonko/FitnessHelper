@@ -4,6 +4,7 @@ import {getMyWorkouts} from "../fetch/FetchData";
 import {IUsersetSmallDesc} from "../interfaces/IUsersetSmallDesc";
 import {addExerciseToUserSet} from '../fetch/FetchData'
 import { Store } from 'react-notifications-component';
+import dumbbell from '../Assets/dumbell.jpg'
 
 const ModalWorkoutsList = (props: {exerciseId:number, active:boolean, setActive: React.Dispatch<React.SetStateAction<boolean>>}) => {
 
@@ -61,7 +62,7 @@ const ModalWorkoutsList = (props: {exerciseId:number, active:boolean, setActive:
                 {myWorkouts?.map((val, ind) => (
                     <div className={classes.cardWrapper} onClick={(e)=>handleClick(e, val.id)}>
                         <div className={classes.imgWrapper}>
-                            <img className={classes.image} src={require("../../public/dumbell.jpg")} alt=""/>
+                            <img className={classes.image} src={dumbbell} alt=""/>
                         </div>
                         <h1 className={classes.h1}>{val.name}</h1>
                     </div>

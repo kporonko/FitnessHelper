@@ -5,8 +5,7 @@ import {Link, useParams} from "react-router-dom";
 import {deleteMyWorkout} from '../fetch/FetchData'
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-import {getExercisesFromUserWorkout} from '../fetch/FetchData'
-import {IExercise} from "../interfaces/IExercise";
+import dumbbell from '../Assets/dumbell.jpg'
 
 const MyWorkoutCard = (props: {id: number, name: string, exercises: string[]}) => {
 
@@ -30,7 +29,7 @@ const MyWorkoutCard = (props: {id: number, name: string, exercises: string[]}) =
     return (
             <div data-aos="fade-up" className={classes.wrapper}>
                 <Link style={{width: '100%', display: 'flex', justifyContent: 'space-between'}} to={`/my-workout/${props.id}`}>
-                    <img className={classes.exImage} src={require("../../public/dumbell.jpg")} alt=""/>
+                    <img className={classes.exImage} src={dumbbell} alt=""/>
                     <div>
                         <h2 className={classes.h2}>{props.name}</h2>
                         <h3 className={classes.h3}>Exercises: {props.exercises.length === 0 ? 'No Exercises' : props.exercises.map((val, ind) => (

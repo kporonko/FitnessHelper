@@ -8,6 +8,7 @@ import ExerciseCard from "../components/ExerciseCard";
 import {Box, Button, Pagination, TextField} from "@mui/material";
 import ModalAddWorkout from "../components/ModalAddWorkout";
 import ModalWorkoutsList from "../components/ModalWorkoutsList";
+import imageExercise from "../Assets/exercises.jpeg"
 
 const Exercises = () => {
 
@@ -80,7 +81,7 @@ const Exercises = () => {
             <Header page="exercises"/>
             <div style={{position: 'relative', marginBottom: '3%'}}>
                 <p className={classes.p}>Here you can see the most popular exercises in the sports history for all muscle group.</p>
-                <img className={classes.mainImage} src={require("../../public/exercises.jpeg")} alt=""/>
+                <img className={classes.mainImage} src={imageExercise} alt=""/>
             </div>
 
             <h4 data-aos="fade-right" className={classes.h4}>Search For Exercises</h4>

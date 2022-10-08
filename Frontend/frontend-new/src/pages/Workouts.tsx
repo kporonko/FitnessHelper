@@ -6,7 +6,7 @@ import {getBasicWorkoutsBySection} from "../fetch/FetchData"
 import {IBasicalWorkout} from "../interfaces/IBasicalWorkout";
 import BasicWorkoutCard from "../components/BasicWorkoutCard";
 import {ScrollMenu, VisibilityContext} from "react-horizontal-scrolling-menu";
-
+import imgWorkouts from "../Assets/workouts.jpg";
 const Workouts = () => {
 
     let [firstSection, setFirstSection] = useState<IBasicalWorkout[] | null>([])
@@ -33,7 +33,7 @@ const Workouts = () => {
             <Header page="workouts"/>
             <div data-aos="fade-up" style={{position: 'relative', marginBottom: '3%'}}>
                 <p className={classes.p}>Here you can see the most popular exercise sets in the sports history.</p>
-                <img className={classes.mainImage} src={require("../../public/workouts.jpg")} alt=""/>
+                <img className={classes.mainImage} src={imgWorkouts} alt=""/>
             </div>
             <div data-aos="fade-up" className={classes.headerWrapper}>
                 <h2 className={classes.h2}>Mass Gaining Workouts</h2>

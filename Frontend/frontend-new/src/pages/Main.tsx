@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import Footer from "../components/Footer";
+import logo from "../Assets/back.jpg"
 
 const Main = () => {
     const nav = useNavigate()
@@ -19,7 +20,7 @@ const Main = () => {
         <div>
             <Header page="main" />
             <div className={classes.main}>
-                <img className={classes.mainImg} src={require("../../public/back.jpg")} alt="MainImage"/>
+                <img className={classes.mainImg} src={logo} alt="MainImage"/>
                 <div data-aos="fade-up" className={classes.textWrapper}>
                     <h2 className={classes.h2}>The best workouts</h2>
                     <h5 className={classes.h5}>

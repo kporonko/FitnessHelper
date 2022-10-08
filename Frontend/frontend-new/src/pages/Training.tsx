@@ -33,10 +33,6 @@ const Training = () => {
 
     const synergists: number[] = [].concat(...exerciseSmallDesc.map((ex: IExercise) => ex.synergistsId));
     const targetIds: number[] = exerciseSmallDesc.map((ex: IExercise) => ex.targetId);
-    console.log('synergists')
-    console.log(synergists)
-    console.log('targetIds')
-    console.log(targetIds)
 
     useEffect(()=>{
         if (!isPaused){
@@ -112,7 +108,6 @@ const Training = () => {
                 alert(`Congrats. You got a new achievement: ${achiev.name}`)
             }
             let ach = await countTrainingAchievements(+userId);
-            console.log(ach)
             if (ach !== null) {
                 await putAchievement(ach.achievmentId, +userId);
                 alert(`Congrats. You got a new achievement: ${ach.name}`)
