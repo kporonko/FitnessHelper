@@ -91,6 +91,10 @@
     right: 0;
     left: 0;
 }
+.target:hover{
+    background: #a60202;
+    transition: 1s all ease;
+}
 .synergist{
     width: 80%;
     border: 1px solid black;
@@ -101,6 +105,10 @@
     top: 0;
     right: 0;
     left: 0;
+}
+.synergist:hover{
+    background: #013c80;
+    transition: 0.5s all ease;
 }
 .ytWrapper{
     display: flex;
