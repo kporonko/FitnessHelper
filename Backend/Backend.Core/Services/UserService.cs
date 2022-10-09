@@ -3,6 +3,8 @@ using Backend.Core.Models;
 using Backend.Infrastructure.Data;
 using Backend.Infrastructure.Models;
 using System.Net;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Backend.Core.Services
 {
@@ -29,7 +31,7 @@ namespace Backend.Core.Services
                 if (IfTheUserLoginExists(registerUser))
                     return HttpStatusCode.Conflict;
 
-                var user = new User { Login = registerUser.Login, Password = registerUser.Password, FirstName = registerUser.FirstName, LastName = registerUser.LastName };
+                var user = new User { Login = registerUser.Login, Password = ConvertPasswordToHash(registerUser.Password), FirstName = registerUser.FirstName, LastName = registerUser.LastName };
                 FillAchievments(user);
                 FillMuscles(user);
                 _context.Users.Add(user);
@@ -88,7 +90,7 @@ namespace Backend.Core.Services
         {
             if (user == null)
                 return false;
-            if (user?.Password == loginUser?.Password)
+            if (user?.Password == ConvertPasswordToHash(loginUser?.Password))
                 return true;
 
             return false;
@@ -118,6 +120,23 @@ namespace Backend.Core.Services
             {
                 user.UserMuscles.Add(new UserMuscles { UserId = user.UserId, MuscleId = muscles[i].MuscleId, MusclePoints = 0});
             }
+        }
+
+        /// <summary>
+        /// Converts password to hash.
+        /// </summary>
+        /// <param name="password">Password string to convert.</param>
+        /// <returns>Hash of password.</returns>
+        private string ConvertPasswordToHash(string password)
+        {
+            using SHA256 sha256Hash = SHA256.Create();
+            byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("x2"));
+            }
+            return builder.ToString();
         }
     } 
 }

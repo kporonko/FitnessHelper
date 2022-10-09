@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Docker initial + uml">
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/ClassDiagram1.cd" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/ClassDiagram1.cd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/back.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/back.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/dumbell.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/dumbell.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/exercises.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/exercises.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/login-image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/login-image.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/public/workouts.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/Assets/workouts.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/MyWorkoutCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/StartTrainingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Docker fix. Created containers with compose">
+      <change beforePath="$PROJECT_DIR$/Backend/Backend.Core/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend.Core/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +76,7 @@
       <workItem from="1664142916154" duration="14698000" />
       <workItem from="1664167385658" duration="43476000" />
       <workItem from="1664626279594" duration="3577000" />
-      <workItem from="1665064222750" duration="10440000" />
+      <workItem from="1665064222750" duration="11125000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -395,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665222324517</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Docker fix. Created containers with compose">
+      <created>1665232097107</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1665232097107</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,7 +397,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="User Workouts page is implemented. Buttons add delete is added too." />
     <MESSAGE value="Adding exercise to user workout function is implemented" />
     <MESSAGE value="Deleted unnecessary functions" />
     <MESSAGE value="User workout description page is added. Api: query of getting workout description was added." />
@@ -438,6 +421,7 @@
     <MESSAGE value="Statistics user muscles is done" />
     <MESSAGE value="Small fix" />
     <MESSAGE value="Docker initial + uml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker initial + uml" />
+    <MESSAGE value="Docker fix. Created containers with compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker fix. Created containers with compose" />
   </component>
 </project>

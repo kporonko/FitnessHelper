@@ -8,7 +8,7 @@ namespace Backend.Core.Models
         public string Login { get; set; }
 
         [Required]
-        [StringLength(50, MinimumLength = 8, ErrorMessage = "Password must contain at least 8 symbols")]
+        [MinLength(8)]
         public string Password { get; set; }
 
         [Required]

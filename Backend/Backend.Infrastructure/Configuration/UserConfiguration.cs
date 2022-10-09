@@ -30,8 +30,7 @@ namespace Backend.Infrastructure.Configuration
                 .Property(x => x.Password)
                 .IsRequired()
                 .HasColumnName("Password")
-                .HasColumnType("varchar")
-                .HasMaxLength(50);
+                .HasColumnType("varchar(max)");
             builder
                 .Property(x => x.FirstName)
                 .IsRequired()
