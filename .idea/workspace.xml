@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Docker fix. Created containers with compose">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/ExerciseDesc.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/ExerciseDesc.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +78,8 @@
       <workItem from="1664167385658" duration="43476000" />
       <workItem from="1664626279594" duration="3577000" />
       <workItem from="1665064222750" duration="11875000" />
+      <workItem from="1665413631683" duration="2973000" />
+      <workItem from="1665475694325" duration="571000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
