@@ -16,8 +16,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetUserProfileByUserId/{userId}")]
-        public ActionResult<UserProfile> GetUserProfileByUserId(int userId)
+        [Route("/Profile/{userId}")]
+        public ActionResult<UserProfile> Profile(int userId)
         {
             var profile = _profileService.GetUserProfileByUserId(userId);
             if (profile == null)
@@ -26,8 +26,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetUserTrainingsByUserId/{userId}")]
-        public ActionResult<List<TrainingDesc>> GetUserTrainingsByUserId(int userId)
+        [Route("/UserTrainings/{userId}")]
+        public ActionResult<List<TrainingDesc>> UserTrainings(int userId)
         {
             var trainings = _profileService.GetUserTrainingsByUserId(userId);
             if (trainings == null)
@@ -36,8 +36,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetBasicTrainingsByUserId/{userId}")]
-        public ActionResult<List<TrainingDesc>> GetBasicTrainingsByUserId(int userId)
+        [Route("/BasicTrainings/{userId}")]
+        public ActionResult<List<TrainingDesc>> BasicTrainings(int userId)
         {
             var trainings = _profileService.GetBasicTrainingsByUserId(userId);
             if (trainings == null)

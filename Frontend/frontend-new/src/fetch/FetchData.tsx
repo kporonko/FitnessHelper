@@ -67,7 +67,7 @@ export const registerUser = async (user: IRegisterUserDto) => {
 }
 
 export const getBasicWorkoutsBySection = async (section: number) => {
-    const response = await fetch(`${baseUrl}GetBySection/${section}`, {
+    const response = await fetch(`${baseUrl}BasicalSetBySection/${section}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ export const getBasicWorkoutsBySection = async (section: number) => {
 }
 
 export const getBasicalWorkoutFullDesc = async (id: number) => {
-    const response = await fetch(`${baseUrl}GetFullDescById/${id}`, {
+    const response = await fetch(`${baseUrl}BasicalSetById/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ export const getExerciseDescById = async (id: number) => {
 }
 
 export const getMuscleById = async (id: number) => {
-    const response = await fetch(`${baseUrl}GetMuscleById/${id}`, {
+    const response = await fetch(`${baseUrl}MuscleById/${id}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -124,7 +124,7 @@ export const getMuscleById = async (id: number) => {
 }
 
 export const getAllExercises = async () => {
-    const response = await fetch(`${baseUrl}AllExercises`, {
+    const response = await fetch(`${baseUrl}Exercises`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ export const getExByPartBody = async (part: string) => {
 }
 
 export const getMyWorkouts = async (userId: number) => {
-    const response = await fetch(`${baseUrl}UserSetsByUserId/${userId}`, {
+    const response = await fetch(`${baseUrl}UserSets/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -180,7 +180,7 @@ export const getMyWorkouts = async (userId: number) => {
 }
 
 export const deleteMyWorkout = async (workoutId: number) => {
-    const response = await fetch(`${baseUrl}DeleteUserSet`, {
+    const response = await fetch(`${baseUrl}UserSet`, {
         method: 'DELETE',
         body: JSON.stringify({
             "userSetId": workoutId,
@@ -193,7 +193,7 @@ export const deleteMyWorkout = async (workoutId: number) => {
 }
 
 export const addNewWorkout = async (userId:number, name: string) => {
-    const response = await fetch(`${baseUrl}CreateNewUserSetOfExercises`, {
+    const response = await fetch(`${baseUrl}UserSet`, {
         method: 'POST',
         body: JSON.stringify({
             "userId": userId,
@@ -207,7 +207,7 @@ export const addNewWorkout = async (userId:number, name: string) => {
 }
 
 export const addExerciseToUserSet = async (exerciseId:number, userSetId: number) => {
-    const response = await fetch(`${baseUrl}AddExerciseToUserSet`, {
+    const response = await fetch(`${baseUrl}ExerciseToUserSet`, {
         method: 'POST',
         body: JSON.stringify({
             "exerciseId": exerciseId,
@@ -235,7 +235,7 @@ export const getExercisesFromUserWorkout = async (userSetId: number) => {
 }
 
 export const deleteExerciseFromWorkout = async (exerciseId:number, userSetId: number) => {
-    const response = await fetch(`${baseUrl}DeleteExerciseFromUserSet`, {
+    const response = await fetch(`${baseUrl}ExerciseFromUserSet`, {
         method: 'DELETE',
         body: JSON.stringify({
             "exerciseId": exerciseId,
@@ -249,7 +249,7 @@ export const deleteExerciseFromWorkout = async (exerciseId:number, userSetId: nu
 }
 
 export const getProfile = async (userId: number) => {
-    const response = await fetch(`${baseUrl}GetUserProfileByUserId/${userId}`, {
+    const response = await fetch(`${baseUrl}Profile/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -263,7 +263,7 @@ export const getProfile = async (userId: number) => {
 }
 
 export const getUserTrainingsByUserId = async (userId: number) => {
-    const response = await fetch(`${baseUrl}GetUserTrainingsByUserId/${userId}`, {
+    const response = await fetch(`${baseUrl}UserTrainings/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -277,7 +277,7 @@ export const getUserTrainingsByUserId = async (userId: number) => {
 }
 
 export const getBasicTrainingsByUserId = async (userId: number) => {
-    const response = await fetch(`${baseUrl}GetBasicTrainingsByUserId/${userId}`, {
+    const response = await fetch(`${baseUrl}BasicTrainings/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -291,8 +291,7 @@ export const getBasicTrainingsByUserId = async (userId: number) => {
 }
 
 export const createAndAddBasicTraining = async (userId:number, basicalSetId: number, time: number, date: string) => {
-    console.log(userId, basicalSetId, time, date)
-    const response = await fetch(`${baseUrl}CreateAndAddBasicTraining`, {
+    const response = await fetch(`${baseUrl}BasicTraining`, {
         method: 'POST',
         body: JSON.stringify({
             "userId": userId,
@@ -308,7 +307,7 @@ export const createAndAddBasicTraining = async (userId:number, basicalSetId: num
 }
 
 export const createAndAddUserTraining = async (userSetId: number, time: number, date: string) => {
-    const response = await fetch(`${baseUrl}CreateAndAddUserTraining`, {
+    const response = await fetch(`${baseUrl}UserTraining`, {
         method: 'POST',
         body: JSON.stringify({
             "userSetId": userSetId,
@@ -323,7 +322,7 @@ export const createAndAddUserTraining = async (userSetId: number, time: number, 
 }
 
 export const getAllAchievments = async (userId: number) => {
-    const response = await fetch(`${baseUrl}GetAllAchievments/${userId}`, {
+    const response = await fetch(`${baseUrl}Achievments/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -338,7 +337,7 @@ export const getAllAchievments = async (userId: number) => {
 
 
 export const getResearcher = async (userId: number) => {
-    const response = await fetch(`${baseUrl}IsResearcher/${userId}`, {
+    const response = await fetch(`${baseUrl}Researcher/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -351,7 +350,7 @@ export const getResearcher = async (userId: number) => {
 }
 
 export const getCreator = async (userId: number) => {
-    const response = await fetch(`${baseUrl}IsCreator/${userId}`, {
+    const response = await fetch(`${baseUrl}Creator/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -364,7 +363,7 @@ export const getCreator = async (userId: number) => {
 }
 
 export const is5Own = async (userId: number) => {
-    const response = await fetch(`${baseUrl}Is5OwnTrainings/${userId}`, {
+    const response = await fetch(`${baseUrl}FiveOwnTrainings/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -377,7 +376,7 @@ export const is5Own = async (userId: number) => {
 }
 
 export const is5Basical = async (userId: number) => {
-    const response = await fetch(`${baseUrl}Is5BasicalTrainings/${userId}`, {
+    const response = await fetch(`${baseUrl}FiveBasicalTrainings/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -403,7 +402,7 @@ export const countTrainingAchievements = async (userId: number) => {
 }
 
 export const putAchievement = async (achievmentId: number, userId: number) => {
-    const response = await fetch(`${baseUrl}PutAchievment`, {
+    const response = await fetch(`${baseUrl}Achievment`, {
         method: 'PUT',
         body: JSON.stringify({
             "achievmentId": achievmentId,
@@ -417,7 +416,7 @@ export const putAchievement = async (achievmentId: number, userId: number) => {
 }
 
 export const getUserMuscles = async (userId: number) => {
-    const response = await fetch(`${baseUrl}GetUserMuscles/${userId}`, {
+    const response = await fetch(`${baseUrl}UserMuscles/${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -431,7 +430,7 @@ export const getUserMuscles = async (userId: number) => {
 
 export const updateUserMuscles = async (muscle: MuscleForUpdate) => {
     console.log(muscle)
-    const response = await fetch(`${baseUrl}UpdateUserMuscles`, {
+    const response = await fetch(`${baseUrl}UserMuscles`, {
         method: 'PUT',
         body: JSON.stringify({
             "synergists": muscle.synergists,

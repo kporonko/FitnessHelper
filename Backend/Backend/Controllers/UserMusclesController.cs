@@ -16,8 +16,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetUserMuscles/{userId}")]
-        public ActionResult<List<UserMuscleSmallDesc>> GetUserMuscles(int userId)
+        [Route("/UserMuscles/{userId}")]
+        public ActionResult<List<UserMuscleSmallDesc>> UserMuscles(int userId)
         {
             var muscles = _userMuscleService.GetUserMuscles(userId);
             if (muscles.Count == 0)
@@ -26,8 +26,8 @@ namespace Backend.Controllers
         }
 
         [HttpPut]
-        [Route("/UpdateUserMuscles")]
-        public IActionResult UpdateUserMuscles(MusclesForUpdate musclesForUpdate)
+        [Route("/UserMuscles")]
+        public IActionResult UserMuscles(MusclesForUpdate musclesForUpdate)
         {
             var code = _userMuscleService.UpdateUserMuscles(musclesForUpdate);
             return Ok();

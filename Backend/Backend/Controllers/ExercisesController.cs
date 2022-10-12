@@ -16,8 +16,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/AllExercises")]
-        public ActionResult<List<ExerciseSmallDescription>> AllExercises()
+        [Route("/Exercises")]
+        public ActionResult<List<ExerciseSmallDescription>> Exercises()
         {
             var exercises = _exerciseService.AllExercises();
             if (exercises.Count == 0)

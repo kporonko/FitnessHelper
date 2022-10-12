@@ -55,3 +55,6 @@
     font-size: 100px;
     margin-bottom: 30px;
 }
+.displayNone{
+    display: none;
+}

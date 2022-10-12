@@ -26,8 +26,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/Is5BasicalTrainings/{userId}")]
-        public ActionResult<AchievmentSmallDesc> Is5BasicalTrainings(int userId)
+        [Route("/FiveBasicalTrainings/{userId}")]
+        public ActionResult<AchievmentSmallDesc> FiveBasicalTrainings(int userId)
         {
             var achievment = _achievmentService.Is5BasicalTrainings(userId);
             if (achievment == null)
@@ -36,8 +36,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/Is5OwnTrainings/{userId}")]
-        public ActionResult<AchievmentSmallDesc> Is5OwnTrainings(int userId)
+        [Route("/FiveOwnTrainings/{userId}")]
+        public ActionResult<AchievmentSmallDesc> FiveOwnTrainings(int userId)
         {
             var achievment = _achievmentService.Is5OwnTrainings(userId);
             if (achievment == null)
@@ -46,7 +46,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/IsResearcher/{userId}")]
+        [Route("/Researcher/{userId}")]
         public ActionResult<AchievmentSmallDesc> IsResearcher(int userId)
         {
             var achievment = _achievmentService.IsResearcher(userId);
@@ -56,7 +56,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/IsCreator/{userId}")]
+        [Route("/Creator/{userId}")]
         public ActionResult<AchievmentSmallDesc> IsCreator(int userId)
         {
             var achievment = _achievmentService.IsCreator(userId);
@@ -67,8 +67,8 @@ namespace Backend.Controllers
 
 
         [HttpPut]
-        [Route("/PutAchievment")]
-        public IActionResult PutAchievment(UserAchievmentDto userAchievmentDto)
+        [Route("/Achievment")]
+        public IActionResult Achievment(UserAchievmentDto userAchievmentDto)
         {
             var code = _achievmentService.PutAchievment(userAchievmentDto.AchievmentId, userAchievmentDto.UserId);
             if ((int)code == 200)
@@ -77,8 +77,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/GetAllAchievments/{userId}")]
-        public IActionResult GetAllAchievments(int userId)
+        [Route("/Achievments/{userId}")]
+        public IActionResult Achievments(int userId)
         {
             var list = _achievmentService.GetAllAchievments(userId);
             if (list.Count > 0)

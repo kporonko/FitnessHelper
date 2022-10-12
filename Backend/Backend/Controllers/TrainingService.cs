@@ -16,20 +16,20 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        [Route("/CreateAndAddBasicTraining")]
-        public IActionResult CreateAndAddBasicTraining(AddBasicTraining addBasicTraining)
+        [Route("/BasicTraining")]
+        public IActionResult BasicTraining(AddBasicTraining addBasicTraining)
         {
             if ((int)_trainingService.CreateAndAddBasicTraining(addBasicTraining) == 201)
-                return CreatedAtAction(nameof(CreateAndAddBasicTraining), addBasicTraining);
+                return CreatedAtAction(nameof(BasicTraining), addBasicTraining);
             return BadRequest();
         }
 
         [HttpPost]
-        [Route("/CreateAndAddUserTraining")]
-        public IActionResult CreateAndAddUserTraining(AddUserTraining addUserTraining)
+        [Route("/UserTraining")]
+        public IActionResult UserTraining(AddUserTraining addUserTraining)
         {
             if ((int)_trainingService.CreateAndAddUserTraining(addUserTraining) == 201)
-                return CreatedAtAction(nameof(CreateAndAddUserTraining), addUserTraining);
+                return CreatedAtAction(nameof(UserTraining), addUserTraining);
             return BadRequest();
         }
     }

@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Possible future bug with frontend fetch using fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Properties/launchSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/BasicalSetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/BasicalSetController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/ExercisesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/ExercisesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/MuscleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/MuscleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/ProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/ProfileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/TrainingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/TrainingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/UserMusclesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/UserMusclesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/UserSetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/UserSetController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

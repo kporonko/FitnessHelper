@@ -31,6 +31,7 @@ const Training = () => {
     let [newArr, setNewArr] = useState([...exerciseSmallDesc.slice(1, exerciseSmallDesc.length)]);
     const [isPaused, setIsPaused] = useState<boolean>(false);
 
+    const [isEnd,setIsEnd] = useState(false)
     const synergists: number[] = [].concat(...exerciseSmallDesc.map((ex: IExercise) => ex.synergistsId));
     const targetIds: number[] = exerciseSmallDesc.map((ex: IExercise) => ex.targetId);
 
@@ -58,6 +59,7 @@ const Training = () => {
                                     if (userId !== null){
                                         updateUserMuscles({ synergists: synergists, target: targetIds, userId: +userId})
                                     }
+                                    setIsEnd(true)
                                     return handleUserTraining()
                                 }
                                 else{
@@ -66,6 +68,7 @@ const Training = () => {
                                     if (userId !== null){
                                         updateUserMuscles({ synergists: synergists, target: targetIds, userId: +userId})
                                     }
+                                    setIsEnd(true)
                                     handleBasicTraining()
                                 }
                                 return
@@ -158,7 +161,7 @@ const Training = () => {
                 <h3>{isRelax && `Exercise ${exerciseSmallDesc.length - exercise + 1}/${count}`}</h3>
             </div>
             <div className={classes.wrapper}>
-                <div className={classes.time}><h2 className={classes.absolute}>{work}</h2></div>
+                <div className={isEnd === true ? classes.displayNone : classes.time}><h2 className={classes.absolute}>{work}</h2></div>
                 <div>
                     <img className={classes.image} src={image} alt=""/>
                 </div>

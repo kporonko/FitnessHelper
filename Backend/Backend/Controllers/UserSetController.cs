@@ -16,8 +16,8 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        [Route("/UserSetsByUserId/{userId}")]
-        public ActionResult<List<UserSetOfExercisesSmallDesc>> GetListOfUserSetsSmallDescByUserId(int userId)
+        [Route("/UserSets/{userId}")]
+        public ActionResult<List<UserSetOfExercisesSmallDesc>> UserSets(int userId)
         {
             var sets = _userSetService.GetListOfUserSetsSmallDesc(userId);
             if (sets == null)
@@ -27,28 +27,28 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        [Route("/CreateNewUserSetOfExercises")]
-        public IActionResult CreateNewUserSetOfExercises(AddUserSet addUserSet)
+        [Route("/UserSet")]
+        public IActionResult UserSet(AddUserSet addUserSet)
         {
             if (_userSetService.AddNewUserSet(addUserSet) == System.Net.HttpStatusCode.BadRequest)
                 return BadRequest();
             else
-                return CreatedAtAction(nameof(CreateNewUserSetOfExercises), addUserSet);
+                return CreatedAtAction(nameof(UserSet), addUserSet);
         }
 
         [HttpPost]
-        [Route("/AddExerciseToUserSet")]
-        public IActionResult AddExerciseToUserSet(AddExerciseToUserSet data)
+        [Route("/ExerciseToUserSet")]
+        public IActionResult ExerciseToUserSet(AddExerciseToUserSet data)
         {
             if (_userSetService.AddExerciseToUserSet(data) == System.Net.HttpStatusCode.BadRequest)
                 return BadRequest();
             else
-                return CreatedAtAction(nameof(AddExerciseToUserSet), data);
+                return CreatedAtAction(nameof(ExerciseToUserSet), data);
         }
 
         [HttpDelete]
-        [Route("/DeleteUserSet")]
-        public IActionResult DeleteUserSet(DeleteUserSet deleteUserSet)
+        [Route("/UserSet")]
+        public IActionResult UserSet(DeleteUserSet deleteUserSet)
         {
             if (_userSetService.DeleteUserSet(deleteUserSet) is System.Net.HttpStatusCode.BadRequest)
                 return BadRequest();
@@ -57,7 +57,7 @@ namespace Backend.Controllers
         }
 
         [HttpDelete]
-        [Route("/DeleteExerciseFromUserSet")]
+        [Route("/ExerciseFromUserSet")]
         public IActionResult DeleteExerciseFromUserSet(DeleteExercise deleteExercise)
         {
             if (_userSetService.DeleteExerciseFromUserSet(deleteExercise) is System.Net.HttpStatusCode.BadRequest)
