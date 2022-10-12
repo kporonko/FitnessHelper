@@ -13,8 +13,9 @@ const ModalWorkoutsList = (props: {exerciseId:number, active:boolean, setActive:
     useEffect(() => {
         const getWorkouts = async () => {
             let id = localStorage.getItem("id");
-            if (id){
-                let workouts = await getMyWorkouts(+id);
+            let token = localStorage.getItem("token")
+            if (id && token){
+                let workouts = await getMyWorkouts(+id, token);
                 setMyWorkouts(workouts);
             }
         }

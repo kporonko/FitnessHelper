@@ -8,11 +8,11 @@ import {ITraining} from "../interfaces/ITraining";
 import TrainingCard from "../components/TrainingCard";
 import {IAchievment} from "../interfaces/IAchievment";
 import {IUserMuscle} from "../interfaces/IUserMuscle";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import Dropdown from 'react-dropdown';
+import {ImExit} from "react-icons/all";
 import userImg from "../Assets/user.png";
 const Profile = () => {
-
     const [profile, setProfile] = useState<IProfile>()
     const [trainings, setTrainings] = useState<ITraining[]>()
     const [isUserSet, setIsUserSet] = useState(true);
@@ -57,6 +57,12 @@ const Profile = () => {
         }
     }
 
+    const navigate = useNavigate()
+    const logout = () => {
+        localStorage.clear()
+        navigate('/');
+    }
+
     return (
         <div>
             <Header page="profile"/>
@@ -69,6 +75,7 @@ const Profile = () => {
                     <h3 className={classes.h3}>{profile?.name}</h3>
                     <h5 className={classes.h5}>Total Trainings: <span className={classes.boldSpan}>{profile?.totalTrainings}</span></h5>
                     <h5 className={classes.h5}>Total Trainings Time: <span className={classes.boldSpan}>{profile?.totalTrainingsTimeInMinutes} min.</span></h5>
+                    <button onClick={() => logout()} className={classes.absButton}><ImExit/></button>
                 </div>
             </div>
             <div className={classes.achievments}>

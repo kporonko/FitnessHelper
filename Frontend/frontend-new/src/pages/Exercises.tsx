@@ -9,6 +9,7 @@ import {Box, Button, Pagination, TextField} from "@mui/material";
 import ModalAddWorkout from "../components/ModalAddWorkout";
 import ModalWorkoutsList from "../components/ModalWorkoutsList";
 import imageExercise from "../Assets/exercises.jpeg"
+import {useNavigate} from "react-router-dom";
 
 const Exercises = () => {
 
@@ -18,12 +19,17 @@ const Exercises = () => {
 
     const indexOfLastProduct = currentPage * 15;
     const indexOfFirstProduct = indexOfLastProduct - 15;
-
+    const nav = useNavigate()
     const indexOfLastProductSearch = currentSearchPage * 15;
     const indexOfFirstProductSearch = indexOfLastProductSearch - 15;
     const [isActiveModal, setIsActiveModal] = useState(false)
     const [currCategory, setCurrCategory] = useState("")
     const myRef = useRef<HTMLDivElement>(null)
+    useEffect(()=>{
+        if (localStorage.getItem("id") == null){
+            nav("/");
+        }
+    })
     useEffect(() => {
         const getExercises = async() => {
             let exercises = await getAllExercises();

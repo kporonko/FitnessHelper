@@ -1,6 +1,8 @@
 ﻿using Backend.Core.Interfaces;
 using Backend.Core.Models.UserSets;
 using Backend.Core.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Backend.Controllers
@@ -16,6 +18,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Route("/UserSets/{userId}")]
         public ActionResult<List<UserSetOfExercisesSmallDesc>> UserSets(int userId)
         {

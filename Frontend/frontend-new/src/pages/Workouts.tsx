@@ -7,6 +7,7 @@ import {IBasicalWorkout} from "../interfaces/IBasicalWorkout";
 import BasicWorkoutCard from "../components/BasicWorkoutCard";
 import {ScrollMenu, VisibilityContext} from "react-horizontal-scrolling-menu";
 import imgWorkouts from "../Assets/workouts.jpg";
+import {useNavigate} from "react-router-dom";
 const Workouts = () => {
 
     let [firstSection, setFirstSection] = useState<IBasicalWorkout[] | null>([])
@@ -15,6 +16,12 @@ const Workouts = () => {
 
     const visibility = React.useContext(VisibilityContext);
 
+    const nav = useNavigate()
+    useEffect(()=>{
+        if (localStorage.getItem("id") == null){
+            nav("/");
+        }
+    })
     useEffect( () => {
         const getWorkouts = async () => {
             let first = await getBasicWorkoutsBySection(1);

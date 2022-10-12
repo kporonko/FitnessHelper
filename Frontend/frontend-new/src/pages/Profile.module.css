@@ -127,3 +127,15 @@
     cursor: pointer;
     transition: 0.7s all ease;
 }
+.absButton{
+    position: absolute;
+    right:10%;
+    top: 45%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    background: red;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+}

@@ -165,11 +165,12 @@ export const getExByPartBody = async (part: string) => {
     return data;
 }
 
-export const getMyWorkouts = async (userId: number) => {
+export const getMyWorkouts = async (userId: number, token: string) => {
     const response = await fetch(`${baseUrl}UserSets/${userId}`, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/x-www-form-urlencoded'
         }});
     if (response.status === 404){
         return undefined;

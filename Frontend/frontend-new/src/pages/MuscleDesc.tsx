@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {getMuscleById, getResearcher, putAchievement} from '../fetch/FetchData'
 import {IMuscle} from "../interfaces/IMuscle";
 import classes from "./MuscleDesc.module.css";
@@ -10,7 +10,12 @@ const MuscleDesc = () => {
     const {id} = useParams()
 
     const [muscle, setMuscle] = useState<IMuscle>()
-
+    const nav = useNavigate();
+    useEffect(()=>{
+        if (localStorage.getItem("id") == null){
+            nav("/");
+        }
+    })
     useEffect(() => {
         const checkAchievement = async () => {
             var userId = localStorage.getItem("id");

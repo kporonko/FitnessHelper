@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {getBasicalWorkoutFullDesc} from '../fetch/FetchData';
 import classes from './WorkoutDesc.module.css';
 import {AiFillFire, AiOutlineFire} from "react-icons/ai";
@@ -24,14 +24,13 @@ const WorkoutDesc = () => {
         chest: 0,
         abs: 0
     });
-    // const [exerciseSmallDesc, setExerciseSmallDesc] = useState([{
-    //     name: "",
-    //     image: "",
-    //     id: -1,
-    //     targetMuscle: "",
-    //     targetId: -1,
-    //     synergists: [-1]
-    // }])
+    const nav = useNavigate()
+    useEffect(()=>{
+        if (localStorage.getItem("id") == null){
+            nav("/");
+        }
+    })
+
     const [exerciseSmallDesc, setExerciseSmallDesc] = useState<IExercise[]>()
 
     useEffect(() => {

@@ -7,17 +7,24 @@ import MyWorkoutCard from "../components/MyWorkoutCard";
 import classes from "./Workouts.module.css";
 import {AiOutlinePlus, AiOutlinePlusCircle} from "react-icons/ai";
 import ModalAddWorkout from "../components/ModalAddWorkout";
+import {useNavigate} from "react-router-dom";
 
 const MyWorkouts = () => {
 
     const [myWorkouts, setMyWorkouts] = useState<IUsersetSmallDesc[]>()
     const [modalActive, setModalActive] = useState(false);
-
+    const nav = useNavigate();
+    useEffect(()=>{
+        if (localStorage.getItem("id") == null){
+            nav("/");
+        }
+    })
     useEffect(()=>{
         const getWorkouts = async() => {
             let id = localStorage.getItem("id");
-            if (id !== null){
-                let workouts = await getMyWorkouts(+id);
+            let token = localStorage.getItem("token");
+            if (id !== null && token){
+                let workouts = await getMyWorkouts(+id, token);
                 setMyWorkouts(workouts);
             }
         }

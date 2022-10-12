@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fix names of queries, bug with display timer after training end">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Added some auth logic to endpoints">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/ProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/ProfileController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665597442396</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added some auth logic to endpoints">
+      <created>1665598435136</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1665598435136</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +429,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="User workout description page is added. Api: query of getting workout description was added." />
     <MESSAGE value="User workout description page exercise deleting function added." />
     <MESSAGE value="Training page added. Data receiving from workout page is implemented" />
     <MESSAGE value="Added start training form to myExercise" />
@@ -441,6 +453,7 @@
     <MESSAGE value="Docker fix. Created containers with compose" />
     <MESSAGE value="Possible future bug with frontend fetch using fixed" />
     <MESSAGE value="Fix names of queries, bug with display timer after training end" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix names of queries, bug with display timer after training end" />
+    <MESSAGE value="Added some auth logic to endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some auth logic to endpoints" />
   </component>
 </project>
