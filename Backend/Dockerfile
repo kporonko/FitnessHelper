@@ -16,14 +16,14 @@ COPY . ./
 RUN dotnet publish Backend.sln -c Release -o out
 
 # Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 as runtime
 
-ENV ASPNETCORE_URLS=http://*:7198
+ENV ASPNETCORE_URLS=http://*:8182
 ENV ASPNETCORE_ENVIRONMENT=Development
 
 
 WORKDIR /app
 COPY --from=build-env /app/out .
 
-EXPOSE 7198
+EXPOSE 8182
 ENTRYPOINT ["dotnet", "Backend.dll"]

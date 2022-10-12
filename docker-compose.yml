@@ -20,7 +20,7 @@ services:
       - sql.data
       - identityserver
     ports:
-      - "7198:7198"
+      - "8182:8182"
 
   identityserver:
     image: identityserver
@@ -35,7 +35,7 @@ services:
   sql.data:
     image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
-      - ConnectionString=Data Source=host.docker.internal;Initial Catalog=TrainingHelperAlevel;Integrated Security=True;MultipleActiveResultSets=true
+      - ConnectionString=Server=host.docker.internal;Initial Catalog=TrainingHelperAlevel;Integrated Security=True;MultipleActiveResultSets=true;UserId=DESKTOP-7HK7ORN\Кирилл;
       - ACCEPT_EULA=Y
     ports:
       - "1433:1433"

@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Docker fix. Created containers with compose">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Possible future bug with frontend fetch using fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Backend/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Identity/IdentityServerExample-IdentityServer.WebApplication.Testing.Features/WebApplication.Testing.Features/Services/UserPasswordValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,7 @@
       <workItem from="1665064222750" duration="11875000" />
       <workItem from="1665413631683" duration="2973000" />
       <workItem from="1665475694325" duration="571000" />
-      <workItem from="1665508576601" duration="1210000" />
+      <workItem from="1665508576601" duration="4936000" />
     </task>
     <task id="LOCAL-00001" summary="React starting project is created">
       <created>1663926088449</created>
@@ -382,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665232097107</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Possible future bug with frontend fetch using fixed">
+      <created>1665519210290</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1665519210290</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +410,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adding exercise to user workout function is implemented" />
     <MESSAGE value="Deleted unnecessary functions" />
     <MESSAGE value="User workout description page is added. Api: query of getting workout description was added." />
     <MESSAGE value="User workout description page exercise deleting function added." />
@@ -425,6 +434,7 @@
     <MESSAGE value="Small fix" />
     <MESSAGE value="Docker initial + uml" />
     <MESSAGE value="Docker fix. Created containers with compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker fix. Created containers with compose" />
+    <MESSAGE value="Possible future bug with frontend fetch using fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Possible future bug with frontend fetch using fixed" />
   </component>
 </project>
