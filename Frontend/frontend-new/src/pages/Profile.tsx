@@ -22,11 +22,12 @@ const Profile = () => {
 
     useEffect(() => {
         const getFullProfile = async () => {
+            let token = localStorage.getItem("token")
             let userId = localStorage.getItem("id")
-            if (userId !== null){
-                let profile = await getProfile(+userId)
+            if (userId !== null && token !== null){
+                let profile = await getProfile(+userId, token)
                 setProfile(profile)
-                let userTrainings = await getUserTrainingsByUserId(+userId);
+                let userTrainings = await getUserTrainingsByUserId(+userId, token);
                 setTrainings(userTrainings)
                 let achievements = await getAllAchievments(+userId);
                 setAchievments(achievements)
@@ -39,16 +40,18 @@ const Profile = () => {
 
     const handleBasicTrainings = async () => {
         let userId = localStorage.getItem("id")
-        if (userId !== null){
-            let basicTrainings = await getBasicTrainingsByUserId(+userId);
+        let token = localStorage.getItem("token")
+        if (userId !== null && token !== null){
+            let basicTrainings = await getBasicTrainingsByUserId(+userId, token);
             setTrainings(basicTrainings)
             setIsUserSet(false)
         }
     }
     const handleUserTrainings = async () => {
+        let token = localStorage.getItem("token")
         let userId = localStorage.getItem("id")
-        if (userId !== null){
-            let userTrainings = await getUserTrainingsByUserId(+userId);
+        if (userId !== null && token !== null){
+            let userTrainings = await getUserTrainingsByUserId(+userId, token);
             setTrainings(userTrainings)
             setIsUserSet(true)
         }

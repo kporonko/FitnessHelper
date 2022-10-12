@@ -1,5 +1,7 @@
 ﻿using Backend.Core.Interfaces;
 using Backend.Core.Models.Profile;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,6 +18,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Route("/Profile/{userId}")]
         public ActionResult<UserProfile> Profile(int userId)
         {
@@ -26,6 +29,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Route("/UserTrainings/{userId}")]
         public ActionResult<List<TrainingDesc>> UserTrainings(int userId)
         {
@@ -36,6 +40,7 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [Route("/BasicTrainings/{userId}")]
         public ActionResult<List<TrainingDesc>> BasicTrainings(int userId)
         {

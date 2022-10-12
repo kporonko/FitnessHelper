@@ -248,11 +248,12 @@ export const deleteExerciseFromWorkout = async (exerciseId:number, userSetId: nu
     return response.status;
 }
 
-export const getProfile = async (userId: number) => {
+export const getProfile = async (userId: number, token:string) => {
     const response = await fetch(`${baseUrl}Profile/${userId}`, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/x-www-form-urlencoded',
         }});
     if (response.status === 404){
         return undefined;
@@ -262,11 +263,12 @@ export const getProfile = async (userId: number) => {
     return data;
 }
 
-export const getUserTrainingsByUserId = async (userId: number) => {
+export const getUserTrainingsByUserId = async (userId: number, token: string) => {
     const response = await fetch(`${baseUrl}UserTrainings/${userId}`, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/x-www-form-urlencoded'
         }});
     if (response.status === 404){
         return undefined;
@@ -276,11 +278,12 @@ export const getUserTrainingsByUserId = async (userId: number) => {
     return data;
 }
 
-export const getBasicTrainingsByUserId = async (userId: number) => {
+export const getBasicTrainingsByUserId = async (userId: number, token: string) => {
     const response = await fetch(`${baseUrl}BasicTrainings/${userId}`, {
         method: 'GET',
         headers: {
-            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + token,
+            'Content-Type': 'application/x-www-form-urlencoded'
         }});
     if (response.status === 404){
         return undefined;

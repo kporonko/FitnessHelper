@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Possible future bug with frontend fetch using fixed">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Fix names of queries, bug with display timer after training end">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/AchievmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/BasicalSetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/BasicalSetController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/ExercisesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/ExercisesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/MuscleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/MuscleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/ProfileController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/ProfileController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/TrainingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/TrainingService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/UserMusclesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/UserMusclesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/Backend/Controllers/UserSetController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/Controllers/UserSetController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Training.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -399,7 +391,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665519210290</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Fix names of queries, bug with display timer after training end">
+      <created>1665597442396</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1665597442396</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted unnecessary functions" />
     <MESSAGE value="User workout description page is added. Api: query of getting workout description was added." />
     <MESSAGE value="User workout description page exercise deleting function added." />
     <MESSAGE value="Training page added. Data receiving from workout page is implemented" />
@@ -442,6 +440,7 @@
     <MESSAGE value="Docker initial + uml" />
     <MESSAGE value="Docker fix. Created containers with compose" />
     <MESSAGE value="Possible future bug with frontend fetch using fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Possible future bug with frontend fetch using fixed" />
+    <MESSAGE value="Fix names of queries, bug with display timer after training end" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix names of queries, bug with display timer after training end" />
   </component>
 </project>
