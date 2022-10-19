@@ -1,0 +1,29 @@
+.h1{
+    padding: 20px 50px;
+    background: #282727;
+    color: white;
+    font-size: 44px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+.image{
+    border-radius: 50px;
+    margin: 50px 0 50px 50px;
+    min-width: 40%;
+    width: 40%;
+    max-width: 40%;
+}
+.h2{
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 44px;
+    font-family: "Oswald", sans-serif;
+}
+.h5{
+    margin-right: 50px;
+    margin-top: 100px;
+    font-weight: 100;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+}

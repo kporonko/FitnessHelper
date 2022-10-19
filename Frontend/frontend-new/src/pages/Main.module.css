@@ -1,0 +1,26 @@
+body::-webkit-scrollbar{
+    width: 20px;
+}
+.mainImg{
+    width: 100%;
+}
+.h2{
+    text-align: center;
+    font-size: 2.5vw!important;
+    font-weight: bold!important;
+    font-family: "Oswald", sans-serif!important;
+    margin-top: 5% !important;
+}
+
+.h5{
+    text-align: center!important;
+    font-size: 1.5vw!important;
+    font-weight: normal!important;
+    font-family: "Oswald", sans-serif!important;
+}
+.textWrapper{
+    margin: 0 10%;
+}
+.main{
+    margin-bottom: 100px;
+}

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Backend.Core.Services.AchievmentService" Collapsed="true">
+    <Position X="5" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ACAAAABAAAAABEAEAAAAYAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AchievmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.BasicSetService" Collapsed="true">
+    <Position X="9.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAABEAQAAAAAAAgCAAAAAAAAAwAkAAAAAA=</HashCode>
+      <FileName>Services\BasicSetService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.ExerciseService" Collapsed="true">
+    <Position X="9.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAhAAAANAJVAAAgAAAAAAAAAABAAAIAAABAAAI=</HashCode>
+      <FileName>Services\ExerciseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.MuscleService" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\MuscleService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.ProfileService" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAABAAAAAAABAGAAAAAAAAAAEAAAAAAABA=</HashCode>
+      <FileName>Services\ProfileService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.TrainingService" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEDAAAQAAAAAAACAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Services\TrainingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.UserMusclesService" Collapsed="true">
+    <Position X="1.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABQAAAAAAAIAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\UserMusclesService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.UserService" Collapsed="true">
+    <Position X="1.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAABAVAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Backend.Core.Services.UserSetService" Collapsed="true">
+    <Position X="1.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIAAxABAAEAAACABAAAAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Services\UserSetService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

@@ -1,0 +1,31 @@
+.wrapper{
+    border: 1px solid black;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 30px;
+}
+.wrapper:hover{
+    transform: scale(1.05);
+    transition: 1s all ease;
+}
+.img{
+    width: 500px;
+    height: 300px;
+}
+.efficiencyWrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+.workoutName{
+    text-align: center;
+    font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-size: 4vh;
+    color: black;
+}
+.p{
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+}
+.p span{
+    color: red;
+}

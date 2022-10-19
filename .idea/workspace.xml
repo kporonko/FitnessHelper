@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="Added some auth logic to endpoints">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/components/ModalWorkoutsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/fetch/FetchData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Exercises.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MuscleDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/MyWorkouts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/WorkoutDesc.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/frontend-new/src/pages/Workouts.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Identity" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FADNDcq4uGu5wPy7mZHDQn3zV8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Учеба/A-LEVEL/.NET C#/Diploma/FitnessHelper/Frontend/frontend-new/public&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Учеба\\A-LEVEL\\.NET C#\\Diploma\\FitnessHelper\\Frontend\\frontend-new\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\public" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma files" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\public" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\src" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\public\Assets" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\public" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\public\images" />
+      <recent name="D:\Учеба\A-LEVEL\.NET C#\Diploma\FitnessHelper\Frontend\frontend-new\src\interfaces" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Frontend/frontend-new/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77c53963-4113-4f5c-ad6b-5556d6441c68" name="Changes" comment="" />
+      <created>1663925952937</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663925952937</updated>
+      <workItem from="1663925954258" duration="32266000" />
+      <workItem from="1664037153195" duration="5682000" />
+      <workItem from="1664067787402" duration="6997000" />
+      <workItem from="1664104941119" duration="1814000" />
+      <workItem from="1664142916154" duration="14698000" />
+      <workItem from="1664167385658" duration="43476000" />
+      <workItem from="1664626279594" duration="3577000" />
+      <workItem from="1665064222750" duration="11875000" />
+      <workItem from="1665413631683" duration="2973000" />
+      <workItem from="1665475694325" duration="571000" />
+      <workItem from="1665508576601" duration="4936000" />
+    </task>
+    <task id="LOCAL-00001" summary="React starting project is created">
+      <created>1663926088449</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663926088449</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Register and login pages are implemented">
+      <created>1663941643972</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663941643972</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Small css classes conditions fixed.">
+      <created>1663941989453</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663941989453</updated>
+    </task>
+    <task id="LOCAL-00004" summary="CSS fix: added responsiveness to forms and login&amp;register pages">
+      <created>1663943494015</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663943494015</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Image files small fix">
+      <created>1663944078743</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663944078743</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added absolute text on login&amp;register image">
+      <created>1663952133906</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1663952133906</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Header 1 version">
+      <created>1664023464310</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664023464310</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Header is fixed">
+      <created>1664023690521</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664023690521</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Main page is done">
+      <created>1664037179654</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664037179654</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed styles, added all routes and matching pages components">
+      <created>1664064236196</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664064236196</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Try to fix fires count">
+      <created>1664120716115</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664120716115</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fires count is fixed">
+      <created>1664122398434</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664122398434</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Small css fix: border to cards added and margins are fixed">
+      <created>1664122678251</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664122678251</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Page of basic workout is implemented without exercises">
+      <created>1664128532497</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664128532497</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Page of basic workout is fully implemented">
+      <created>1664130430189</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664130430189</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Basic workouts are fully implemented, as well as muscle desc page">
+      <created>1664147619033</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664147619033</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Exercises page fully implemented">
+      <created>1664167352455</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664167352455</updated>
+    </task>
+    <task id="LOCAL-00018" summary="User Workouts page is implemented. Buttons add delete is added too.">
+      <created>1664215952484</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664215952484</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adding exercise to user workout function is implemented">
+      <created>1664230619374</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664230619374</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Deleted unnecessary functions">
+      <created>1664230775094</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664230775094</updated>
+    </task>
+    <task id="LOCAL-00021" summary="User workout description page is added. Api: query of getting workout description was added.">
+      <created>1664269159647</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664269159647</updated>
+    </task>
+    <task id="LOCAL-00022" summary="User workout description page exercise deleting function added.">
+      <created>1664274019199</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664274019199</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Training page added. Data receiving from workout page is implemented">
+      <created>1664277009682</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664277009682</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Added start training form to myExercise">
+      <created>1664277327731</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664277327732</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Profile is fully done">
+      <created>1664291367502</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1664291367502</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixed range of Link">
+      <created>1664292318871</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1664292318871</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Fixed starting form visibility when workout has no exercises">
+      <created>1664292635730</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1664292635730</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Fixed bugs + added training queries">
+      <created>1664369971918</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1664369971918</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Fixed incorrect userTraining query">
+      <created>1664370304061</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1664370304061</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Fixed training. Program functionality is done">
+      <created>1664468339369</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1664468339369</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Exercises pagination scroll is fixed, bug with search text is fixed too">
+      <created>1664565493098</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1664565493098</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Name is fixed">
+      <created>1664565555919</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1664565555919</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Pause functionality added to training">
+      <created>1664566860730</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1664566860730</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Initial setup">
+      <created>1664625913323</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1664625913323</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Achievements backend is done">
+      <created>1664802733983</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1664802733983</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed">
+      <created>1664804536325</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1664804536325</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Achievements are implemented fully">
+      <created>1664811686791</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1664811686791</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Pagination bug with category handle is fixed">
+      <created>1664814175464</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1664814175464</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Statistics user muscle in process">
+      <created>1664830777023</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1664830777023</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Statistics user muscles is done">
+      <created>1664839622966</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1664839622966</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Small fix">
+      <created>1664840851021</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1664840851021</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Docker initial + uml">
+      <created>1665222324517</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1665222324517</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Docker fix. Created containers with compose">
+      <created>1665232097107</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1665232097107</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Possible future bug with frontend fetch using fixed">
+      <created>1665519210290</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1665519210290</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Fix names of queries, bug with display timer after training end">
+      <created>1665597442396</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1665597442396</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Added some auth logic to endpoints">
+      <created>1665598435136</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1665598435136</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="User workout description page exercise deleting function added." />
+    <MESSAGE value="Training page added. Data receiving from workout page is implemented" />
+    <MESSAGE value="Added start training form to myExercise" />
+    <MESSAGE value="Profile is fully done" />
+    <MESSAGE value="Fixed range of Link" />
+    <MESSAGE value="Fixed starting form visibility when workout has no exercises" />
+    <MESSAGE value="Fixed bugs + added training queries" />
+    <MESSAGE value="Fixed incorrect userTraining query" />
+    <MESSAGE value="Fixed training. Program functionality is done" />
+    <MESSAGE value="Exercises pagination scroll is fixed, bug with search text is fixed too" />
+    <MESSAGE value="Name is fixed" />
+    <MESSAGE value="Pause functionality added to training" />
+    <MESSAGE value="Initial setup" />
+    <MESSAGE value="Achievements backend is done" />
+    <MESSAGE value="Achievements in profile is implemented. Bug with Id server using in frontend is fixed. Backend achievement model is fixed" />
+    <MESSAGE value="Achievements are implemented fully" />
+    <MESSAGE value="Pagination bug with category handle is fixed" />
+    <MESSAGE value="Statistics user muscle in process" />
+    <MESSAGE value="Statistics user muscles is done" />
+    <MESSAGE value="Small fix" />
+    <MESSAGE value="Docker initial + uml" />
+    <MESSAGE value="Docker fix. Created containers with compose" />
+    <MESSAGE value="Possible future bug with frontend fetch using fixed" />
+    <MESSAGE value="Fix names of queries, bug with display timer after training end" />
+    <MESSAGE value="Added some auth logic to endpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some auth logic to endpoints" />
+  </component>
+</project>

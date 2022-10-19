@@ -1,0 +1,116 @@
+.h1{
+    padding: 20px 50px;
+    background: #282727;
+    color: white;
+    font-size: 44px;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+}
+.imgWrapper{
+    display: flex;
+    justify-content: center;
+}
+.exImage{
+    width: 30%;
+}
+.imgWrapperDiv{
+    display: flex;
+    justify-content: center;
+}
+.buttonAdd{
+    padding: 7px 50px;
+    background: #00D63C;
+    font-weight: normal;
+    font-family: "Oswald", sans-serif;
+    font-size: 24px;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+}
+.buttonAdd:hover{
+    transform: scale(1.1);
+    transition: 1s all ease;
+    color: white;
+    background: #1b6d32;
+}
+.descWrapper{
+    background: #4d4c4c;
+    color: white;
+    margin: 30px 0;
+}
+
+.h2{
+    padding: 30px 0 50px 0;
+    text-align: center;
+    font-size: 36px;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+}
+.h5{
+    padding: 10px 20% 50px 20%;
+    text-align: justify;
+    font-size: 28px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+}
+.h3{
+    margin-top: 3%;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-size: 38px;
+    font-weight: normal;
+}
+.targetBarWrapper{
+    display: flex;
+    justify-content: center;
+}
+.targetBar{
+    padding: 1% 20%;
+    background: #bbbbbb;
+    border-radius: 30px;
+    position: relative;
+    min-height: 50px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.h2Muscle{
+    font-size: 36px;
+    font-family: "Oswald", sans-serif;
+    font-weight: normal;
+    color: white;
+}
+.target{
+    border: 1px solid black;
+    border-radius: 30px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.target:hover{
+    background: #a60202;
+    transition: 1s all ease;
+}
+.synergist{
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 30px;
+    background: #0075FF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.synergist:hover{
+    background: #013c80;
+    transition: 0.5s all ease;
+}
+.ytWrapper{
+    display: flex;
+    justify-content: center;
+}
